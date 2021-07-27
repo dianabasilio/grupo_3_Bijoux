@@ -13,4 +13,4 @@
   maestra de programación de videojuegos, robótica y matemáticas.
   
 - Malaika Andrade:
-- Wilfrido Arenas:
+- Wilfrido Arenas: Actualmente developer Senior para Nova Tecnologia Administrativa, Ingeniero en sistemas y Maestro en Ciencias Computacionales
