@@ -36,8 +36,8 @@
 - Wilfrido Arenas: Actualmente developer Senior para Nova Tecnologia Administrativa, Ingeniero en sistemas y Maestro en Ciencias Computacionales
 
  ## Sitios de referencia
-https://cristaljoyas.com/joyeria.html
-https://laesmeralda.com.mx/
-https://www.pandoraoficial.com.mx/
-https://www.tiffany.com.mx/jewelry/
-https://tumbiko.mx/
+- https://cristaljoyas.com/joyeria.html
+- https://laesmeralda.com.mx/
+- https://www.pandoraoficial.com.mx/
+- https://www.tiffany.com.mx/jewelry/
+- https://tumbiko.mx/
