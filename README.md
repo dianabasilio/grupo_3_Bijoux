@@ -32,7 +32,7 @@
 - 👩‍💻 Diana Basilio: Actualmente estudiante de ingeniería mecatrónica, practicante en Industronic como Back-end Software Engineer, 
   maestra de programación de videojuegos, robótica y matemáticas.
   
-- 🌵 Malaika Andrade: Licenciada en Biología, entuciasta de la programación, el emprendimiento y la ecología y la restauración de zonas semiáridas.
+- 🌵 Malaika Andrade: Licenciada en Biología, entusiasta de la programación, el emprendimiento y la ecología y la restauración de zonas semiáridas.
 - Wilfrido Arenas: Actualmente developer Senior para Nova Tecnologia Administrativa, Ingeniero en sistemas y Maestro en Ciencias Computacionales
 
  ## Sitios de referencia
