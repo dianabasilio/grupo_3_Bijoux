@@ -8,12 +8,12 @@
 ## Descripción de la oferta de productos
 
 ### Anillos
-- Compromiso ó Promesa
-- De oro ó plata
-- Con diamantes o piedras naturales
+- Compromiso ó Promesa ó de regalo.
+- De oro ó plata.
+- Con diamantes o piedras naturales.
 
 ### Relojes
-- De diferentes marcas y colores
+- De diferentes marcas y colores.
 
 ### Pulseras
 - Bañadas de oro ó plata.
@@ -21,11 +21,15 @@
 
 ### Collares
 - De oro, plata ó bañados en oro/plata.
-- Con piedras ó sin piedras
+- Con piedras ó sin piedras.
 
 ### Aretes
 - De oro, plata ó bañados en oro/plata.
-- Con piedras ó sin piedras
+- Con piedras ó sin piedras.
+
+### Piercings
+- De diferentes tipos.
+- De oro y plata.
 
 ## Descrición de integrantes
 
