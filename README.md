@@ -36,8 +36,9 @@
 - Wilfrido Arenas: Actualmente developer Senior para Nova Tecnologia Administrativa, Ingeniero en sistemas y Maestro en Ciencias Computacionales
 
  ## Sitios de referencia
-- https://cristaljoyas.com/joyeria.html
-- https://laesmeralda.com.mx/
-- https://www.pandoraoficial.com.mx/
-- https://www.tiffany.com.mx/jewelry/
-- https://tumbiko.mx/
+- Esta joyería es una de las más clásicas y famosas que existe a nivel mundial y por eso decidimos tomarla como punto de referencia: https://www.tiffany.com.mx/jewelry/
+- De este sitio nos gustó como se presenta en la versión móbil las categorías de joyería a la venta en forma de cuadros con imágenes : https://www.pandoraoficial.com.mx/
+- Este sitio nos atrajo porque es más vérsatil y moderno, dirigido para un público más joven: https://www.pdpaola.com/
+- Esta tienda de relojes nos atrajo porque a pesar de tener tiendas físicas la mayoría de sus ventas las producen de modo online. Nos gustó el footer para basarnos en él: https://www.danielwellington.com/mx/
+- Este sitio se eligió porque nos gustó el diseño de la barra principal de opciones : https://cristaljoyas.com/joyeria.html
+- En este sitio nos gustó la experiencia de usuario que tiene el carrito de compras tanto de versión web como móbil: https://www.zara.com/mx/
