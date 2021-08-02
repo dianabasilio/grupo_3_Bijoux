@@ -2,7 +2,7 @@
 
 ### Joyería
 
-![alt text](https://github.com/dianabasilio/markdown/blob/main/bijoux/bijoux.png?raw=true)
+![alt text](https://github.com/dianabasilio/grupo_3_Bijoux/blob/master/Logo,colores,%20tipograf%C3%ADa/1.png?raw=true)
 
 
 ## Descripción de la oferta de productos
