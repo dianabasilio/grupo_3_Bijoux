@@ -43,5 +43,5 @@
 - https://cristaljoyas.com/joyeria.html
 - https://laesmeralda.com.mx/
 - https://www.pandoraoficial.com.mx/
-- https://www.tiffany.com.mx/jewelry/
+- https://www.tiffany.com.mx/jewelry/:  esta página se utilizó de inspiración para el detalle de producto, ya que visualmente queda muy limpio.
 - https://tumbiko.mx/
