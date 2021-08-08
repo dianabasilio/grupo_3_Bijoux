@@ -1,0 +1,27 @@
+{
+  "name": "grupo_3_bijoux",
+  "version": "1.0.0",
+  "description": "Proyecto integrador E-commerce",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "develop": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dianabasilio/grupo_3_Bijoux.git"
+  },
+  "author": "Diana Basilio, Wilfrido Arenas, Malaika Adrade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dianabasilio/grupo_3_Bijoux/issues"
+  },
+  "homepage": "https://github.com/dianabasilio/grupo_3_Bijoux#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
