@@ -6,16 +6,19 @@
 
 .products-box{
     display: flex;
-    background-color: white;
+    background-color: #f5efef;
     text-align: center;
     justify-content: center;
 }
 
 article{
     margin: 10px;
-    padding: 10px;
-    background-color: brown;
+    padding: 6px;
+    background-color: #9B4F4F;
     color: white;
 
 }
 
+main{
+    background-color: #f5efef;
+}
