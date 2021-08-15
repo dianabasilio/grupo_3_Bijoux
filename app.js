@@ -21,3 +21,10 @@ app.get('/', (req,res) =>{
     res.sendFile(path.resolve('./views/index.html'))
 
 });
+
+app.get('/login', (req,res) =>{
+    //res se encuentra en el callback en el segundo parámetro
+    res.sendFile(path.resolve('./views/login.html'))
+    //res.sendFile(__dirname + '/views/login.html');
+
+});
