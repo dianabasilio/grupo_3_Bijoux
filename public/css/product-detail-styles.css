@@ -1,4 +1,4 @@
-main section{
+main section .photos{
     display: flex;
 }
 
@@ -41,7 +41,7 @@ align-self: center;
 }
 
 .info h4{
-    width: 70%;
+    width: 65%;
     text-align: left;
 
 }
@@ -63,6 +63,47 @@ align-self: center;
     position: absolute;
     right: 10px;
 }
+
+.fa-shopping-bag{
+    padding: 0px 10px;
+
+}
 .open{
     display: flex;
+    flex-wrap: wrap;
+
+}
+
+#buy{
+    background-color: #c57373;
+    width: 70%;
+    border: none;
+    padding: 20px;
+    border-radius: 5px;
+    color: black;
+    font-weight: 600;
+    align-self: center;
+}
+
+#buy:hover{
+    background-color: #9B4F4F;
+    
+}
+
+@media(min-width: 701px){
+    main section {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .text{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 39%;
+    }
+    .photos{
+        width: 60%;
+    }
+
 }
