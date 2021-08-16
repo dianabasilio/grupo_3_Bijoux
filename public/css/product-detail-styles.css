@@ -101,6 +101,7 @@ align-self: center;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+        align-self: center;
         width: 39%;
     }
     .photos{
