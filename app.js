@@ -35,3 +35,10 @@ app.get('/product-detail', (req,res) =>{
     //res.sendFile(__dirname + '/views/login.html');
 
 });
+
+app.get('/carrito', (req,res) =>{
+    //res se encuentra en el callback en el segundo parámetro
+    res.sendFile(path.resolve('./views/carrito.html'))
+    //res.sendFile(__dirname + '/views/login.html');
+
+});
