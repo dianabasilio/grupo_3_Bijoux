@@ -10,10 +10,12 @@
 - Planear lo que vamos a hacer desde que se nos asigna el nuevo sprint.
 - Checar el proceso que tienen los demás compañeros en sus tareas.
 - Más comunicación en el equipo.
+- Utilizar más la herramienta del trello.
 
 ## Continuar haciedo
 - Continuar hablando en el grupo de whatsapp.
-- Entregar el proyecto a tiempo. 
+- Entregar el proyecto a tiempo.
+
 
 
 ## Hacer menos

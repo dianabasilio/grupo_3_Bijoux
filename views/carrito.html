@@ -4,10 +4,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carrito de compras</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/index-styles.css">
+    <link rel="stylesheet" href="/css/product-detail-styles.css">
+    <link rel="stylesheet" href="/css/carrito-styles.css">
+    <script src="https://kit.fontawesome.com/f8b57e23e1.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>hola mundo</h1>
+    <div class="titulo-cesta">
+        <h2>Cesta de compra</h2>
+        <h4>3 artículos en la cesta</h4>
+    </div>
+
+    <div class="contenedor-foto-descripcion">
+        <img src="/images/index-images/anillo.jpg" alt="anillo" class="product_img">
+        <div class="descripcion-producto-1">
+            <div><p class="titulo-descripcion">Anillo solitario Azul Pálido Recubrimiento En Oro Blanco de 14k</p></div>
+
+            <div><p>Referencia: 189259C02</p></div>
+
+            <div><p>Precio: 1220.00 MX</p></div>
+
+            <div><p>Talla: 52</p></div>
+
+            <div>
+                <select name="color">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="1">0</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor-foto-descripcion">
+        <img src="/images/index-images/collar.jpg" alt="collar" class="product_img">
+        <div class="descripcion-producto-2">
+            <div><p class="titulo-descripcion">Collar Cadena De Eslabones Recubrimiento En Oro Blanco de 14k</p></div>
+
+            <div><p>Referencia: 399410C00</p></div>
+
+            <div><p>Precio: 2400.00 MXN</p></div>
+
+            <div><p>Talla: 50</p></div>
+
+            <div>
+                <select name="color">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="1">0</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor-foto-descripcion">
+        <img src="/images/index-images/pulsera.jpg" alt="pulsera" class="product_img">
+        <div class="descripcion-producto-3">
+            <div><p class="titulo-descripcion">Pulsera Corazón En Plata</p></div>
+
+            <div><p>Referencia: 28830C02</p></div>
+
+            <div><p>Precio: 1220.00 MX</p></div>
+
+            <div><p>Talla: 45</p></div>
+
+            <div>
+                <select name="color">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="1">0</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="comprar-total">
+        <div class="boton-comprar"><button type="buy" id = "buy"><i class="fas fa-shopping-bag"></i>Comprar</button></div>
+        <div class="total">
+            <p>Total 4840.00 MXN</p>
+            <p>IVA Incluido</p>
+        </div>
+    </div>
 
 
 
