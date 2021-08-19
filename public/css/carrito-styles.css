@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     flex-direction: row;
+    margin-bottom: 15px;
 }
 .product_img{
     border: solid 2px rgb(153, 151, 151);
@@ -23,14 +24,12 @@
  
     margin: 10px 20px;
     width: 30%;
-    padding: 15px;
-    line-height: 25px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
 }
 .titulo-descripcion{
     font-weight: bolder;
-    font-size: 16px;
+    font-size: 13px;
 
 }
 
@@ -47,12 +46,33 @@ hr{
 }
 .total{
   font-weight: bolder;
+  width: 25%;
+  margin-right: 10px;
+  font-size: 13px;
 
 
 }
 .boton-comprar{
-    width: 70%;
+    width: 75%;
     margin-left: 40px;
-    margin-right: 40px;
+    font-size: 17px;
+
 }
 
+@media (min-width: 701px){
+    .descripcion-producto-1, .descripcion-producto-2, .descripcion-producto-3{
+        line-height: 25px;
+        font-size: 17px;
+    }
+    .titulo-descripcion{
+        font-size: 20px;
+    }
+    .product_img{
+        width: 30%;
+    }
+    .total{
+        width: 20%;
+        margin-right: 40px;
+        font-size: 17px;
+      }
+}
