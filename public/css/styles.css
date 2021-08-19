@@ -2,10 +2,99 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+}
+header nav , header div.search
+    {
+        display: block;
+    }
+header{
+    background-color: white;
+}    
+header div i{
+         font-size: 28px;
+         font-weight: bolder;
+    }    
+
+      header .top-header{
+        display:flex;
+        justify-content:space-between;
+        
+        padding: 2%;
+        align-items: center; 
+      }
+      
+
+    header div.logo img{
+        height: 80px; 
+             
     }
 
-    
+    header > .top-header  div{
+        display:inline-block;
+      }
+
+    .menu{
+         
+        display: flex;
+        justify-content: space-between; 
+        padding: 1%;  
+        font-weight: bolder;
+    }
+    .menu div{
+       
+       width: 10%;
+       justify-content: space-between;
+    }
+     .menu   ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;   
+        display: flex;
+        justify-content: space-between;   
+        width: 80%;
+         
+    }
+    .menu    ul a{
+        text-decoration: none;
+        color: black;
+        display: inline-block;
+        padding: 1px 0;
+        font-size: 17px;
+    } 
+
 main{
     background-color: #f5efef;
     text-align: center;
+   
+}
+/*Movil*/
+@media (min-width: 361px){
+     header div.searchpc,.menu
+    {
+        display: none;
+    }
+    
+}
+/*Tableta*/
+@media (min-width: 768px){
+    header div.searchpc,.menu
+    {
+        display: flex;
+    }
+    header div.left
+    {
+        color: white;
+    }
+}
+/*PC*/
+@media (min-width: 960px){
+   header{
+      margin-left: 7%;
+      margin-right: 7%;
+   }
 }
