@@ -72,6 +72,9 @@ main{
     text-align: center;
    
 }
+header{
+    background-color: #9B4F4F;
+}
 
 
 .contenedor-registro{
@@ -126,7 +129,10 @@ main{
     font-weight: bold;
 }
 
+.fa-search{
+    color: black;
 
+}
 
 /*Movil*/
 @media (min-width: 361px){
@@ -187,7 +193,7 @@ main{
 /*PC*/
 @media (min-width: 960px){
    header{
-      margin-left: 7%;
-      margin-right: 7%;
+      padding-left: 7%;
+      padding-right: 7%;
    }
 }
