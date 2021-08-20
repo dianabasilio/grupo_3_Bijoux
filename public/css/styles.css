@@ -14,7 +14,11 @@ header nav , header div.search
     }
 header{
     background-color: white;
-}    
+}
+
+footer{
+    background-color: #f5efef;
+}
 header div i{
          font-size: 28px;
          font-weight: bolder;
@@ -86,7 +90,7 @@ header{
     display: flex;
     padding: 20px;
     text-align: center;
-    margin-top: 10px;
+    padding-top: 10px;
 
 }
 
@@ -113,7 +117,7 @@ header{
     margin: auto;
     margin-top: 20px;
 
-    border: solid 1px black;
+    border: solid #9B4F4F 1px;
     background-color: white;
     width: 20%;
     padding: 10px;
@@ -166,11 +170,11 @@ header{
     }
      
     .contenedor-gris{
-        background-color: rgb(216, 213, 213);
+        background-color: #f5efef;
         padding: 20px;
     }
     .contenedor-registro{
-        border: solid 1px black; 
+        border: solid #9B4F4F 6px;
         width: 50%;
         margin: auto;
         background-color: white;
