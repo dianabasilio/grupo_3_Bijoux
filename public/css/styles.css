@@ -74,6 +74,11 @@ main{
 }
 header{
     background-color: #9B4F4F;
+    color: white;
+}
+
+.menu ul li a{
+    color: white;
 }
 
 
@@ -130,11 +135,11 @@ header{
 }
 
 .fa-search{
-    color: black;
+    color: white;
 
 }
 .fa-user{
-    color: #000;
+    color: white;
 }
 /*Movil*/
 @media (min-width: 361px){
