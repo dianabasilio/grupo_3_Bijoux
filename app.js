@@ -42,3 +42,10 @@ app.get('/carrito', (req,res) =>{
     //res.sendFile(__dirname + '/views/login.html');
 
 });
+
+app.get('/register', (req,res) =>{
+    //res se encuentra en el callback en el segundo parámetro
+    res.sendFile(path.resolve('./views/register.html'))
+    //res.sendFile(__dirname + '/views/login.html');
+
+});

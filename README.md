@@ -46,3 +46,7 @@
 - Este sitio se eligió porque nos gustó el diseño de la barra principal de opciones : https://cristaljoyas.com/joyeria.html
 - En este sitio nos gustó la experiencia de usuario que tiene el carrito de compras tanto de versión web como móbil: https://www.zara.com/mx/
 
+## Trello
+
+https://trello.com/b/zNaHg9lc
+
