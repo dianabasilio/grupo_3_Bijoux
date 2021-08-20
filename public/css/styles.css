@@ -133,7 +133,9 @@ header{
     color: black;
 
 }
-
+.fa-user{
+    color: #000;
+}
 /*Movil*/
 @media (min-width: 361px){
      header div.searchpc,.menu
