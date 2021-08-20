@@ -145,17 +145,16 @@ header{
 .fa-user{
     color: white;
 }
-/*Movil*/
-@media (min-width: 361px){
-     header div.searchpc,.menu
-    {
-        display: none;
-    }
-    main .products-box article{
-        width: 30%;
-    }
-    
+
+
+    header div.searchpc,.menu
+{
+    display: none;
 }
+main .products-box article{
+    width: 30%;
+}
+
 /*Tableta*/
 @media (min-width: 700px){
     .burger-menu i{

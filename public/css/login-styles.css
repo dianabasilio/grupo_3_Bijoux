@@ -1,4 +1,6 @@
-
+main{
+    padding-top: 30px;
+}
 form {
     display: flex;
     padding: 5% 0;
@@ -14,6 +16,7 @@ form p, form p label{
 #email, #contraseña{
     background-color: white;
     width: 70%;
+    max-width: 400px;
     border: none;
     padding: 20px;
     border-radius: 5px;
@@ -22,6 +25,7 @@ form p, form p label{
 #submit, #forgot-password{
     background-color: #c57373;
     width: 70%;
+    max-width: 400px;
     border: none;
     padding: 20px;
     border-radius: 5px;
@@ -33,4 +37,28 @@ form p, form p label{
 #submit:hover, #forgot-password:hover{
     background-color: #9B4F4F;
     
+}
+
+
+/*Tableta*/
+@media (min-width: 700px){
+    .tipos-de-cliente{
+        display: flex;
+        margin-top: 50px;
+        flex-wrap: wrap;
+    }
+
+    .clientes{
+        width: 50%;
+        padding: 20px;
+    }
+    .nuevos-clientes{
+        padding: 20px;
+        width: 50%;
+    }
+
+}
+/*PC*/
+@media (min-width: 960px){
+
 }
