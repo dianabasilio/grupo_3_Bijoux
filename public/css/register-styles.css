@@ -3,12 +3,12 @@ main, main section{
     padding: 3%;
     
 }
-form.register {
+.register {
     display: flex;
     padding: 3% 0;
     justify-content: space-between;     
     align-items: stretch;
-    flex-direction: column;     
+    
 }
  
  #nombre, #email
@@ -45,8 +45,16 @@ form.register {
 }
 
 @media (min-width: 700px){
+    .register{
+        display: flex;
+         
+        justify-content: space-between;     
+           
+    }
     .logo-registro{
         display: flex;
+           
+        
     }
      
 }
