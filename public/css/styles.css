@@ -147,6 +147,9 @@ header{
 }
 /*Tableta*/
 @media (min-width: 768px){
+    .burger-menu i{
+        display: none;
+    }
     header div.searchpc,.menu
     {
         display: flex;
