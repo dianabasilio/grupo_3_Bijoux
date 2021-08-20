@@ -10,6 +10,7 @@
 </head>
 <body>
 
+    
     <header>
         <div class="top-header">
             <div class="left">
@@ -28,7 +29,7 @@
                     <i class="fas fa-shopping-bag"></i>
                 </div> 
                 <div class="user">
-                    <i class="fas fa-user"></i>
+                    <i href="/login" class="fas fa-user"></i>
                 </div>
             </div>
             
@@ -51,12 +52,39 @@
         
      
     </header>
-    
-    <main >
+    <main>
+        <section>
+            
+            <h2>Crear cuenta</h2>
+            <p>
+                Crear una cuenta tiene muchos beneficios: Pago más rápido, guardar más de una dirección, seguimiento de pedidos y mucho más.
+            </p>
+            <form action="/" method="GET">
 
-       
-        
-    </main>
+                <input type="email" name="email" id="email" placeholder="Nombre">
+                <input type="email" name="email" id="email" placeholder="Apellido">
+                <input type="email" name="email" id="email" placeholder="Email">
+                <input type="email" name="email" id="email" placeholder="Contraseña">
+                <input type="email" name="email" id="email" placeholder="repetir contraseña">
+                <input type="submit" value="Crear cuenta">
+                <div class="privacidad">
+                    <div>
+                        <input type="checkbox" name="interests" value="a" id="a">
+                        <label for="a"> Al marcar esta casilla, doy mi consentimiento y acepto lo siguiente.
+
+                        </label>
+                    </div> 
+                    <p>
+                        Al entregar la información de arriba, acepto que Bijoux, identificados en www.bijoux.com/politica/politicaprivacidad/  pueden procesar mi nombre, mi dirección de correo electrónico y demás información personal que haya sido entregada por mí para ponerse en contacto conmigo y realizar actividades de publicidad directa, ventas y estudios. 
+                    </p>                  
+                </div>      
+              
+                
+            </form>
+        </section>
+    </main>   
+
+
 
     <footer>
         <div class="contenedor-gris">
@@ -76,10 +104,10 @@
 
             </div>
             <div class="contenedor-iconos">
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-instagram icono"></i>
+                <i class="fab fa-facebook-f icono"></i>
+                <i class="fab fa-twitter icono"></i>
+                <i class="fab fa-pinterest-p icono"></i>
             </div>
         </div>
         <div class="contenedor-informacion">
@@ -115,6 +143,7 @@
         </div>
    
     </footer>
+
 
 </body>
 </html>
