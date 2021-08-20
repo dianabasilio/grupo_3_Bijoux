@@ -82,6 +82,12 @@
         main .products-box article{
             width: 30%;
         }
+        .icono{
+            margin: 7px;
+        }
+        .contenedor-iconos{
+            width: 30%;
+        }
     
     }
 
