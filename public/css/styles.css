@@ -150,14 +150,14 @@ header{
     .burger-menu i{
         display: none;
     }
+    .search i{
+        display: none;
+    }
     header div.searchpc,.menu
     {
         display: flex;
     }
-    header div.left
-    {
-        color: white;
-    }
+     
     .contenedor-gris{
         background-color: rgb(216, 213, 213);
         padding: 20px;
