@@ -157,12 +157,10 @@ main .products-box article{
 
 /*Tableta*/
 @media (min-width: 700px){
-    .burger-menu i{
+    .left div i{
         display: none;
     }
-    .search i{
-        display: none;
-    }
+    
     header div.searchpc,.menu
     {
         display: flex;
@@ -179,12 +177,7 @@ main .products-box article{
         background-color: white;
         border-radius: 5px;
     }
-    /* .contenedor-iconos{
-        border: solid 1px black;
-        background-color: white;
-        width: 20%;
-        padding: 10px;
-        border-radius: 5px; }*/
+     
 
     .contenedor-informacion{
         display: flex;

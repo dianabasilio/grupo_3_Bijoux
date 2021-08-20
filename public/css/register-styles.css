@@ -1,2 +1,52 @@
 
+main, main section{
+    padding: 3%;
+    
+}
+form.register {
+    display: flex;
+    padding: 3% 0;
+    justify-content: space-between;     
+    align-items: stretch;
+    flex-direction: column;     
+}
+ 
+ #nombre, #email
+{
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+     
+}
+#submit{
+    background-color: #c57373;     
+    border: none;
+    padding:  1rem;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.6s;
+    align-content: center;
+    margin-bottom: 1rem;
+}
 
+#submit:hover{
+    background-color: #9B4F4F;
+    
+}
+.privacidad p{
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.logo-registro{
+    display: none;
+}
+
+@media (min-width: 700px){
+    .logo-registro{
+        display: flex;
+    }
+     
+}

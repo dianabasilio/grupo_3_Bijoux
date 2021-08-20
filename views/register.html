@@ -29,11 +29,8 @@
                     <i class="fas fa-shopping-bag"></i>
                 </div> 
                 <div class="user">
-<<<<<<< HEAD
-                    <i href="/login" class="fas fa-user"></i>
-=======
                     <a  href="/login"> <i class="fas fa-user"></i></a>
->>>>>>> a8ff6604a1ee6f9af038f724529ffeb9150b534e
+
                 </div>
             </div>
             
@@ -57,20 +54,20 @@
      
     </header>
     <main>
-        <section>
-            
-            <h2>Crear cuenta</h2>
+        <h2>Crear cuenta</h2>
+        <section>     
             <p>
                 Crear una cuenta tiene muchos beneficios: Pago más rápido, guardar más de una dirección, seguimiento de pedidos y mucho más.
             </p>
-            <form action="/" method="GET">
-
-                <input type="email" name="email" id="email" placeholder="Nombre">
-                <input type="email" name="email" id="email" placeholder="Apellido">
+            
+            <form class="register" action="/" method="GET">
+                <div>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                <input type="text" name="email" id="email" placeholder="Apellido">
                 <input type="email" name="email" id="email" placeholder="Email">
-                <input type="email" name="email" id="email" placeholder="Contraseña">
-                <input type="email" name="email" id="email" placeholder="repetir contraseña">
-                <input type="submit" value="Crear cuenta">
+                <input type="password" name="email" id="email" placeholder="Contraseña">
+                <input type="password" name="email" id="email" placeholder="repetir contraseña">
+                <input type="submit" id = "submit" value="Crear cuenta">
                 <div class="privacidad">
                     <div>
                         <input type="checkbox" name="interests" value="a" id="a">
@@ -83,7 +80,10 @@
                     </p>                  
                 </div>      
               
-                
+            </div>
+            <div class="logo-registro">
+                <img src="/images/logo-bijoux.svg" alt="Logo Bijoux">
+            </div>
             </form>
         </section>
     </main>   
