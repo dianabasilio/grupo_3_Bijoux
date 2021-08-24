@@ -14,7 +14,7 @@ form p, form p label{
 }
 
 #email, #contraseña{
-    background-color: white;
+    background-color: rgb(230, 227, 227);
     width: 70%;
     max-width: 300px;
     border: none;
