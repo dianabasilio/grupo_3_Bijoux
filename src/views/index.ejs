@@ -21,58 +21,64 @@
         
         </section>
 
-        <div class= "all-categories">
-            <h3>Categorías</h3>
-        </div>
-        <div class= "products-box">
-
-
-            <% categorias.forEach(categoria =>{ %>
-                <article>
-                    <img src="/images/index-images/<%= categoria.imagen%>"  width="100" alt="anillo" class="product_img">
+        <section class="categories-and-boxes">
+            <div class= "all-categories">
+                <h3>CATEGORÍAS</h3>
+                <i class="fas fa-gem"></i>
+            </div>
+            <div class= "products-box">
+    
+    
+                <% categorias.forEach(categoria =>{ %>
+                    <article>
+                        <img src="/images/index-images/<%= categoria.imagen%>"  width="100" alt="anillo" class="product_img">
+                        <div class="category">
+                            <a href="/producto/categoria/<%= categoria.categoriaId%>">
+                            <p>  <%= categoria.categoria%></p>
+                            </a>
+                        </div>
+                    </article>
+                  <% }) %>
+              
+    
+                <!-- <article >
+                    <img src="/images/index-images/collar.jpg"  width="100" alt="collar" class="product_img">
                     <div class="category">
-                        <a href="/producto/categoria/<%= categoria.categoriaId%>">
-                        <p>  <%= categoria.categoria%></p>
-                        </a>
+                        <p>Collares</p>
                     </div>
                 </article>
-              <% }) %>
-          
+    
+                <article >
+                    <img src="/images/index-images/pulsera.jpg"  width="100" alt="piercing" class="product_img">
+                    <div class="category">
+                        <p>Pulseras</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="/images/index-images/piercing.jpg"  width="100" alt="pulsera" class="product_img">
+                   
+                    <p class="category">Piercings</p>
+    
+                </article>
+    
+                <article>
+                    <img src="/images/index-images/arete.jpg"  width="100" alt="arete" class="product_img">
+                   
+                    <p class="category">Aretes</p>
+    
+                </article>
+    
+                <article >
+                    <img src="/images/index-images/reloj.jpg"  width="100" alt="reloj" class="product_img">
+                    <p class="category">Relojes</p>
+                    
+                </article> -->
+    
+            </div>
 
-            <!-- <article >
-                <img src="/images/index-images/collar.jpg"  width="100" alt="collar" class="product_img">
-                <div class="category">
-                    <p>Collares</p>
-                </div>
-            </article>
+        </section>
 
-            <article >
-                <img src="/images/index-images/pulsera.jpg"  width="100" alt="piercing" class="product_img">
-                <div class="category">
-                    <p>Pulseras</p>
-                </div>
-            </article>
-            <article>
-                <img src="/images/index-images/piercing.jpg"  width="100" alt="pulsera" class="product_img">
-               
-                <p class="category">Piercings</p>
-
-            </article>
-
-            <article>
-                <img src="/images/index-images/arete.jpg"  width="100" alt="arete" class="product_img">
-               
-                <p class="category">Aretes</p>
-
-            </article>
-
-            <article >
-                <img src="/images/index-images/reloj.jpg"  width="100" alt="reloj" class="product_img">
-                <p class="category">Relojes</p>
-                
-            </article> -->
-
-        </div>
+        
         
     </main>
 

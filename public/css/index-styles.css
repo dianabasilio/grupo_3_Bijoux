@@ -12,6 +12,7 @@ main .products-box article{
     margin: 10px 5px;
     padding: 10px 2%;
     width: 27%;
+    transition: box-shadow,250ms,  display, 200ms;
 }
 
     .products-box{
@@ -85,7 +86,30 @@ main .products-box article{
         color: black;
         font-weight: bold;
     }
+    .all-categories{
+        color:#9B4F4F;
+    }
 
+    .fa-gem{
+        font-size: 30px;
+        margin-top: 10px;
+    
+    }
+
+     
+    main .products-box article img{
+        width: 100%;
+    }
+
+    .category p, .category a {
+        color: white;
+        text-decoration: none;
+        font-weight: 510;
+    }
+
+    .products-box article:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
     
     @media(min-width: 300px){
         main .products-box article{
@@ -101,6 +125,10 @@ main .products-box article{
     }
 
     @media(min-width: 769px){
+        .fa-gem{
+            font-size: 40px;
+        
+        }
         .contenedor-gris{
             background-color: rgb(216, 213, 213);
             padding: 20px;
@@ -124,6 +152,23 @@ main .products-box article{
             justify-content: space-between;
             padding: 30px;
         }
+        .categories-and-boxes{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 30px;
+
+        }
+        .all-categories{
+            padding-top: 200px;
+            width: 30%;
+        }
+        .all-categories h3{
+            font-size: 20px;
+        }
+        .products-box{
+            width: 70%;
+        }
         .contenedor-informacion li{
             margin-bottom: 8px;
         }
@@ -138,16 +183,4 @@ main .products-box article{
 
     }
     
- 
-main .products-box article img{
-    width: 100%;
-}
 
-.category p, .category a {
-    color: white;
-    text-decoration: none;
-}
-
-.products-box article:hover{
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-}
