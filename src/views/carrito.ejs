@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/index-styles.css">
+    <link rel="stylesheet" href="/css/product-detail-styles.css">
+    <link rel="stylesheet" href="/css/carrito-styles.css">
+    <script src="https://kit.fontawesome.com/f8b57e23e1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <div class="top-header">
+            <div class="left">
+                <div class="burger-menu">
+                    <i class="fa fa-bars burger"></i>
+                </div>
+                <div class="search">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            <div class="logo"> 
+                <img src="images/logo/logo.jpeg" width= 150 height= 200 alt="Logo de Bijoux">
+            </div>  
+            <div class="rigth">
+                <div class="bag">
+                    <i class="fas fa-shopping-bag"></i>
+                </div> 
+                <div class="user">
+                    <a  href="/login"> <i class="fas fa-user"></i></a>
+                </div>
+            </div>
+            
+        </div>
+         
+            
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">Joyeria</a></li>
+                    <li><a href="#">Relojes</a></li>
+                    <li><a href="#">Descuento</a></li>
+                    <li><a href="#">Colecciones</a></li>
+                    <li><a href="#">Conocenos</a></li>
+                </ul>    
+                <div class="searchpc">
+                    <i class="fas fa-search"></i>
+                </div>       
+            </nav>
+         
+        
+     
+    </header>
+    <div class="titulo-cesta">
+        <h2>Cesta de compra</h2>
+        <h4>3 artículos en la cesta</h4>
+    </div>
+
+    <div class="contenedor-foto-descripcion">
+        <img src="/images/index-images/anillo.jpg" alt="anillo" class="product_img">
+        <div class="descripcion-producto-1">
+            <div><p class="titulo-descripcion">Anillo solitario Azul Pálido Recubrimiento En Oro Blanco de 14k</p></div>
+
+            <div><p>Referencia: 189259C02</p></div>
+
+            <div><p>Precio: 1220.00 MX</p></div>
+
+            <div><p>Talla: 52</p></div>
+
+            <div>
+                <select name="color">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="1">0</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor-foto-descripcion">
+        <img src="/images/index-images/collar.jpg" alt="collar" class="product_img">
+        <div class="descripcion-producto-2">
+            <div><p class="titulo-descripcion">Collar Cadena De Eslabones Recubrimiento En Oro Blanco de 14k</p></div>
+
+            <div><p>Referencia: 399410C00</p></div>
+
+            <div><p>Precio: 2400.00 MXN</p></div>
+
+            <div><p>Talla: 50</p></div>
+
+            <div>
+                <select name="color">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="1">0</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor-foto-descripcion">
+        <img src="/images/index-images/pulsera.jpg" alt="pulsera" class="product_img">
+        <div class="descripcion-producto-3">
+            <div><p class="titulo-descripcion">Pulsera Corazón En Plata</p></div>
+
+            <div><p>Referencia: 28830C02</p></div>
+
+            <div><p>Precio: 1220.00 MX</p></div>
+
+            <div><p>Talla: 45</p></div>
+
+            <div>
+                <select name="color">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="1">0</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="comprar-total">
+        <div class="boton-comprar"><button type="buy" id = "buy"><i class="fas fa-shopping-bag"></i>Comprar</button></div>
+        <div class="total">
+            <p>Total 4840.00 MXN</p>
+            <p>IVA Incluido</p>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="contenedor-gris">
+            <div class="contenedor-registro">
+                <form class="form-registro" action="/" method="GET"> 
+                    <h5>10% DE DESCUENTO EN TU PRIMERA COMPRA</h5>
+                    <p class="registrate-newsletter">Registrate en nuestro newsletter para ser el primero en conocer nuestras novedades y ofertas exclusivas. Además, recibe un 10% de descuento que podrás usar en tu primera compra con nosotros.</p>
+                    <div>
+                        <label for="usuario"></label>
+                        <input class="caja-registro" type="email" name="usuario" id="usuario" placeholder="Correo electrónico">
+                    </div>
+
+                    <div class="registrate">
+                    <button class= "boton" type="submit">Registrate</button>
+                    </div>
+                </form>
+
+            </div>
+            <div class="contenedor-iconos">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-pinterest-p"></i>
+            </div>
+        </div>
+        <div class="contenedor-informacion">
+            <ul type=none>
+                <li><a href="#">Acerca de Bijoux</a></li>
+                <li><a href="#">Nuestra historia</a></li>
+                <li><a href="#">Sustentabilidad</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+
+            <ul type=none>
+                <li><a href="#">Atención a clientes</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Preguntas frecuentes</a></li>
+                <li><a href="#">Guía de tallas</a></li>
+            </ul>
+
+            <ul type=none>
+                <li><a href="#">Información</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Política de devolución</a></li>
+                <li><a href="#">Cookies settings</a></li>
+            </ul>
+
+        </div>
+        <div class="contenedor-informacion-version-mobile">
+            <ul type=none>
+                <li><a href="#">Acerca de Bijoux</a></li>
+                <li><a href="#">Atención a clientes</a></li>
+                <li><a href="#">Información</a></li>
+            </ul>
+
+        </div>
+   
+    </footer>
+
+</body>
+</html>

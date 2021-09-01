@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f8b57e23e1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/index-styles.css">
+    <link rel="stylesheet" href="/css/login-styles.css">
+    <script src="https://kit.fontawesome.com/f8b57e23e1.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+
+    <header>
+        <div class="top-header">
+            <div class="left">
+                <div class="burger-menu">
+                    <i class="fa fa-bars burger"></i>
+                </div>
+                <div class="search">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            <div class="logo"> 
+                <img src="images/logo/logo.jpeg" width= 150 height= 200 alt="Logo de Bijoux">
+            </div>  
+            <div class="rigth">
+                <div class="bag">
+                    <i class="fas fa-shopping-bag"></i>
+                </div> 
+                <div class="user">
+                    <a  href="/login"> <i class="fas fa-user"></i></a>
+                </div>
+            </div>
+            
+        </div>
+         
+            
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">Joyeria</a></li>
+                    <li><a href="#">Relojes</a></li>
+                    <li><a href="#">Descuento</a></li>
+                    <li><a href="#">Colecciones</a></li>
+                    <li><a href="#">Conocenos</a></li>
+                </ul>    
+                <div class="searchpc">
+                    <i class="fas fa-search"></i>
+                </div>       
+            </nav>
+         
+        
+     
+    </header>
+    
+    <main>
+        <h2>Inicio de sesión</h2>
+        <div class= "tipos-de-cliente">
+            <section class="clientes">
+            
+                <h4>Clientes registrados</h4>
+                <div class="instructions">
+                    <p>Si tiene una cuenta inicie sesión con su dirección de correo electrónico.</p>
+                </div>
+                
+                <form action="/" method="GET">
+                    <p>
+                        <label for="email"></label>
+                        <input type="email" name="email" id="email" placeholder="Correo electrónico">
+                    </p>   
+        
+                    <p>      
+                        <label for="contraseña"></label>
+                        <input type="password" name="password" id="contraseña" placeholder="Contraseña"> 
+                    </p>
+        
+                    <p >
+                        <!--<button type="submit" action="/" method="GET">Enviar</button> -->
+                        <button type="submit" id = "submit">Iniciar sesión</button>
+                        
+                    </p>
+        
+                    <p>
+                        <!--<button type="submit" action="/" method="GET">Enviar</button> -->               
+                        <button type="forgot-password" id = "forgot-password" >¿Olvidó su contraseña?</button>
+                    </p>
+        
+    
+                   
+                  </form>
+    
+            </section>
+    
+            <section class= "nuevos-clientes">
+                <h4>Nuevos clientes</h4>
+                <p class="instructions">Crear una cuenta tiene muchos beneficios: Pago más rápido, guardar más 
+                    de una dirección, seguimiento de pedidos y mucho más.
+    
+                </p>
+    
+                <form action="/register" method="GET">
+    
+                    <p >
+                        <!--<button type="submit" action="/" method="GET">Enviar</button> -->
+                        <button type="submit" id = "submit">Crear una cuenta</button>
+                        
+                    </p>
+                   
+                  </form>
+    
+            </section>
+
+        </div>
+        
+  
+    </main>
+
+    <footer>
+        <div class="contenedor-gris">
+            <div class="contenedor-registro">
+                <form class="form-registro" action="/" method="GET"> 
+                    <h5>10% DE DESCUENTO EN TU PRIMERA COMPRA</h5>
+                    <p class="registrate-newsletter">Registrate en nuestro newsletter para ser el primero en conocer nuestras novedades y ofertas exclusivas. Además, recibe un 10% de descuento que podrás usar en tu primera compra con nosotros.</p>
+                    <div>
+                        <label for="usuario"></label>
+                        <input class="caja-registro" type="email" name="usuario" id="usuario" placeholder="Correo electrónico">
+                    </div>
+
+                    <div class="registrate">
+                    <button class= "boton" type="submit">Regístrate</button>
+                    </div>
+                </form>
+
+            </div>
+            <div class="contenedor-iconos">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-pinterest-p"></i>
+            </div>
+        </div>
+        <div class="contenedor-informacion">
+            <ul type=none>
+                <li><a href="#">Acerca de Bijoux</a></li>
+                <li><a href="#">Nuestra historia</a></li>
+                <li><a href="#">Sustentabilidad</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+
+            <ul type=none>
+                <li><a href="#">Atención a clientes</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Preguntas frecuentes</a></li>
+                <li><a href="#">Guía de tallas</a></li>
+            </ul>
+
+            <ul type=none>
+                <li><a href="#">Información</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Política de devolución</a></li>
+                <li><a href="#">Cookies settings</a></li>
+            </ul>
+
+        </div>
+        <div class="contenedor-informacion-version-mobile">
+            <ul type=none>
+                <li><a href="#">Acerca de Bijoux</a></li>
+                <li><a href="#">Atención a clientes</a></li>
+                <li><a href="#">Información</a></li>
+            </ul>
+
+        </div>
+   
+    </footer>
+
+
+</body>
+</html>

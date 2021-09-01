@@ -14,7 +14,11 @@ header nav , header div.search
     }
 header{
     background-color: white;
-}    
+}
+
+footer{
+    background-color: #f5efef;
+}
 header div i{
          font-size: 28px;
          font-weight: bolder;
@@ -68,12 +72,17 @@ header div i{
     } 
 
 main{
-    background-color: #f5efef;
+    background-color: white;
     text-align: center;
    
 }
 header{
     background-color: #9B4F4F;
+    color: white;
+}
+
+.menu ul li a{
+    color: white;
 }
 
 
@@ -81,7 +90,7 @@ header{
     display: flex;
     padding: 20px;
     text-align: center;
-    margin-top: 10px;
+    padding-top: 10px;
 
 }
 
@@ -108,7 +117,7 @@ header{
     margin: auto;
     margin-top: 20px;
 
-    border: solid 1px black;
+    border: solid #9B4F4F 1px;
     background-color: white;
     width: 20%;
     padding: 10px;
@@ -130,51 +139,45 @@ header{
 }
 
 .fa-search{
-    color: black;
+    color: white;
 
 }
+.fa-user{
+    color: white;
+}
 
-/*Movil*/
-@media (min-width: 361px){
-     header div.searchpc,.menu
-    {
+
+    header div.searchpc,.menu
+{
+    display: none;
+}
+main .products-box article{
+    width: 30%;
+}
+
+/*Tableta*/
+@media (min-width: 700px){
+    .left div i{
         display: none;
-    }
-    main .products-box article{
-        width: 30%;
     }
     
-}
-/*Tableta*/
-@media (min-width: 768px){
-    .burger-menu i{
-        display: none;
-    }
     header div.searchpc,.menu
     {
         display: flex;
     }
-    header div.left
-    {
-        color: white;
-    }
+     
     .contenedor-gris{
-        background-color: rgb(216, 213, 213);
+        background-color: #f5efef;
         padding: 20px;
     }
     .contenedor-registro{
-        border: solid 1px black; 
+        border: solid #9B4F4F 6px;
         width: 50%;
         margin: auto;
         background-color: white;
         border-radius: 5px;
     }
-    /* .contenedor-iconos{
-        border: solid 1px black;
-        background-color: white;
-        width: 20%;
-        padding: 10px;
-        border-radius: 5px; }*/
+     
 
     .contenedor-informacion{
         display: flex;

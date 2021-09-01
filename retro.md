@@ -1,5 +1,4 @@
-# Retrospectiva
-
+# Retrospectiva s1
 ## Comenzar a hacer
 - Hay que empezar a buscar la manera en la que se hará el chatbot.
 - Tratar de terminar las tareas asignadas a cada uno de los integrantes del equipo antes de que termine el sprint, para poder checar errores y si falta algo por terminar o mejorar. 
@@ -22,6 +21,19 @@
 - Tratar de que no entremos tarde a las reuniones.
 - Tratar de no posponer las reuniones ya planeadas. 
 
+
+
+## Dejar de hacer
+
+
+# Retrospectiva s2
+## Comenzar a hacer
+
+## Hacer más 
+
+## Continuar haciedo
+
+## Hacer menos
 
 
 ## Dejar de hacer

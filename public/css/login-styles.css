@@ -1,13 +1,9 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    }
-
-
+main{
+    padding-top: 30px;
+}
 form {
     display: flex;
-    margin: 5% 0;
+    padding: 5% 0;
     justify-content: space-between;
     flex-direction: column;
     align-items: stretch;
@@ -18,8 +14,9 @@ form p, form p label{
 }
 
 #email, #contraseña{
-    background-color: white;
+    background-color: rgb(230, 227, 227);
     width: 70%;
+    max-width: 300px;
     border: none;
     padding: 20px;
     border-radius: 5px;
@@ -28,6 +25,7 @@ form p, form p label{
 #submit, #forgot-password{
     background-color: #c57373;
     width: 70%;
+    max-width: 300px;
     border: none;
     padding: 20px;
     border-radius: 5px;
@@ -40,3 +38,48 @@ form p, form p label{
     background-color: #9B4F4F;
     
 }
+
+.instructions{
+    margin-top: 25px;
+}
+
+
+/*Tableta*/
+@media (min-width: 700px){
+    #email, #contraseña{
+
+        max-width: 350px;
+
+    }
+
+    #submit, #forgot-password{
+
+        max-width: 350px;
+
+    }
+    .tipos-de-cliente{
+        display: flex;
+        margin-top: 50px;
+        flex-wrap: wrap;
+        
+    }
+
+    .clientes{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .nuevos-clientes{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 50%;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+}
+

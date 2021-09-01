@@ -1,9 +1,18 @@
-*{
-    margin: 0px;
-    padding: 0px;    
-    box-sizing: border-box;
+.products-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
+main .products-box article{
+    background-color: #9B4F4F;
+    color: white;
+    margin: 10px 5px;
+    padding: 10px 2%;
+    width: 27%;
+}
 
     .products-box{
         display: flex;
@@ -130,3 +139,6 @@
     }
     
  
+main .products-box article img{
+    width: 100%;
+}

@@ -91,7 +91,16 @@ align-self: center;
     
 }
 
+main {
+    padding: 60px 0;
+
+}
+
 @media(min-width: 701px){
+    main {
+        padding: 5% 0;
+    
+    }
     main section {
         display: flex;
         flex-wrap: wrap;
