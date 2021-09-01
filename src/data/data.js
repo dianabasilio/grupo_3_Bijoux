@@ -31,37 +31,37 @@ const data = {
     categorias : [
         {
             categoriaId: 1,
-            categoria: "anillos",
+            categoria: "ANILLOS",
             imagen:'anillo.jpg'
     
     
         },
         {
             categoriaId: 2,
-            categoria: "collares",
+            categoria: "COLLARES",
             imagen:"collar.jpg"
     
         },
         {
             categoriaId: 3,
-            categoria: "pulseras",
+            categoria: "PULSERAS",
             imagen:"pulsera.jpg"
     
         },
         {
             categoriaId: 4,
-            categoria: "piercings",
+            categoria: "PIERCINGS",
             imagen:"piercing.jpg"
         },
         {
             categoriaId: 5,
-            categoria: "aretes",
+            categoria: "ARETES",
             imagen:"arete.jpg" 
     
         },
         {
             categoriaId: 6,
-            categoria: "relojes",
+            categoria: "RELOJES",
             imagen:"reloj.jpg"
         },
         
