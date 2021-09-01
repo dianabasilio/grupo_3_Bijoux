@@ -17,3 +17,8 @@ main .products-box article{
 main .products-box article img{
     width: 100%;
 }
+
+.category p, .category a {
+    color: white;
+    text-decoration: none;
+}
