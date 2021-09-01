@@ -1,4 +1,4 @@
-# Retrospectiva s1
+# Retrospectiva 1
 ## Comenzar a hacer
 - Hay que empezar a buscar la manera en la que se hará el chatbot.
 - Tratar de terminar las tareas asignadas a cada uno de los integrantes del equipo antes de que termine el sprint, para poder checar errores y si falta algo por terminar o mejorar. 
@@ -26,14 +26,14 @@
 ## Dejar de hacer
 
 
-# Retrospectiva s2
+# Retrospectiva 2
 ## Comenzar a hacer
-
+Hacer dailies en vez de weeklies.
 ## Hacer más 
-
+Seguir cumpliendo con la hora acordada para las reuniones.
 ## Continuar haciedo
-
+Continuar hablando en whatsapp, es una manera rápida de ver qué esta pasando.
 ## Hacer menos
-
-
+Dejar menos cosas para los útlimos días del sprint.
 ## Dejar de hacer
+No comunicarnos diario.
