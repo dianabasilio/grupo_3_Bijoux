@@ -147,3 +147,7 @@ main .products-box article img{
     color: white;
     text-decoration: none;
 }
+
+.products-box article:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
