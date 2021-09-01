@@ -60,14 +60,21 @@
         </section>
         <h3>Categorías</h3>
         <div class= "products-box">
-            <article>
-                <img src="/images/index-images/anillo.jpg"  width="100" alt="anillo" class="product_img">
-                <div class="category">
-                    <p>Anillos</p>
-                </div>
-            </article>
 
-            <article >
+
+            <% categorias.forEach(categoria =>{ %>
+                <article>
+                    <img src="/images/index-images/<%= categoria.imagen%>"  width="100" alt="anillo" class="product_img">
+                    <div class="category">
+                        <a href="/producto/categoria/<%= categoria.categoriaId%>">
+                        <p>  <%= categoria.categoria%></p>
+                        </a>
+                    </div>
+                </article>
+              <% }) %>
+          
+
+            <!-- <article >
                 <img src="/images/index-images/collar.jpg"  width="100" alt="collar" class="product_img">
                 <div class="category">
                     <p>Collares</p>
@@ -98,7 +105,7 @@
                 <img src="/images/index-images/reloj.jpg"  width="100" alt="reloj" class="product_img">
                 <p class="category">Relojes</p>
                 
-            </article>
+            </article> -->
 
         </div>
         

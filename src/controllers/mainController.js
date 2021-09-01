@@ -1,7 +1,9 @@
 // Acá nos falta un objeto literal con las acciones para cada ruta
+const data = require('../data/data');
+
 const mainController = {
     index: (req, res)=>{
-        res.render("index");
+        res.render("index", {categorias:data.categorias});
 
     }
     ,
