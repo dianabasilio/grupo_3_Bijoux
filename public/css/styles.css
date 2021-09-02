@@ -28,7 +28,7 @@ header div i{
         display:flex;
         justify-content:space-between;
         
-        padding: 2%;
+        padding: 1%;
         align-items: center; 
       }
       
@@ -46,7 +46,7 @@ header div i{
          
         display: flex;
         justify-content: space-between; 
-        padding: 1%;  
+         
         font-weight: bolder;
     }
      .menu .nav-bar-titles  ul{
@@ -57,12 +57,13 @@ header div i{
         justify-content: space-between; 
          
     }
-    .menu  .nav-bar-titles  ul li a{
+    .menu  .nav-bar-titles  ul  a{
         text-decoration: none;
         display: inline-block;
         padding: 1px 0;
         font-size: 17px;
         justify-content: space-between;   
+        color: white;
     } 
 
 main{
@@ -75,9 +76,6 @@ header{
     color: white;
 }
 
-.menu .nav-bar-titles ul li a{
-    color: white;
-}
 
 
 .contenedor-registro{
@@ -148,37 +146,167 @@ header{
 main .products-box article{
     width: 30%;
 }
-.left .toggler{
-    position: absolute;
-    top: 29px;
-    left: 5px;
-    z-index:2;
-    cursor: pointer;
-    width: 38px;
-    height: 40px;
-    opacity: 0;
-}
 
+
+/*Menu*/
+/*
+
+
+
+
+*/
 @media(min-width: 300px){
     .contenedor-iconos{
         width: 30%;
     }
+    #chkmenu{
+        display: none;
+    }
+    header div.searchpc,.menu
+    {
+        display: flex;
+    }
+    #menuToggle
+        {
+        display: block;
+        position: relative;
+        top: 0%;
+        left: 50px;
+        
+        z-index: 1;
+        
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+        }
+    #menuToggle a
+        {
+        text-decoration: none;
+        color: #232323;
+        
+        transition: color 0.3s ease;
+        }
+    #menuToggle a:hover
+        {
+        color: tomato;
+        }
+
+        #menu
+            {
+            position: absolute;
+            width: 300px;
+            margin: -100px 0 0 -50px;
+            flex-wrap: wrap;
+            padding: 50px;
+            padding-top: 125px;
+            
+            background: #9B4F4F;;
+            list-style-type: none;
+            -webkit-font-smoothing: antialiased;
+            
+            
+            transform-origin: 0% 0%;
+            transform: translate(-100%, 0);
+            
+            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+            min-height: 100vh;
+            
+            }
+        #menu li
+        {
+            padding: 10px 0;
+            font-size: 22px;
+        }
+        #menu a
+        {
+            color: white;
+            width: 100%;
+        }
+        #menuToggle input:checked ~ ul
+        {
+            color: red;
+            transform: none!important;
+        }
+        .menu{
+            margin-top: -2%;
+        }
+        .close{
+           color: white;
+        }
+
+  
 }
 
 /*Tableta*/
-@media (min-width: 700px){
-
-    .burger-menu:active .menu {
-        display: block;
-      }
-    .left div i{
+@media (min-width: 700px){    
+    
+    .left label i,.left div i {
         display: none;
     }
+     
+    
     .menu .nav-bar-titles
     {
         width: 100%;
         padding-right: 10px;
     }
+    #chkmenu{
+        display: none;
+    }
+
+    #menuToggle
+        {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        
+        z-index: 1;
+        
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+        }
+    #menuToggle a
+        {
+        text-decoration: none;
+        color: white;
+        
+        transition: none;
+        }
+    #menuToggle a:hover
+        {
+        color: white;
+        }
+
+        #menu
+{
+  position: relative;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  padding-top: 0;
+  
+  background: transparent;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+ 
+  
+  transform-origin: 0% 0%;
+  transform: none;
+  
+  transition: none;
+  min-height: auto;
+
+}
+#menu li
+{
+  padding: 15px;
+  font-size: 1.2rem;
+}
+
 
 
     .menu , header div.searchpc
@@ -230,6 +358,16 @@ main .products-box article{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
         border: none;
     }
+    .menu{
+        margin-top: 2%;
+    }
+    #menu a
+    {
+        width: auto;
+    }
+    .close{
+        display: none;
+    }
     
 }
 /*PC*/
@@ -247,3 +385,5 @@ main .products-box article{
        
     }
 }
+
+

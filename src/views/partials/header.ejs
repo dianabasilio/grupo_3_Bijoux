@@ -1,16 +1,17 @@
 <header>
     <div class="top-header">
         <div class="left">
-            <input type="checkbox" class="toggler">
-            <div class="burger-menu">
+            
+            
+            <label class="burger-menu" for="chkmenu">
                 <i class="fa fa-bars burger"></i>
-            </div>
+            </label>
             <div class="search">
                 <i class="fas fa-search"></i>
             </div>
         </div>
         <div class="logo"> 
-            <a href="/"> <img src="../../images/logo/logo.jpeg" width= 150 height= 200 alt="Logo de Bijoux"></a>
+            <a href="/"> <img src="/images/logo/logo.jpeg" width= 150 height= 200 alt="Logo de Bijoux"></a>
         </div>  
         <div class="rigth">
             <div class="bag">
@@ -24,23 +25,29 @@
     </div>
      
         
-        <nav class="menu">
-            <div class="nav-bar-titles">
-                <ul>
-                    <li><a href="#">Joyeria</a></li>
-                    <li><a href="#">Relojes</a></li>
-                    <li><a href="#">Descuento</a></li>
-                    <li><a href="#">Colecciones</a></li>
-                    <li><a href="#">Conocenos</a></li>
-                </ul> 
+        <nav class="menu" role="navigation">
+            <div class="nav-bar-titles" id="menuToggle">
+            <input type="checkbox" class="toggler" id="chkmenu"/>             
+                                  
+                <ul id ="menu">
+                    <li class="close">  
+                        <label  for="chkmenu">
+                            <i class="fas fa-times"></i>
+                        </label> 
+                    </li> 
+                    <a href="/products/categoria/1/"> <li>Anillos</li></a>
+                    <a href="/products/categoria/6/"> <li>Relojes</li> </a>
+                    <a href="#"> <li>Descuento</li> </a>
+                    <a href="#"> <li>Colecciones</li></a>
+                    <a href="#"><li>Conocenos</li></a>
+                </ul>
 
-            </div>
-               
+            </div>               
             <div class="searchpc">
                 <i class="fas fa-search"></i>
             </div>       
         </nav>
      
-    
+         
  
 </header>
