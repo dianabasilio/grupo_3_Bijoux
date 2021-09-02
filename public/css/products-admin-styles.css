@@ -1,0 +1,99 @@
+main{
+    padding-top: 3rem;
+}
+h1{
+    padding-bottom: 1rem;
+}
+.table{    
+    width: 85%;
+    margin: auto;
+    padding: 1.25rem;
+    outline-color: transparent;
+    outline-style: none;
+    border-radius: 0;
+    border-top: 1px solid #eaeded;
+    box-shadow: 0 1px 1px 0 rgb(0 28 36 / 50%);
+}
+
+.table-header{
+    background: #9B4F4F;
+    font-weight: 400;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center;
+        border: 0;
+        outline-color: transparent;
+    outline-style: none;
+    color: white;
+    box-shadow: 0px 5px 20px rgb(0 0 0 / 10%);
+     
+}
+ .productoid {
+    width: 10%;
+ } 
+ .producto{
+    width: 35%;
+ }   
+ .descripcion{
+    width: 40%;
+ }
+ .precio{
+    width: 10%;
+ }
+.editar{
+    width: 5%;
+    
+}
+.table-body div a {
+   text-decoration: none    ;
+   color: #9B4F4F; ;
+    
+}
+
+.table-row
+{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center;
+    
+    color: black;
+    border-bottom: 1px solid #e0e0e0;
+   
+
+}
+.table-column {    
+    text-align: justify;
+}
+ 
+.table-footer{
+    background: #9B4F4F;
+    color: white;
+    text-align: left;
+    
+     
+}
+.form-nuevo-products{
+   
+   
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;   
+    margin: auto;
+    padding-bottom: 1rem;
+    min-height: 38px;
+
+}
+@media(min-width: 300px){
+    .descripcion , .precio{
+        display :none;
+    }
+}
+@media (min-width: 700px){
+    .descripcion , .precio{
+        display :flex;
+    }
+}
