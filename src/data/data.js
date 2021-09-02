@@ -6,35 +6,35 @@ const data = {
         categoriaId: 1,
         nombreProducto: "Anillo boda 1",
         descripcion: "Anillo plateado 11k...",
-        imagen: "anillo.jpg",
+        imagen: "/anillos/anillo-plateado1.1.jpg",
         precio: 1400,
-        imagenesdetail1: 'anillo1.jpg',
-        imagenesdetail2: 'anillo2.jpg',
-        imagenesdetail3: 'anillo3.jpg',
+        imagenesdetail1: '/anillos/anillo-plateado1.1.jpg',
+        imagenesdetail2: '/anillos/anillo-plateado1.2.jpg',
+        imagenesdetail3: '/anillos/anillo-plateado1.3.jpg',
 
     },
     {
         productoid: 2,
         categoriaId: 1,
-        nombreProducto: "Anillo boda 2",
+        nombreProducto: "Anillo Granos Trigo",
         descripcion: "Anillo plateado 11k...",
-        imagen: "anillo.jpg",
-        precio: 1400,
-        imagenesdetail1: '',
-        imagenesdetail2: '',
-        imagenesdetail3: '',
+        imagen: "/anillos/anillo-granos-trigo2.1.jpg",
+        precio: 1430,
+        imagenesdetail1: '/anillos/anillo-granos-trigo2.1.jpg',
+        imagenesdetail2: '/anillos/anillo-granos-trigo2.2.jpg',
+        imagenesdetail3: '/anillos/anillo-granos-trigo2.3.jpg',
 
     },
     {
         productoid: 3,
         categoriaId: 1,
-        nombreProducto: "Anillo boda 3",
-        descripcion: "Anillo plateado 11k...",
-        imagen: "anillo.jpg",
-        precio: 1400,
-        imagenesdetail1: '',
-        imagenesdetail2: '',
-        imagenesdetail3: '',
+        nombreProducto: "Anillo Circulo",
+        descripcion: "Anillo plateado circular 11k...",
+        imagen: "/anillos/anillo-circulo3.1.jpg",
+        precio: 1500,
+        imagenesdetail1: '/anillos/anillo-circulo3.1.jpg',
+        imagenesdetail2: '/anillos/anillo-circulo3.2.jpg',
+        imagenesdetail3: '/anillos/anillo-circulo3.3.jpg',
 
     },
     {
@@ -42,11 +42,11 @@ const data = {
         categoriaId: 1,
         nombreProducto: "Anillo boda 4",
         descripcion: "Anillo plateado 11k...",
-        imagen: "anillo.jpg",
-        precio: 1400,
-        imagenesdetail1: '',
-        imagenesdetail2: '',
-        imagenesdetail3: '',
+        imagen: "/anillos/anillo-rombo4.1.jpg",
+        precio: 1600,
+        imagenesdetail1: '/anillos/anillo-rombo4.1.jpg',
+        imagenesdetail2: '/anillos/anillo-rombo4.2.jpg',
+        imagenesdetail3: '/anillos/anillo-rombo4.3.jpg',
 
     },
     {
@@ -251,43 +251,91 @@ const data = {
         imagenesdetail2: '',
         imagenesdetail3: '',
 
+    },
+    {
+        productoid: 22,
+        categoriaId: 1,
+        nombreProducto: "Anillo Dorado Diamante",
+        descripcion: "Anillo Dorado  11k...",
+        imagen: "/anillos/anillo-dorado-diamante5.1.jpg",
+        precio: 1900,
+        imagenesdetail1: '/anillos/anillo-dorado-diamante5.1.jpg',
+        imagenesdetail2: '/anillos/anillo-dorado-diamante5.2.jpg',
+        imagenesdetail3: '/anillos/anillo-dorado-diamante5.3.jpg',
+
+    },
+    {
+        productoid: 23,
+        categoriaId: 1,
+        nombreProducto: "Anillo Dorado Pico",
+        descripcion: "Anillo Dorado  11k...",
+        imagen: "/anillos/anillo-dorado-pico6.1.jpg",
+        precio: 1300,
+        imagenesdetail1: '/anillos/anillo-dorado-pico6.1.jpg',
+        imagenesdetail2: '/anillos/anillo-dorado-pico6.2.jpg',
+        imagenesdetail3: '/anillos/anillo-dorado-pico6.3.jpg',
+
+    },
+    {
+        productoid: 24,
+        categoriaId: 1,
+        nombreProducto: "Anillo Azul",
+        descripcion: "Anillo Azul 11k...",
+        imagen: "/anillos/anillo-azul7.1.jpg",
+        precio: 1200,
+        imagenesdetail1: '/anillos/anillo-azul7.1.jpg',
+        imagenesdetail2: '/anillos/anillo-azul7.2.jpg',
+        imagenesdetail3: '/anillos/anillo-azul7.3.jpg',
+
+    },
+    {
+        productoid: 25,
+        categoriaId: 1,
+        nombreProducto: "Anillo Rosa",
+        descripcion: "Anillo Rosa 11k...",
+        imagen: "/anillos/anillo-rosa8.1.jpg",
+        precio: 1400,
+        imagenesdetail1: '/anillos/anillo-rosa8.1.jpg',
+        imagenesdetail2: '/anillos/anillo-rosa8.2.jpg',
+        imagenesdetail3: '/anillos/anillo-rosa8.3.jpg',
+
     }
     ], 
     categorias : [
         {
             categoriaId: 1,
             categoria: "ANILLOS",
-            imagen:'anillo.jpg'
+            imagen:'/productos/anillos/anillo-rombo4.1.jpg'
     
     
         },
         {
             categoriaId: 2,
             categoria: "COLLARES",
-            imagen:"collar.jpg"
+            imagen:"/index-images/collar.jpg"
     
         },
         {
             categoriaId: 3,
             categoria: "PULSERAS",
-            imagen:"pulsera.jpg"
+            imagen:"/index-images/pulsera.jpg"
     
         },
         {
             categoriaId: 4,
             categoria: "PIERCINGS",
-            imagen:"piercing.jpg"
+            imagen:"/index-images/piercing.jpg"
         },
         {
             categoriaId: 5,
             categoria: "ARETES",
-            imagen:"arete.jpg" 
+            imagen:"/index-images/arete.jpg" 
     
         },
         {
             categoriaId: 6,
             categoria: "RELOJES",
-            imagen:"reloj.jpg"
+            imagen:"/index-images/reloj.jpg"
         },
         
     
