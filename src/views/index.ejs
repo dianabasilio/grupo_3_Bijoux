@@ -33,7 +33,7 @@
     
                 <% categorias.forEach(categoria =>{ %>
                     <article>
-                        <img src="/images/index-images/<%= categoria.imagen%>"  width="100" alt="anillo" class="product_img">
+                        <img src="/images/<%= categoria.imagen%>"  width="100" alt="anillo" class="product_img">
                         <div class="category">
                             <a href="/products/categoria/<%= categoria.categoriaId%>">
                             <p>  <%= categoria.categoria%></p>
