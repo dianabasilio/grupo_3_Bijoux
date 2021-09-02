@@ -28,12 +28,16 @@
 
 # Retrospectiva 2
 ## Comenzar a hacer
-Hacer dailies en vez de weeklies.
+-Hacer dailys en vez de weeklies.
+-Inmediatamente después de que nos asignan las tareas del próximo sprint hacer una reunión para organizarnos y ver que es lo que se tiene que hacer.
 ## Hacer más 
-Seguir cumpliendo con la hora acordada para las reuniones.
+-Seguir cumpliendo con la hora acordada para las reuniones.
+-Más reuniones a la semana.
 ## Continuar haciedo
-Continuar hablando en whatsapp, es una manera rápida de ver qué esta pasando.
+-Continuar hablando en whatsapp, es una manera rápida de ver qué esta pasando.
+-Entregar todo lo que nos piden en el sprint en tiempo y forma.
+-Seguirnos apoyando como equipo y ayudándonos en las dudas que tenemos.
 ## Hacer menos
-Dejar menos cosas para los útlimos días del sprint.
+-Dejar menos cosas para los últimos días del sprint.
 ## Dejar de hacer
-No comunicarnos diario.
+-No comunicarnos diario.
