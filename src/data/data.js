@@ -4,7 +4,7 @@ const data = {
     {
         productoid: 1,
         categoriaId: 1,
-        nombreProducto: "Anillo boda 1",
+        nombreProducto: "Anillo Boda Plateado",
         descripcion: "Anillo plateado 11k...",
         imagen: "/anillos/anillo-plateado1.1.jpg",
         precio: 1400,
@@ -40,8 +40,8 @@ const data = {
     {
         productoid: 4,
         categoriaId: 1,
-        nombreProducto: "Anillo boda 4",
-        descripcion: "Anillo plateado 11k...",
+        nombreProducto: "Anillo boda Rombo",
+        descripcion: "Anillo plateado 14k...",
         imagen: "/anillos/anillo-rombo4.1.jpg",
         precio: 1600,
         imagenesdetail1: '/anillos/anillo-rombo4.1.jpg',
