@@ -162,9 +162,13 @@ main .products-box article{
     #chkmenu{
         display: none;
     }
-    header div.searchpc,.menu
+    .menu
     {
         display: flex;
+    }
+    header div.searchpc
+    {
+        display: none;
     }
     #menuToggle
         {
