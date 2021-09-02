@@ -49,26 +49,20 @@ header div i{
         padding: 1%;  
         font-weight: bolder;
     }
-    .menu div{
-       
-       width: 10%;
-       justify-content: space-between;
-    }
-     .menu   ul{
+     .menu .nav-bar-titles  ul{
         list-style-type: none;
-        margin: 0;
-        padding: 0;   
+        margin: 0;  
         display: flex;
-        justify-content: space-between;   
-        width: 80%;
+        align-items: center;
+        justify-content: space-between; 
          
     }
-    .menu    ul a{
+    .menu  .nav-bar-titles  ul li a{
         text-decoration: none;
-        color: black;
         display: inline-block;
         padding: 1px 0;
         font-size: 17px;
+        justify-content: space-between;   
     } 
 
 main{
@@ -81,7 +75,7 @@ header{
     color: white;
 }
 
-.menu ul li a{
+.menu .nav-bar-titles ul li a{
     color: white;
 }
 
@@ -155,16 +149,37 @@ header{
 main .products-box article{
     width: 30%;
 }
+.left .toggler{
+    position: absolute;
+    top: 29px;
+    left: 5px;
+    z-index:2;
+    cursor: pointer;
+    width: 38px;
+    height: 40px;
+    opacity: 0;
+}
 
 /*Tableta*/
 @media (min-width: 700px){
+
+    .burger-menu:active .menu {
+        display: block;
+      }
     .left div i{
         display: none;
     }
-    
-    header div.searchpc,.menu
+    .menu .nav-bar-titles
+    {
+        width: 100%;
+        padding-right: 10px;
+    }
+
+
+    .menu , header div.searchpc
     {
         display: flex;
+        justify-content: space-between;
     }
      
     .contenedor-gris{
