@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/index-styles.css">
+    <script src="https://kit.fontawesome.com/f8b57e23e1.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <h1>Administrador de Productos </h1>
+        <div class="table">
+            <div class="table-header"> 
+                <form action="/products/nuevo">
+                    <input type="submit" value="Nuevo producto"> 
+                </form> 
+            </div>
+            <div class="table-body">
+                <% productos.forEach(producto =>{ %>
+                    <div class="row" >
+                    <div class="column productoid"> <p><%= producto.productoid  %></p>  </div>
+                    <div class="column producto"><p><%= producto.producto  %></p> </div>
+                    <div class="column descripcion"><p><%= producto.descripcion  %></p></div>
+                    <div class="column precio"><p><%= producto.precio  %></p></div>
+                    <div class="column editar"> <a href="/products/editar/<%= producto.productoid %>"><i class="fas fa-eye"></i></a> </div>
+                    </div>
+                <% }) %>
+
+            </div>
+            <div class="table-footer">
+                <p>Numero de productos <%=productos.length  %> </p>
+            </div>
+
+        </div>
+    </main>
+
+    <%- include('../partials/footer') %>
+
+</body>

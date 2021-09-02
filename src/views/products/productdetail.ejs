@@ -21,22 +21,22 @@
             <div class="photos">
                 <div class = "extra-photos">
                     <article>
-                        <img src="/images/product-detail/anillo1.jpg"  alt="piercing" class="product_img">
+                        <img src="/images/product-detail/<%= producto.imagenesdetail1%>"  alt="imagen 1" class="product_img">
                     </article>
     
                     <article>
-                        <img src="/images/product-detail/anillo2.jpg"   alt="anillo" class="product_img">
+                        <img src="/images/product-detail/<%= producto.imagenesdetail2%>"   alt="imagen 2" class="product_img">
                     </article>
     
                     <article>
-                        <img src="/images/product-detail/anillo3.jpg"   alt="collar" class="product_img">
+                        <img src="/images/product-detail/<%= producto.imagenesdetail3%>"   alt="imagen 3" class="product_img">
                     </article>
                          
                 </div>
                 <div class="main-photo">
     
                     <article>
-                        <img src="/images/product-detail/anillo1.jpg"  alt="piercing" class="product_img">
+                        <img src="/images/productos/<%= producto.imagen%>"  alt="piercing" class="product_img">
                     </article>
                 
                 </div>
@@ -44,13 +44,13 @@
             </div>
             <di class="text">
                 <div class= "info">
-                    <h4>Anillo</h4>
-                    <p class="price">MX$1400</p>
+                    <h4><%= producto.nombreProducto%></h4>
+                    <p class="price">MX$<%= producto.precio%></p>
         
                 </div>
         
                 <div class= "extra-info">
-                    <p class="description">Bañado en oro rosa con diamantes</p>         
+                    <p class="description"><%= producto.descripcion%></p>         
                     <li><a>Garantía un año</a></li>
                     <H5>Talla:</h5>
                     <select name="color">

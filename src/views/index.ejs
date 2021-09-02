@@ -25,15 +25,17 @@
             <div class= "all-categories">
                 <h3>CATEGORÍAS</h3>
                 <i class="fas fa-gem"></i>
+                <a href="/products/categoria/">
+                <p>Ver todo</p>
+                </a>
             </div>
-            <div class= "products-box">
-    
+            <div class= "products-box">    
     
                 <% categorias.forEach(categoria =>{ %>
                     <article>
                         <img src="/images/index-images/<%= categoria.imagen%>"  width="100" alt="anillo" class="product_img">
                         <div class="category">
-                            <a href="/producto/categoria/<%= categoria.categoriaId%>">
+                            <a href="/products/categoria/<%= categoria.categoriaId%>">
                             <p>  <%= categoria.categoria%></p>
                             </a>
                         </div>

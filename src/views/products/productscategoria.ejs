@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/index-styles.css">
+    <script src="https://kit.fontawesome.com/f8b57e23e1.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <h1>Productos</h1>
+
+
+        <section class="categories-and-boxes">
+            <div class= "products-box">
+                <% productos.forEach(producto =>{ %>
+                    <article>
+                        <img src="/images/productos/<%=producto.imagen%>"  width="100" alt="producto" class="product_img">
+                        <div class="category">
+                            <a href="/products/productdetail/<%= producto.productoid%>">
+                            <p>  <%= producto.nombreProducto%></p>
+                            <p>  $ <%= producto.precio%></p>
+                            </a>
+                        </div>
+                    </article>
+                  <% }) %>
+            </div>
+        </section>
+    </main>
+    <%- include('../partials/footer') %>
+     
+</body>
