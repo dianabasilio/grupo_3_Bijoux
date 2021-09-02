@@ -35,57 +35,7 @@ main .products-box article{
         width: 100%;
     }
     
-    .contenedor-registro{
-        display: flex;
-        padding: 20px;
-        text-align: center;
-        margin-top: 10px;
 
-    }
-
-    .caja-registro{
-        width: 100%;
-        padding: 5px;
-        margin-top: 10px;
-        border-radius: 5px solid white;
-    }
-    .registrate-newsletter{
-        text-align: justify;
-        font-size: 13px;
-        margin-top: 10px;
-    }
-    .boton{
-        width: 100%;
-        padding: 5px;
-        margin-top: 10px;
-        border-radius: 5px solid white;
-    }
-    .contenedor-iconos{
-        display: flex;
-        justify-content: space-around;
-        margin: auto;
-        margin-top: 20px;
-
-        border: solid 1px black;
-        background-color: white;
-        width: 20%;
-        padding: 10px;
-        border-radius: 5px;
-    }
-    .contenedor-informacion{
-        display: none;
-    }
-    .contenedor-informacion-version-mobile ul{
-        padding: 30px;
-    }
-    .contenedor-informacion-version-mobile li{
-        margin-bottom: 8px;
-    }
-    .contenedor-informacion-version-mobile a{
-        text-decoration: none;
-        color: black;
-        font-weight: bold;
-    }
     .all-categories{
         color:#9B4F4F;
     }
@@ -118,9 +68,6 @@ main .products-box article{
         .icono{
             margin: 7px;
         }
-        .contenedor-iconos{
-            width: 30%;
-        }
     
     }
 
@@ -129,29 +76,7 @@ main .products-box article{
             font-size: 40px;
         
         }
-        .contenedor-gris{
-            background-color: rgb(216, 213, 213);
-            padding: 20px;
-        }
-        .contenedor-registro{
-            border: solid 1px black; 
-            width: 50%;
-            margin: auto;
-            background-color: white;
-            border-radius: 5px;
-        }
-        /* .contenedor-iconos{
-            border: solid 1px black;
-            background-color: white;
-            width: 20%;
-            padding: 10px;
-            border-radius: 5px; }*/
-
-        .contenedor-informacion{
-            display: flex;
-            justify-content: space-between;
-            padding: 30px;
-        }
+ 
         .categories-and-boxes{
             display: flex;
             justify-content: space-between;
@@ -168,17 +93,6 @@ main .products-box article{
         }
         .products-box{
             width: 70%;
-        }
-        .contenedor-informacion li{
-            margin-bottom: 8px;
-        }
-        .contenedor-informacion a{
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-        }
-        .contenedor-informacion-version-mobile{
-            display: none;
         }
 
     }

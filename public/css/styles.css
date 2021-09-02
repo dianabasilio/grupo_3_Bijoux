@@ -85,7 +85,7 @@ header{
     padding: 20px;
     text-align: center;
     padding-top: 10px;
-
+    margin-top: 10px;
 }
 
 .caja-registro{
@@ -109,10 +109,9 @@ header{
     display: flex;
     justify-content: space-around;
     margin: auto;
-    margin-top: 20px;
-
-    border: solid #9B4F4F 1px;
-    background-color: white;
+    /* margin-top: 20px; */
+    border: solid 1px rgb(100 100 100 / 40%);
+    background-color: rgb(255, 255, 255);
     width: 20%;
     padding: 10px;
     border-radius: 5px;
@@ -160,6 +159,12 @@ main .products-box article{
     opacity: 0;
 }
 
+@media(min-width: 300px){
+    .contenedor-iconos{
+        width: 30%;
+    }
+}
+
 /*Tableta*/
 @media (min-width: 700px){
 
@@ -187,14 +192,15 @@ main .products-box article{
         padding: 20px;
     }
     .contenedor-registro{
-        border: solid #9B4F4F 6px;
-        width: 50%;
+        /* border: solid 1px black;  */
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 70%;
         margin: auto;
         background-color: white;
         border-radius: 5px;
+
     }
      
-
     .contenedor-informacion{
         display: flex;
         justify-content: space-between;
@@ -211,6 +217,20 @@ main .products-box article{
     .contenedor-informacion-version-mobile{
         display: none;
     }
+    .contenedor-gris{
+        background-image: url("/images/index-images/elevation_footer.jpeg");
+    }
+    .contenedor-registro{
+        background-color: rgb(255 255 255 / 25%);
+        
+    }
+    .contenedor-iconos{
+        margin-top: 20px;
+        background-color: rgba(255, 255, 255, 0.253);
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        border: none;
+    }
+    
 }
 /*PC*/
 @media (min-width: 960px){
@@ -218,4 +238,12 @@ main .products-box article{
       padding-left: 7%;
       padding-right: 7%;
    }
+    /* .contenedor-gris{
+    background-image: url("/images/index-images/elevation_footer.jpeg");
+} */
+    .contenedor-registro{
+        /* background-color: rgb(255 255 255 / 25%); */
+        width: 50%;
+       
+    }
 }
