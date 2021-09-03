@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/index-styles.css">
+    <link rel="stylesheet" href="/css/product-create.css">
     <script src="https://kit.fontawesome.com/f8b57e23e1.js" crossorigin="anonymous"></script>
 
 </head>
@@ -16,26 +17,36 @@
      <h1> <%= title %>  Producto </h1>
     <section>
         <form action="/" method="GET" class="form-create-update">
-            <input type="text" name="name" placeholder="Nombre del producto" value="<%=producto.productoid==0?'': producto.nombreProducto%>">
-            <input type="text" name="descripcion" placeholder="Descripcion del producto" value ="<%=producto.productoid==0?'': producto.descripcion  %>">
-            <input type="text" name="precio" placeholder="precio del producto" value="<%=producto.productoid==0?'': producto.precio  %>">
+            <div class="info-new-product">
+                <input type="text" name="name" placeholder="Nombre del producto" value="<%=producto.productoid==0?'': producto.nombreProducto%>">
+                <input type="text" name="descripcion" placeholder="Descripcion del producto" value ="<%=producto.productoid==0?'': producto.descripcion  %>">
+                <input type="text" name="precio" placeholder="Precio del producto" value="<%=producto.productoid==0?'': producto.precio  %>">
+            </div>
             <label for="categorias"><b>Categoria:   </b></label>
             <select name="categorias"  id="categorias">
                 <% categorias.forEach(categoria =>{ %>
-                    <option value="<%=categoria.categoriaId %>"> <%=categoria.categoria %> </option>
+                    <option id= "value"value="<%=categoria.categoriaId %>"> <%=categoria.categoria %> </option>
                 <% }) %>  
             </select>
-            <h4>Foto principal</h4>
-            <input type="file" name="foto-main">
-            <h4>Foto detalle 1</h4>
-            <input type="file" name="foto-detalle-1">
-            <h4>Foto detalle 2</h4>
-            <input type="file" name="foto-detalle-2">
-            <h4>Foto detalle 3</h4>
-            <input type="file" name="foto-detalle-3">
+            <div class="fotos">
+                <h4>Foto principal</h4>
+                <input type="file" class = "upload-file1" name="foto-main" accept=".jpg" multiple>
+                <span class="btn btn-primary">Escoger archivo</span>
+                <h4>Foto detalle 1</h4>
+                <input type="file" class = "upload-file2" name="foto-detalle-1" accept=".jpg" multiple>
+                <span class="btn btn-primary">Escoger archivo</span>
+                <h4>Foto detalle 2</h4>
+                <input type="file" class = "upload-file3" name="foto-detalle-2" accept=".jpg" multiple>
+                <span class="btn btn-primary">Escoger archivo</span>
+                <h4>Foto detalle 3</h4>
+                <input type="file" class = "upload-file4" name="foto-detalle-3" accept=".jpg" multiple>
+                <span class="btn btn-primary">Escoger archivo</span>
 
-            <input type="submit" value="Enviar" class="button-register">
-            <input type="reset" value="Borrar" class="button-register">
+            </div>
+
+            <button type="submit" id = "submit" value="Enviar">Enviar</button>
+            <button type="reset" id = "submit" value="Borrar">Borrar</button>
+
         </form>
     </section>
 </main>
