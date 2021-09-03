@@ -2,17 +2,28 @@
 const data = require('../data/data');
 
 const productoController = {
+    productos:(req,res)=>{
+        productos = data.productos
+        res.render("products/products", {productos:productos});
+    }
+    ,
     categoria: (req, res)=>{
 
         let productos ;
-       
-        if (req.params.categoriaid === undefined)
-            productos = data.productos
-        else{            
-            productos = data.productos.filter(p => p.categoriaId == req.params.categoriaid );            
+        let categoria =  "PRODUCTOS" 
+        categoriaid =req.params.categoriaid; 
+        
+        if (categoriaid ==0){   
+            categoria = "JOYERIA";
+            productos = data.productos.filter(p => p.categoriaId != 6 );
+        }
+        else{
+            let c = data.categorias.find( c =>  c.categoriaId == categoriaid );
+            categoria = c.categoria  
+            productos = data.productos.filter(p => p.categoriaId == req.params.categoriaid );
         }
          
-        res.render("products/productscategoria", {productos:productos});
+        res.render("products/productscategoria", {productos:productos, categoria:categoria});
 
     }, 
     productodetail : (req,res)=>{

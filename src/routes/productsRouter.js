@@ -4,6 +4,7 @@ const router=express.Router();
 // Aća nos falta traer el controller
 const productsController = require('../controllers/productsControllers');
 
+router.get('/', productsController.productos);
 router.get('/categoria/:categoriaid?/', productsController.categoria);
 router.get('/productdetail/:productoid/', productsController.productodetail);
 router.get('/admin/', productsController.productoadmin);
