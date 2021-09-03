@@ -41,14 +41,17 @@ select{
 }
 
 
-
+.upload-file{
+    opacity: 0;
+    overflow: hidden;
+    z-index: 2;
+}
 .btn-primary{
-    height: 150px;
-    left: -75px;
+    height: 250px;
     position: relative;
     top: -31px;
     background-color: rgb(214, 213, 213);
-    width:109px;
+    width:320px;
     height: 20px;
     border: none;
     padding: 2px;
