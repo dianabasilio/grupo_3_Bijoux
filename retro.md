@@ -41,3 +41,22 @@
 -Dejar menos cosas para los últimos días del sprint.
 ## Dejar de hacer
 -No comunicarnos diario.
+
+
+# Retrospectiva 3
+## Comenzar a hacer
+-Hacer los dailys por lo menos 2 veces por semana para plantear nuestros impedimentos
+-Retroalimentarnos en cada reunion 
+-hacer Rama del sprint
+## Hacer más
+Participar con ideas
+Organizarnos y ponernos de acuerdo
+
+## Continuar haciendo
+Compremitiendos con nuestras tareas 
+Participar cuando se requiere
+
+## Hacer menos 
+Dejar todo para lo ultimo
+
+## Dejar de hacer
