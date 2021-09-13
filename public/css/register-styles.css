@@ -11,7 +11,7 @@ main, main section{
     
 }
  
- #nombre, #email
+ #nombre, #email, #apellido, #contrasena, #confirmaContrasena
 {
     width: 100%;
     border-radius: 0.5rem;

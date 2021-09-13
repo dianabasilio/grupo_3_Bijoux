@@ -16,6 +16,8 @@ router.get('/login', mainController.login);
 router.get('/productdetail', mainController.productdetail);
 //GET register page
 router.get('/register', mainController.register);
+//POST register page
+router.post('/register', mainController.create);
 
 
 

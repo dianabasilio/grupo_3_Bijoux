@@ -19,13 +19,13 @@
                 Crear una cuenta tiene muchos beneficios: Pago más rápido, guardar más de una dirección, seguimiento de pedidos y mucho más.
             </p>
             
-            <form class="register" action="/" method="GET">
+            <form class="register" action="/register" method="POST">
                 <div >
                 <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-                <input type="text" name="email" id="email" placeholder="Apellido">
+                <input type="text" name="apellido" id="apellido" placeholder="Apellido">
                 <input type="email" name="email" id="email" placeholder="Email">
-                <input type="password" name="email" id="email" placeholder="Contraseña">
-                <input type="password" name="email" id="email" placeholder="repetir contraseña">
+                <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña">
+                <input type="password" name="confirmaContrasena" id="confirmaContrasena" placeholder="repetir contraseña">
                 <input type="submit" id = "submit" value="Crear cuenta">
                 <div class="privacidad">
                     <div>
@@ -39,10 +39,10 @@
                 </div>                 
                 </div>      
               
-            </div>
-            <div class="logo-registro">
-                <img src="/images/logo-bijoux.svg" alt="Logo Bijoux">
-            </div>
+                </div>
+                <div class="logo-registro">
+                    <img src="/images/logo-bijoux.svg" alt="Logo Bijoux">
+                </div>
             </form>
         </section>
     </main>   
