@@ -83,7 +83,7 @@ const productoController = {
 
        }, 
        productonuevo : (req,res)=>{
-        res.render("products/productcreate", {title:"Nuevo", categorias:dataProductsCategorie, producto:{productoid:0}});
+        res.render("products/productcreate", {title:"Nuevo", categorias:dataProductsCategories, producto:{productoid:0}});
 
        }
 
