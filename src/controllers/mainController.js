@@ -1,11 +1,14 @@
 // Acá nos falta un objeto literal con las acciones para cada ruta
-const data = require('../data/data');
+
 let fs = require('fs');
 const path = require('path');
 
+const data = require('../data/data-products.json');
+const dataProductsCategories = require('../data/data-categories-products.json');
+
 const mainController = {
     index: (req, res)=>{
-        res.render("index", {categorias:data.categorias});
+        res.render("index", {categorias:dataProductsCategories});
 
     }
     ,

@@ -1,0 +1,39 @@
+[
+    {
+        "categoriaId": 1,
+        "categoria": "ANILLOS",
+        "imagen":"/productos/anillos/anillo-rombo4.1.jpg"
+
+
+    },
+    {
+        "categoriaId": 2,
+        "categoria": "COLLARES",
+        "imagen":"/productos/collares/1.1Collar.jpg"
+
+    },
+    {
+        "categoriaId": 3,
+        "categoria": "PULSERAS",
+        "imagen":"/index-images/pulsera.jpg"
+
+    },
+    {
+        "categoriaId": 4,
+        "categoria": "PIERCINGS",
+        "imagen":"/index-images/piercing.jpg"
+    },
+    {
+        "categoriaId": 5,
+        "categoria": "ARETES",
+        "imagen":"/productos/aretes/2.1Arete.jpg" 
+
+    },
+    {
+        "categoriaId": 6,
+        "categoria": "RELOJES",
+        "imagen":"/index-images/reloj.jpg"
+    }
+
+
+] 
