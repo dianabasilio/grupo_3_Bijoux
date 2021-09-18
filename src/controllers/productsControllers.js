@@ -1,5 +1,9 @@
 // Acá nos falta un objeto literal con las acciones para cada ruta
-const dataProducts = require('../data/data-products.json');
+const fs = require('fs');
+const path = require('path');
+
+const dataProducts = path.join(__dirname, '../data/data-products.json');
+const products = JSON.parse(fs.readFileSync(dataProducts, 'utf-8'));
 const dataProductsCategories = require('../data/data-categories-products.json');
 
 const productoController = {
@@ -9,38 +13,6 @@ const productoController = {
     }
     ,
     store: (req, res) => {
-		let image
-		//req.file marca undefined si no se lleno algún dato, image por ejemplo, o name
-		//console.log(req.file); 
-		//console.log(...req.body); 
-
-
-		//Detecta cuando sí se subió la imagen
-		//req.file es undefined si le faltoo poner la imagen o algún otro como nombre
-		if (req.file){
-
-			image = req.file[0].filename
-		} else{
-			//Se le pone la imagen default si falta
-			image = 'default-image.png'
-		}
-
-		//Crea el objeto literal directamente tomando los valores que se le metieron con req.body
-		let newProduct = {
-			...req.body,
-			//Toma la variable image que se definió arriba
-			image: image,
-			//Le agrega un id siguinete, tomando el último id y sumandole a este 1
-			id: products[products.length - 1].id + 1
-		};
-
-		//le damos push para agregar el úlitmo producto que acabamos de agregar
-		products.push(newProduct);
-
-		//Aquí actualiza
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-		//La vista a la que llevará cuando se mande
-		res.redirect('/products');
 
 	},
     categoria: (req, res)=>{
@@ -51,19 +23,20 @@ const productoController = {
         
         if (categoriaid ==0){   
             categoria = "JOYERIA";
-            productos = dataProducts.filter(p => p.categoriaId != 6 );
+            productos = products.filter(p => p.categoriaId != 6 );
         }
         else{
             let c = dataProductsCategories.find( c =>  c.categoriaId == categoriaid );
+            //título de categoría
             categoria = c.categoria  
-            productos = dataProducts.filter(p => p.categoriaId == req.params.categoriaid );
+            productos = products.filter(p => p.categoriaId == req.params.categoriaid );
         }
          
         res.render("products/productscategoria", {productos:productos, categoria:categoria});
 
     }, 
     productodetail : (req,res)=>{
-     let    producto = dataProducts.find(p => p.productoid == req.params.productoid );            
+     let    producto = products.find(p => p.productoid == req.params.productoid );            
          
          
         res.render("products/productdetail", {producto:producto});
@@ -71,21 +44,52 @@ const productoController = {
     },
 
     productoadmin : (req,res)=>{
-        let    productos = dataProducts;            
+        let    productos = products;            
             
             
            res.render("products/productsadmin", {productos:productos});
    
        },
-       productoeditar : (req,res)=>{
-        let    producto = dataProducts.find(p => p.productoid == req.params.productoid );
-        res.render("products/productcreate", {title:"Editar", categorias:data.categorias, producto:producto});
+    edit: (req,res)=>{
+    let    productToEdit= products.find(p => p.productoid == req.params.productoid );
+    res.render("products/productedit", {title:"Editar", categorias:dataProductsCategories, productToEdit:productToEdit});
+    }, 
+    productonuevo : (req,res)=>{
+    res.render("products/productcreate", {title:"Nuevo", categorias:dataProductsCategories, producto:{productoid:0}});
 
-       }, 
-       productonuevo : (req,res)=>{
-        res.render("products/productcreate", {title:"Nuevo", categorias:dataProductsCategories, producto:{productoid:0}});
+    },
+    update: (req,res)=>{
+        let productoid = req.params.productoid;
+		let productToEdit = products.find(product => product.productoid == productoid)
+		let imagen
+        let imagenes=[]
 
-       }
+		if(req.files){
+			imagen = req.files[0].filename
+            imagenes[0]= req.files[1].filename
+            imagenes[1]= req.files[2].filename
+            imagenes[2]= req.files[3].filename
+		} else {
+			imagen = productToEdit.imagen
+		}
+
+		productToEdit = {
+			productoid: productToEdit.productoid,
+			...req.body,
+			imagen: imagen,
+            imagenes: imagenes,
+		};
+		
+		let newProducts = products.map(product => {
+			if (product.productoid == productToEdit.productoid) {
+				return product = {...productToEdit};
+			}
+			return product;
+		})
+
+		fs.writeFileSync(dataProducts, JSON.stringify(newProducts, null, 2));
+		res.redirect('/products');
+        },
 
    
 };

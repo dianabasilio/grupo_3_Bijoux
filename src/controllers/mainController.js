@@ -3,7 +3,7 @@
 let fs = require('fs');
 const path = require('path');
 
-const data = require('../data/data-products.json');
+const dataProducts = require('../data/data-products.json');
 const dataProductsCategories = require('../data/data-categories-products.json');
 
 const mainController = {
