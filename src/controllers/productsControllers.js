@@ -62,16 +62,33 @@ const productoController = {
         let productoid = req.params.productoid;
 		let productToEdit = products.find(product => product.productoid == productoid)
 		let imagen
-        let imagenes=[]
+        let imagenes=[0,0,0]
 
 		if(req.files){
-			imagen = req.files[0].filename
-            imagenes[0]= req.files[1].filename
-            imagenes[1]= req.files[2].filename
-            imagenes[2]= req.files[3].filename
+            if(productToEdit.categoriaId == 1){
+                carpeta="anillos/";
+            } else if (productToEdit.categoriaId == 2){
+                carpeta="collares/";
+            }else if (productToEdit.categoriaId == 3){
+                carpeta="pulseras/";
+            }
+            else if (productToEdit.categoriaId == 4){
+                carpeta="piercings/";
+            }else if (productToEdit.categoriaId == 5){
+                carpeta="aretes/";
+            }else if (productToEdit.categoriaId == 6){
+                carpeta="relojes/";
+            }
+            imagen =carpeta+ req.files[0].filename;
+            imagenes[0]= carpeta+ req.files[1].filename;
+            imagenes[1]= carpeta+ req.files[2].filename;
+            imagenes[2]= carpeta+ req.files[3].filename;
+			
 		} else {
-			imagen = productToEdit.imagen
+			imagen = productToEdit.imagen;
+            imagenes= imagenes;
 		}
+        //console.log(imagenes);
 
 		productToEdit = {
 			productoid: productToEdit.productoid,
@@ -88,7 +105,8 @@ const productoController = {
 		})
 
 		fs.writeFileSync(dataProducts, JSON.stringify(newProducts, null, 2));
-		res.redirect('/products');
+		res.redirect('/');
+        //res.send(imagenes);
         },
 
    

@@ -18,28 +18,28 @@
     <section>
         <form action="/products/editar/<%= productToEdit.productoid %>?_method=PATCH" method="POST" enctype="multipart/form-data">
             <div class="info-new-product">
-                <input type="text" name="name" placeholder="Nombre del producto" value="<%=productToEdit.productoid==0?'': productToEdit.nombreProducto%>">
+                <input type="text" name="nombreProducto" placeholder="Nombre del producto" value="<%=productToEdit.productoid==0?'': productToEdit.nombreProducto%>">
                 <input type="text" name="descripcion" placeholder="Descripcion del producto" value ="<%=productToEdit.productoid==0?'': productToEdit.descripcion  %>">
                 <input type="text" name="precio" placeholder="Precio del producto" value="<%=productToEdit.productoid==0?'': productToEdit.precio  %>">
             </div>
-            <label for="categorias"><b>Categoria:   </b></label>
-            <select name="categorias"  id="categorias">
+            <label for="categoriaId"><b>Categoria:   </b></label>
+            <select name="categoriaId"  id="categoriaId">
                 <% categorias.forEach(categoria =>{ %>
                     <option id= "value"value="<%=categoria.categoriaId %>"> <%=categoria.categoria %> </option>
                 <% }) %>  
             </select>
             <div class="fotos">
                 <h4>Foto principal</h4>
-                <input type="file" class = "upload-file" name="foto-main" accept=".jpg" multiple>
+                <input type="file" class = "upload-file" name="photoMain.<%=categorias.categoria %>" accept=".jpg" multiple>
                 <span class="btn btn-primary">Escoger archivo</span>
                 <h4>Foto detalle 1</h4>
-                <input type="file" class = "upload-file" name="foto-detalle-1" accept=".jpg" multiple>
+                <input type="file" class = "upload-file" name="photo1.<%=categorias.categoria %>" accept=".jpg" multiple>
                 <span class="btn btn-primary">Escoger archivo</span>
                 <h4>Foto detalle 2</h4>
-                <input type="file" class = "upload-file" name="foto-detalle-2" accept=".jpg" multiple>
+                <input type="file" class = "upload-file" name="photo2.<%=categorias.categoria%>" accept=".jpg" multiple>
                 <span class="btn btn-primary">Escoger archivo</span>
                 <h4>Foto detalle 3</h4>
-                <input type="file" class = "upload-file" name="foto-detalle-3" accept=".jpg" multiple>
+                <input type="file" class = "upload-file" name="photo3.<%=categorias.categoria %>" accept=".jpg" multiple>
                 <span class="btn btn-primary">Escoger archivo</span>
 
             </div>

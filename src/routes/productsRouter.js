@@ -9,13 +9,43 @@ const multer = require('multer');
 const productsController = require('../controllers/productsControllers');
 
 
+
 // ************ Multer ************ 
 const storage = multer.diskStorage({
     destination:function(req,file,cb){
-        cb(null, path.join(__dirname, '../public/images/products'));
+        const fs = require('fs');
+        const dataP = path.join(__dirname, '../data/data-products.json');
+        const productos = JSON.parse(fs.readFileSync(dataP, 'utf-8'));
+
+        let productoid = req.params.productoid;
+        let product = productos.find(product => product.productoid == productoid);
+        console.log(product);
+        if(product.categoriaId == 1){
+            carpeta="/anillos";
+        } else if (product.categoriaId == 2){
+            carpeta="/collares";
+        }else if (product.categoriaId == 3){
+            carpeta="/pulseras";
+        }
+        else if (product.categoriaId == 4){
+            carpeta="/piercings";
+        }else if (product.categoriaId == 5){
+            carpeta="/aretes";
+        }else if (product.categoriaId == 6){
+            carpeta="/relojes";
+        }
+
+
+        cb(null, path.join(__dirname, '../../public/images/productos/'+carpeta));
     },
     filename: function(req,file,cb){
-        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+        const fs = require('fs');
+        const dataP = path.join(__dirname, '../data/data-products.json');
+        const productos = JSON.parse(fs.readFileSync(dataP, 'utf-8'));
+
+        let productoid = req.params.productoid;
+        let product = productos.find(product => product.productoid == productoid);
+        cb(null,'categoria:'+product.categoriaId+'-' +file.fieldname + '-' + Date.now() + path.extname(file.originalname));
     }
 })
 const upload = multer({storage: storage})
