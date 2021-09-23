@@ -16,7 +16,7 @@
 <main>
      <h1> <%= title %>  Producto </h1>
     <section>
-        <form action="/" method="GET" class="form-create-update">
+        <form action="/products/nuevo" method="POST" class="form-create-update" enctype="multipart/form-data">
             <div class="info-new-product">
                 <input type="text" name="name" placeholder="Nombre del producto" value="<%=producto.productoid==0?'': producto.nombreProducto%>">
                 <input type="text" name="descripcion" placeholder="Descripcion del producto" value ="<%=producto.productoid==0?'': producto.descripcion  %>">

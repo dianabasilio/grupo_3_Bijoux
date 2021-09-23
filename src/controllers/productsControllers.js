@@ -5,14 +5,66 @@ const path = require('path');
 const dataProducts = path.join(__dirname, '../data/data-products.json');
 const products = JSON.parse(fs.readFileSync(dataProducts, 'utf-8'));
 const dataProductsCategories = require('../data/data-categories-products.json');
+let folder = path.join(__dirname, '../data/data-products.json')
 
 const productoController = {
     productos:(req,res)=>{
-        productos = dataProducts
+        productos = products;
         res.render("products/products", {productos:productos});
     }
     ,
     store: (req, res) => {
+        console.log("hola");
+        console.log(req.files);
+        let productos = products;
+
+        let parsePrecio = parseInt(req.body.precio);
+        let parseCategoriaId = parseInt(req.body.categorias);
+        let arregloImagenes = [];
+
+		let imagen
+
+
+		if(req.files){
+            if(parseCategoriaId == 1){
+                carpeta="anillos/";
+            } else if (parseCategoriaId == 2){
+                carpeta="collares/";
+            }else if (parseCategoriaId == 3){
+                carpeta="pulseras/";
+            }
+            else if (parseCategoriaId == 4){
+                carpeta="piercings/";
+            }else if (parseCategoriaId == 5){
+                carpeta="aretes/";
+            }else if (parseCategoriaId == 6){
+                carpeta="relojes/";
+            }
+            imagen = carpeta + req.files[0].filename;
+
+            arregloImagenes.push(carpeta + req.files[1].filename);
+            arregloImagenes.push(carpeta + req.files[2].filename);
+            arregloImagenes.push(carpeta + req.files[3].filename);
+			
+		} 
+
+        let newProduct = {
+
+            productoid : productos[productos.length - 1].productoid + 1,
+            categoriaId : parseCategoriaId,
+            nombreProducto: req.body.name,
+            descripcion : req.body.descripcion,
+            imagen : imagen,
+            precio : parsePrecio,
+            imagenes : arregloImagenes
+            
+        };
+
+        productos.push(newProduct);
+        fs.writeFileSync(folder, JSON.stringify(productos, null, 2));
+        //La vista a la que llevará cuando se mande
+        res.redirect('/products');
+
 
 	},
     categoria: (req, res)=>{

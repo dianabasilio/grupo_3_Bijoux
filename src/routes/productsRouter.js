@@ -36,7 +36,7 @@ const storage = multer.diskStorage({
         }
 
 
-        cb(null, path.join(__dirname, '../../public/images/productos/'+carpeta));
+        cb(null, path.join(__dirname, '../../public/images/productos'+carpeta));
     },
     filename: function(req,file,cb){
         const fs = require('fs');
@@ -48,8 +48,38 @@ const storage = multer.diskStorage({
         cb(null,'categoria:'+product.categoriaId+'-' +file.fieldname + '-' + Date.now() + path.extname(file.originalname));
     }
 })
-const upload = multer({storage: storage})
 
+const upload = multer({storage: storage});
+
+const storageNewFile = multer.diskStorage({
+    destination:function(req,file,cb){
+        console.log(req.body);
+        let parseCategorias = parseInt(req.body.categorias);
+
+        if(parseCategorias == 1){
+            carpeta="/anillos";
+        } else if (parseCategorias == 2){
+            carpeta="/collares";
+        }else if (parseCategorias == 3){
+            carpeta="/pulseras";
+        }
+        else if (parseCategorias == 4){
+            carpeta="/piercings";
+        }else if (parseCategorias == 5){
+            carpeta="/aretes";
+        }else if (parseCategorias == 6){
+            carpeta="/relojes";
+        }
+
+
+        cb(null, path.join(__dirname, '../../public/images/productos'+carpeta));
+    },
+    filename: function(req,file,cb){
+        let parseCategorias = parseInt(req.body.categorias);
+        cb(null,'categoria-'+parseCategorias+'-' +file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+    }
+});
+const fileUpload = multer({storage: storageNewFile});
 
 router.get('/', productsController.productos);
 router.get('/categoria/:categoriaid?/', productsController.categoria);
@@ -62,7 +92,10 @@ router.get('/editar/:productoid', productsController.edit);
 router.patch('/editar/:productoid', upload.any(),productsController.update); 
 
 router.get('/nuevo/', productsController.productonuevo);
-router.post('/nuevo/', upload.single(''),productsController.productonuevo);
+// router.post('/nuevo/', productsController.store);
+router.post('/nuevo', fileUpload.any(), productsController.store)
+
+// router.post('/nuevo/', upload.single(''),productsController.productonuevo);
 
 
 module.exports = router;
