@@ -195,4 +195,10 @@ const productoController = {
    
 };
 
+<<<<<<< HEAD
 module.exports=productoController;
+=======
+
+// Acá exportamos el resultado
+module.exports=productoController;
+>>>>>>> 979bf6eb9cd06cafe100c50c562c0557b7a0b6aa
