@@ -1,535 +1,535 @@
 [
- {
-  "productoid": 1,
-  "nombreProducto": "Anillo bolitas",
-  "descripcion": "Anillo plateado 28k...",
-  "precio": "1400",
-  "categoriaId": "1",
-  "imagen": "anillos/categoria-1-photoMain.-1632444799879.jpg",
-  "imagenes": [
-   "anillos/categoria-1-photo1.-1632444799888.jpg",
-   "anillos/categoria-1-photo2.-1632444799892.jpg",
-   "anillos/categoria-1-photo3.-1632444799900.jpg"
-  ]
- },
- {
-  "productoid": 2,
-  "categoriaId": 1,
-  "nombreProducto": "Anillo Granos Trigo",
-  "descripcion": "Anillo plateado 11k...",
-  "imagen": "/anillos/anillo-granos-trigo2.1.jpg",
-  "precio": 1430,
-  "imagenes": [
-   "/anillos/anillo-granos-trigo2.1.jpg",
-   "/anillos/anillo-granos-trigo2.2.jpg",
-   "/anillos/anillo-granos-trigo2.3.jpg"
-  ]
- },
- {
-  "productoid": 3,
-  "categoriaId": 1,
-  "nombreProducto": "Anillo Circulo",
-  "descripcion": "Anillo plateado circular 11k...",
-  "imagen": "/anillos/anillo-circulo3.1.jpg",
-  "precio": 1500,
-  "imagenes": [
-   "/anillos/anillo-circulo3.1.jpg",
-   "/anillos/anillo-circulo3.2.jpg",
-   "/anillos/anillo-circulo3.3.jpg"
-  ]
- },
- {
-  "productoid": 4,
-  "categoriaId": 1,
-  "nombreProducto": "Anillo boda Rombo",
-  "descripcion": "Anillo plateado 14k...",
-  "imagen": "/anillos/anillo-rombo4.1.jpg",
-  "precio": 1600,
-  "imagenes": [
-   "/anillos/anillo-rombo4.1.jpg",
-   "/anillos/anillo-rombo4.2.jpg",
-   "/anillos/anillo-rombo4.3.jpg"
-  ]
- },
- {
-  "productoid": 5,
-  "categoriaId": 2,
-  "nombreProducto": "Collar perla",
-  "descripcion": "Collar plateado con perla",
-  "imagen": "/collares/1.1Collar.jpg",
-  "precio": 1300,
-  "imagenes": [
-   "/collares/1.1Collar.jpg",
-   "/collares/1.2Collar.jpg",
-   "/collares/1.3Collar.jpg"
-  ]
- },
- {
-  "productoid": 6,
-  "categoriaId": 2,
-  "nombreProducto": "Collar corazones",
-  "descripcion": "Collar plateado con 2 corazones",
-  "imagen": "/collares/2.1Collar.jpg",
-  "precio": 1000,
-  "imagenes": [
-   "/collares/2.1Collar.jpg",
-   "/collares/2.2Collar.jpg",
-   "/collares/3.3Collar.jpg"
-  ]
- },
- {
-  "productoid": 7,
-  "categoriaId": 2,
-  "nombreProducto": "Collar Ángel",
-  "descripcion": "Collar dorado con un ángel",
-  "imagen": "/collares/3.1Collar.jpg",
-  "precio": 1400,
-  "imagenes": [
-   "/collares/3.1Collar.jpg",
-   "/collares/3.2Collar.jpg",
-   "/collares/3.3Collar.jpg"
-  ]
- },
- {
-  "productoid": 8,
-  "categoriaId": 2,
-  "nombreProducto": "Collar circulos",
-  "descripcion": "Collar con 3 circulos",
-  "imagen": "/collares/4.1Collar.jpg",
-  "precio": 1350,
-  "imagenes": [
-   "/collares/4.1Collar.jpg",
-   "/collares/4.2Collar.jpg",
-   "/collares/4.3Collar.jpg"
-  ]
- },
- {
-  "productoid": 9,
-  "categoriaId": 3,
-  "nombreProducto": "Pulsera Dije Corazón",
-  "descripcion": "Pulsera de serpiente & corazón en plata",
-  "imagen": "/pulseras/pulseraCorazon-Plata2.1.jpeg",
-  "precio": 2500,
-  "imagenes": [
-   "/pulseras/pulseraCorazon-Plata2.1.jpeg",
-   "/pulseras/pulseraCorazon-Plata2.2.jpeg",
-   "/pulseras/pulseraCorazon-Plata2.3.jpeg"
-  ]
- },
- {
-  "productoid": 10,
-  "categoriaId": 3,
-  "nombreProducto": "Pulsera Infinity",
-  "descripcion": "Pulsera Infinity elaborada en acero inoxidable color oro rosa con diseño eslabonado y detalle en forma de corazón con incrustación tipo pedrería",
-  "imagen": "/pulseras/pulseraInfinito-dorado5.1.jpeg",
-  "precio": 2750,
-  "imagenes": [
-   "/pulseras/pulseraInfinito-dorado5.1.jpeg",
-   "/pulseras/pulseraInfinito-dorado5.2.jpeg",
-   "/pulseras/pulseraInfinito-dorado5.3.jpeg"
-  ]
- },
- {
-  "productoid": 11,
-  "categoriaId": 3,
-  "nombreProducto": "Pulsera en plata",
-  "descripcion": "Pulsera en plata con diseño de cuentas",
-  "imagen": "/pulseras/pulseraPlata1.1.jpeg",
-  "precio": 1200,
-  "imagenes": [
-   "/pulseras/pulseraPlata1.1.jpeg",
-   "/pulseras/pulseraPlata1.2.jpeg",
-   "/pulseras/pulseraPlata1.3.jpeg"
-  ]
- },
- {
-  "productoid": 12,
-  "categoriaId": 3,
-  "nombreProducto": "Pulsera Rosa de Abril",
-  "descripcion": "Pulsera Rosa de Abril elaborada en plata con motivos en forma de rosas.",
-  "imagen": "/pulseras/pulseraRosas-plata4.1.jpeg",
-  "precio": 2300,
-  "imagenes": [
-   "/pulseras/pulseraRosas-plata4.1.jpeg",
-   "/pulseras/pulseraRosas-plata4.2.jpeg",
-   "/pulseras/pulseraRosas-plata4.3.jpeg"
-  ]
- },
- {
-  "productoid": 13,
-  "categoriaId": 4,
-  "nombreProducto": "Piercing Piedra Swarovski Colgante",
-  "descripcion": "Charm Piercing Shine on me, elaborado en metal con baño de plata con forma de ojo, cristal de Swarovski color Light Saphire y broche de presión",
-  "imagen": "/piercings/piercing5.1.jpeg",
-  "precio": 489,
-  "imagenes": [
-   "/piercings/piercing5.1.jpeg",
-   "/piercings/piercing5.2.jpeg",
-   "/piercings/piercing5.3.jpeg"
-  ]
- },
- {
-  "productoid": 14,
-  "categoriaId": 4,
-  "nombreProducto": "Piercing Piedra Swarovski",
-  "descripcion": "Piercing elaborado en metal bañado en oro con forma ovalada e incrustación de Swarovski color light amethyst.",
-  "imagen": "/piercings/piercing1.1.jpeg",
-  "precio": 889,
-  "imagenes": [
-   "/piercings/piercing1.1.jpeg",
-   "/piercings/piercing1.2.jpeg",
-   "/piercings/piercing1.3.jpeg"
-  ]
- },
- {
-  "productoid": 15,
-  "categoriaId": 4,
-  "nombreProducto": "Piercing Libélula",
-  "descripcion": "Piercing en forma de libélula elaborado en metal bañado en oro con forma de libélula",
-  "imagen": "/piercings/piercing6.1.jpeg",
-  "precio": 739,
-  "imagenes": [
-   "/piercings/piercing6.1.jpeg",
-   "/piercings/piercing6.2.jpeg",
-   "/piercings/piercing6.3.jpeg"
-  ]
- },
- {
-  "productoid": 16,
-  "categoriaId": 4,
-  "nombreProducto": "Piercing flor de loto",
-  "descripcion": "Piercing elaborado en oro amarillo de 9 Kts, colgante de flor de loto y engaste de diamante",
-  "imagen": "/piercings/piercing2.1.jpeg",
-  "precio": 5900,
-  "imagenes": [
-   "/piercings/piercing2.1.jpeg",
-   "/piercings/piercing2.2.jpeg",
-   "/piercings/piercing2.3.jpeg"
-  ]
- },
- {
-  "productoid": 17,
-  "categoriaId": 5,
-  "nombreProducto": "Aretes tono verde",
-  "descripcion": "Aretes dorados con esmeralda verde",
-  "imagen": "/aretes/1.1Arete.jpg",
-  "precio": 1400,
-  "imagenes": [
-   "/aretes/1.1Arete.jpg",
-   "/aretes/1.2Arete.jpg",
-   "/aretes/1.3Arete.jpg"
-  ]
- },
- {
-  "productoid": 18,
-  "categoriaId": 5,
-  "nombreProducto": "Aretes tono rosa",
-  "descripcion": "Aretes plateado piedra rosa",
-  "imagen": "/aretes/2.1Arete.jpg",
-  "precio": 1400,
-  "imagenes": [
-   "/aretes/2.1Arete.jpg",
-   "/aretes/2.2Arete.jpg",
-   "/aretes/2.3Arete.jpg"
-  ]
- },
- {
-  "productoid": 19,
-  "categoriaId": 5,
-  "nombreProducto": "Aretes mitad hoop",
-  "descripcion": "Aretes tipo mitad hoop dorados",
-  "imagen": "/aretes/3.1Arete.jpg",
-  "precio": 1400,
-  "imagenes": [
-   "/aretes/3.1Arete.jpg",
-   "/aretes/3.2Arete.jpg",
-   "/aretes/3.3Arete.jpg"
-  ]
- },
- {
-  "productoid": 20,
-  "categoriaId": 5,
-  "nombreProducto": "Aretes toque celeste",
-  "descripcion": "Aretes plateado 11k con piedra celeste",
-  "imagen": "/aretes/4.1Arete.jpg",
-  "precio": 1400,
-  "imagenes": [
-   "/aretes/4.1Arete.jpg",
-   "/aretes/4.2Arete.jpg",
-   "/aretes/4.3Arete.jpg"
-  ]
- },
- {
-  "productoid": 21,
-  "categoriaId": 6,
-  "nombreProducto": "Iconic Link Rose Gold",
-  "descripcion": "El Iconic Link Rose Gold se presenta con una lujosa pulsera metálica de eslabones de tres piezas, en acero inoxidable pulido con un baño en oro rosado",
-  "imagen": "/relojes/relojCirculo-rosado3.1.jpeg",
-  "precio": 4500,
-  "imagenes": [
-   "/relojes/relojCirculo-rosado3.1.jpeg",
-   "/relojes/relojCirculo-rosado3.2.jpeg",
-   "/relojes/relojCirculo-rosado3.3.jpeg"
-  ]
- },
- {
-  "productoid": 22,
-  "categoriaId": 1,
-  "nombreProducto": "Anillo Dorado Diamante",
-  "descripcion": "Anillo Dorado  11k...",
-  "imagen": "/anillos/anillo-dorado-diamante5.1.jpg",
-  "precio": 1900,
-  "imagenes": [
-   "/anillos/anillo-dorado-diamante5.1.jpg",
-   "/anillos/anillo-dorado-diamante5.2.jpg",
-   "/anillos/anillo-dorado-diamante5.3.jpg"
-  ]
- },
- {
-  "productoid": 23,
-  "categoriaId": 1,
-  "nombreProducto": "Anillo Dorado Pico",
-  "descripcion": "Anillo Dorado  11k...",
-  "imagen": "/anillos/anillo-dorado-pico6.1.jpg",
-  "precio": 1300,
-  "imagenes": [
-   "/anillos/anillo-dorado-pico6.1.jpg",
-   "/anillos/anillo-dorado-pico6.2.jpg",
-   "/anillos/anillo-dorado-pico6.3.jpg"
-  ]
- },
- {
-  "productoid": 24,
-  "categoriaId": 1,
-  "nombreProducto": "Anillo Azul",
-  "descripcion": "Anillo Azul 11k...",
-  "imagen": "/anillos/anillo-azul7.1.jpg",
-  "precio": 1200,
-  "imagenes": [
-   "/anillos/anillo-azul7.1.jpg",
-   "/anillos/anillo-azul7.2.jpg",
-   "/anillos/anillo-azul7.3.jpg"
-  ]
- },
- {
-  "productoid": 25,
-  "categoriaId": 1,
-  "nombreProducto": "Anillo Rosa",
-  "descripcion": "Anillo Rosa 11k...",
-  "imagen": "/anillos/anillo-rosa8.1.jpg",
-  "precio": 1400,
-  "imagenes": [
-   "/anillos/anillo-rosa8.1.jpg",
-   "/anillos/anillo-rosa8.2.jpg",
-   "/anillos/anillo-rosa8.3.jpg"
-  ]
- },
- {
-  "productoid": 26,
-  "categoriaId": 3,
-  "nombreProducto": "Pulsera Ojo",
-  "descripcion": "Pulsera elaborada en baño de oro rosa, diseño de ojo con cristales blancos y azules",
-  "imagen": "/pulseras/pulseraSwarovski-dorado3.1.jpeg",
-  "precio": 2300,
-  "imagenes": [
-   "/pulseras/pulseraSwarovski-dorado3.1.jpeg",
-   "/pulseras/pulseraSwarovski-dorado3.2.jpeg",
-   "/pulseras/pulseraSwarovski-dorado3.3.jpeg"
-  ]
- },
- {
-  "productoid": 27,
-  "categoriaId": 3,
-  "nombreProducto": "Pulsera Cuentas de Perlas",
-  "descripcion": "Pulsera elaborada con cuentas de perlas, dijes de plata color dorado y oso con aplicación de piedras tipo diamantes",
-  "imagen": "/pulseras/pulseraPerlasDijes6.1.jpeg",
-  "precio": 5800,
-  "imagenes": [
-   "/pulseras/pulseraPerlasDijes6.1.jpeg",
-   "/pulseras/pulseraPerlasDijes6.2.jpeg",
-   "/pulseras/pulseraPerlasDijes6.3.jpeg"
-  ]
- },
- {
-  "productoid": 28,
-  "categoriaId": 6,
-  "nombreProducto": "Iconic Link Silver",
-  "descripcion": "El Iconic Link se presenta con una lujosa pulsera metálica de eslabones de tres piezas, en acero inoxidable pulido en tono plateado",
-  "imagen": "/relojes/relojCirculo-plata2.1.jpeg",
-  "precio": 3900,
-  "imagenes": [
-   "/relojes/relojCirculo-plata2.1.jpeg",
-   "/relojes/relojCirculo-plata2.2.jpeg",
-   "/relojes/relojCirculo-plata2.3.jpeg"
-  ]
- },
- {
-  "productoid": 29,
-  "categoriaId": 6,
-  "nombreProducto": "Iconic Link Lumine",
-  "descripcion": "El reloj Lumine se presenta con una esfera en blanco translúcido, embellecida con cristales, en acero inoxidable pulido con un  acabado plateado y elementos en contraste en la pulsera chapados en refinado oro rosado. ",
-  "imagen": "/relojes/relojCirculo-lumine4.1.jpeg",
-  "precio": 5500,
-  "imagenes": [
-   "/relojes/relojCirculo-lumine4.1.jpeg",
-   "/relojes/relojCirculo-lumine4.2.jpeg",
-   "/relojes/relojCirculo-lumine4.3.jpeg"
-  ]
- },
- {
-  "productoid": 30,
-  "categoriaId": 6,
-  "nombreProducto": "Iconic Link Emerald",
-  "descripcion": "El Iconic Link Emerald tiene una esfera de un brillante color verde esmeralda, en acero inoxidable pulido con un baño en oro rosado",
-  "imagen": "/relojes/relojCirculo-dorado1.1.jpeg",
-  "precio": 4500,
-  "imagenes": [
-   "/relojes/relojCirculo-dorado1.1.jpeg",
-   "/relojes/relojCirculo-dorado1.2.jpeg",
-   "/relojes/relojCirculo-dorado1.3.jpeg"
-  ]
- },
- {
-  "productoid": 31,
-  "categoriaId": 6,
-  "nombreProducto": "Quadro Pressed Sheffield",
-  "descripcion": "El reloj de esfera cuadrada. Fabricado con acero inoxidable pulido, en un chapado en oro rosado y con una correa de piel prensada color negro",
-  "imagen": "/relojes/relojCuadrado-negro5.1.jpeg",
-  "precio": 3900,
-  "imagenes": [
-   "/relojes/relojCuadrado-negro5.1.jpeg",
-   "/relojes/relojCuadrado-negro5.2.jpeg",
-   "/relojes/relojCuadrado-negro5.3.jpeg"
-  ]
- },
- {
-  "productoid": 32,
-  "categoriaId": 6,
-  "nombreProducto": "Quadro Pressed Sterling",
-  "descripcion": "El reloj de esfera cuadrada. Fabricado con acero inoxidable pulido, en un acabado en plateado y con una correa metálica plateada",
-  "imagen": "/relojes/relojCuadrado-plata6.1.jpeg",
-  "precio": 3900,
-  "imagenes": [
-   "/relojes/relojCuadrado-plata6.1.jpeg",
-   "/relojes/relojCuadrado-plata6.2.jpeg",
-   "/relojes/relojCuadrado-plata6.3.jpeg"
-  ]
- },
- {
-  "productoid": 33,
-  "categoriaId": 5,
-  "nombreProducto": "Aretes sol",
-  "descripcion": "Aretes sol",
-  "imagen": "/aretes/5.1Arete.jpg",
-  "precio": 1700,
-  "imagenes": [
-   "/aretes/5.1Arete.jpg",
-   "/aretes/5.2Arete.jpg",
-   "/aretes/5.3Arete.jpg"
-  ]
- },
- {
-  "productoid": 34,
-  "categoriaId": 5,
-  "nombreProducto": "Aretes toque celeste",
-  "descripcion": "Aretes plateado 11k con piedra celeste",
-  "imagen": "/aretes/6.1Arete.jpg",
-  "precio": 1400,
-  "imagenes": [
-   "/aretes/6.1Arete.jpg",
-   "/aretes/6.2Arete.jpg",
-   "/aretes/6.3Arete.jpg"
-  ]
- },
- {
-  "productoid": 35,
-  "categoriaId": 5,
-  "nombreProducto": "Aretes toque celeste",
-  "descripcion": "Aretes plateado 11k con piedra celeste",
-  "imagen": "/aretes/7.1Arete.jpg",
-  "precio": 1400,
-  "imagenes": [
-   "/aretes/7.1Arete.jpg",
-   "/aretes/7.2Arete.jpg",
-   "/aretes/7.3Arete.jpg"
-  ]
- },
- {
-  "productoid": 36,
-  "categoriaId": 5,
-  "nombreProducto": "Aretes toque celeste",
-  "descripcion": "Aretes plateado 11k con piedra celeste",
-  "imagen": "/aretes/8.1Arete.jpg",
-  "precio": 1400,
-  "imagenes": [
-   "/aretes/8.1Arete.jpg",
-   "/aretes/8.2Arete.jpg",
-   "/aretes/8.3Arete.jpg"
-  ]
- },
- {
-  "productoid": 37,
-  "categoriaId": 2,
-  "nombreProducto": "Collar mano",
-  "descripcion": "Collar dorado con mano",
-  "imagen": "/collares/5.1Collar.jpg",
-  "precio": 1150,
-  "imagenes": [
-   "/collares/5.1Collar.jpg",
-   "/collares/5.2Collar.jpg",
-   "/collares/5.3Collar.jpg"
-  ]
- },
- {
-  "productoid": 38,
-  "categoriaId": 2,
-  "nombreProducto": "Collar ojo",
-  "descripcion": "Collar plateado ojo",
-  "imagen": "/collares/6.1Collar.jpg",
-  "precio": 1350,
-  "imagenes": [
-   "/collares/6.1Collar.jpg",
-   "/collares/6.2Collar.jpg",
-   "/collares/6.3Collar.jpg"
-  ]
- },
- {
-  "productoid": 39,
-  "categoriaId": 2,
-  "nombreProducto": "Collar piedras",
-  "descripcion": "Collar con diferentes piedras preciosas",
-  "imagen": "/collares/7.1Collar.jpg",
-  "precio": 1800,
-  "imagenes": [
-   "/collares/7.1Collar.jpg",
-   "/collares/7.2Collar.jpg",
-   "/collares/7.3Collar.jpg"
-  ]
- },
- {
-  "productoid": 40,
-  "categoriaId": 2,
-  "nombreProducto": "Collar centro rojo",
-  "descripcion": "Collar con esmeralda roja en el centro",
-  "imagen": "/collares/8.1Collar.jpg",
-  "precio": 1250,
-  "imagenes": [
-   "/collares/8.1Collar.jpg",
-   "/collares/8.2Collar.jpg",
-   "/collares/8.3Collar.jpg"
-  ]
- },
- {
-  "productoid": 41,
-  "categoriaId": 4,
-  "nombreProducto": "Piercing Diseño Geométrico",
-  "descripcion": "Piercing elaborado en oro amarillo de 9 Kts con diseño geométrico estilo bohemio",
-  "imagen": "/piercings/piercing4.1.jpeg",
-  "precio": 3900,
-  "imagenes": [
-   "/piercings/piercing4.1.jpeg",
-   "/piercings/piercing4.2.jpeg",
-   "/piercings/piercing4.3.jpeg"
-  ]
- }
-]
+  {
+   "productoid": 1,
+   "nombreProducto": "Anillo bolitas",
+   "descripcion": "Anillo plateado 28k...",
+   "precio": "1400",
+   "categoriaId": "1",
+   "imagen": "anillos/categoria-1-photoMain.-1632444799879.jpg",
+   "imagenes": [
+    "anillos/categoria-1-photo1.-1632444799888.jpg",
+    "anillos/categoria-1-photo2.-1632444799892.jpg",
+    "anillos/categoria-1-photo3.-1632444799900.jpg"
+   ]
+  },
+  {
+   "productoid": 2,
+   "categoriaId": 1,
+   "nombreProducto": "Anillo Granos Trigo",
+   "descripcion": "Anillo plateado 11k...",
+   "imagen": "/anillos/anillo-granos-trigo2.1.jpg",
+   "precio": 1430,
+   "imagenes": [
+    "/anillos/anillo-granos-trigo2.1.jpg",
+    "/anillos/anillo-granos-trigo2.2.jpg",
+    "/anillos/anillo-granos-trigo2.3.jpg"
+   ]
+  },
+  {
+   "productoid": 3,
+   "categoriaId": 1,
+   "nombreProducto": "Anillo Circulo",
+   "descripcion": "Anillo plateado circular 11k...",
+   "imagen": "/anillos/anillo-circulo3.1.jpg",
+   "precio": 1500,
+   "imagenes": [
+    "/anillos/anillo-circulo3.1.jpg",
+    "/anillos/anillo-circulo3.2.jpg",
+    "/anillos/anillo-circulo3.3.jpg"
+   ]
+  },
+  {
+   "productoid": 4,
+   "categoriaId": 1,
+   "nombreProducto": "Anillo boda Rombo",
+   "descripcion": "Anillo plateado 14k...",
+   "imagen": "/anillos/anillo-rombo4.1.jpg",
+   "precio": 1600,
+   "imagenes": [
+    "/anillos/anillo-rombo4.1.jpg",
+    "/anillos/anillo-rombo4.2.jpg",
+    "/anillos/anillo-rombo4.3.jpg"
+   ]
+  },
+  {
+   "productoid": 5,
+   "categoriaId": 2,
+   "nombreProducto": "Collar perla",
+   "descripcion": "Collar plateado con perla",
+   "imagen": "/collares/1.1Collar.jpg",
+   "precio": 1300,
+   "imagenes": [
+    "/collares/1.1Collar.jpg",
+    "/collares/1.2Collar.jpg",
+    "/collares/1.3Collar.jpg"
+   ]
+  },
+  {
+   "productoid": 6,
+   "categoriaId": 2,
+   "nombreProducto": "Collar corazones",
+   "descripcion": "Collar plateado con 2 corazones",
+   "imagen": "/collares/2.1Collar.jpg",
+   "precio": 1000,
+   "imagenes": [
+    "/collares/2.1Collar.jpg",
+    "/collares/2.2Collar.jpg",
+    "/collares/3.3Collar.jpg"
+   ]
+  },
+  {
+   "productoid": 7,
+   "categoriaId": 2,
+   "nombreProducto": "Collar Ángel",
+   "descripcion": "Collar dorado con un ángel",
+   "imagen": "/collares/3.1Collar.jpg",
+   "precio": 1400,
+   "imagenes": [
+    "/collares/3.1Collar.jpg",
+    "/collares/3.2Collar.jpg",
+    "/collares/3.3Collar.jpg"
+   ]
+  },
+  {
+   "productoid": 8,
+   "categoriaId": 2,
+   "nombreProducto": "Collar circulos",
+   "descripcion": "Collar con 3 circulos",
+   "imagen": "/collares/4.1Collar.jpg",
+   "precio": 1350,
+   "imagenes": [
+    "/collares/4.1Collar.jpg",
+    "/collares/4.2Collar.jpg",
+    "/collares/4.3Collar.jpg"
+   ]
+  },
+  {
+   "productoid": 9,
+   "categoriaId": 3,
+   "nombreProducto": "Pulsera Dije Corazón",
+   "descripcion": "Pulsera de serpiente & corazón en plata",
+   "imagen": "/pulseras/pulseraCorazon-Plata2.1.jpeg",
+   "precio": 2500,
+   "imagenes": [
+    "/pulseras/pulseraCorazon-Plata2.1.jpeg",
+    "/pulseras/pulseraCorazon-Plata2.2.jpeg",
+    "/pulseras/pulseraCorazon-Plata2.3.jpeg"
+   ]
+  },
+  {
+   "productoid": 10,
+   "categoriaId": 3,
+   "nombreProducto": "Pulsera Infinity",
+   "descripcion": "Pulsera Infinity elaborada en acero inoxidable color oro rosa con diseño eslabonado y detalle en forma de corazón con incrustación tipo pedrería",
+   "imagen": "/pulseras/pulseraInfinito-dorado5.1.jpeg",
+   "precio": 2750,
+   "imagenes": [
+    "/pulseras/pulseraInfinito-dorado5.1.jpeg",
+    "/pulseras/pulseraInfinito-dorado5.2.jpeg",
+    "/pulseras/pulseraInfinito-dorado5.3.jpeg"
+   ]
+  },
+  {
+   "productoid": 11,
+   "categoriaId": 3,
+   "nombreProducto": "Pulsera en plata",
+   "descripcion": "Pulsera en plata con diseño de cuentas",
+   "imagen": "/pulseras/pulseraPlata1.1.jpeg",
+   "precio": 1200,
+   "imagenes": [
+    "/pulseras/pulseraPlata1.1.jpeg",
+    "/pulseras/pulseraPlata1.2.jpeg",
+    "/pulseras/pulseraPlata1.3.jpeg"
+   ]
+  },
+  {
+   "productoid": 12,
+   "categoriaId": 3,
+   "nombreProducto": "Pulsera Rosa de Abril",
+   "descripcion": "Pulsera Rosa de Abril elaborada en plata con motivos en forma de rosas.",
+   "imagen": "/pulseras/pulseraRosas-plata4.1.jpeg",
+   "precio": 2300,
+   "imagenes": [
+    "/pulseras/pulseraRosas-plata4.1.jpeg",
+    "/pulseras/pulseraRosas-plata4.2.jpeg",
+    "/pulseras/pulseraRosas-plata4.3.jpeg"
+   ]
+  },
+  {
+   "productoid": 13,
+   "categoriaId": 4,
+   "nombreProducto": "Piercing Piedra Swarovski Colgante",
+   "descripcion": "Charm Piercing Shine on me, elaborado en metal con baño de plata con forma de ojo, cristal de Swarovski color Light Saphire y broche de presión",
+   "imagen": "/piercings/piercing5.1.jpeg",
+   "precio": 489,
+   "imagenes": [
+    "/piercings/piercing5.1.jpeg",
+    "/piercings/piercing5.2.jpeg",
+    "/piercings/piercing5.3.jpeg"
+   ]
+  },
+  {
+   "productoid": 14,
+   "categoriaId": 4,
+   "nombreProducto": "Piercing Piedra Swarovski",
+   "descripcion": "Piercing elaborado en metal bañado en oro con forma ovalada e incrustación de Swarovski color light amethyst.",
+   "imagen": "/piercings/piercing1.1.jpeg",
+   "precio": 889,
+   "imagenes": [
+    "/piercings/piercing1.1.jpeg",
+    "/piercings/piercing1.2.jpeg",
+    "/piercings/piercing1.3.jpeg"
+   ]
+  },
+  {
+   "productoid": 15,
+   "categoriaId": 4,
+   "nombreProducto": "Piercing Libélula",
+   "descripcion": "Piercing en forma de libélula elaborado en metal bañado en oro con forma de libélula",
+   "imagen": "/piercings/piercing6.1.jpeg",
+   "precio": 739,
+   "imagenes": [
+    "/piercings/piercing6.1.jpeg",
+    "/piercings/piercing6.2.jpeg",
+    "/piercings/piercing6.3.jpeg"
+   ]
+  },
+  {
+   "productoid": 16,
+   "categoriaId": 4,
+   "nombreProducto": "Piercing flor de loto",
+   "descripcion": "Piercing elaborado en oro amarillo de 9 Kts, colgante de flor de loto y engaste de diamante",
+   "imagen": "/piercings/piercing2.1.jpeg",
+   "precio": 5900,
+   "imagenes": [
+    "/piercings/piercing2.1.jpeg",
+    "/piercings/piercing2.2.jpeg",
+    "/piercings/piercing2.3.jpeg"
+   ]
+  },
+  {
+   "productoid": 17,
+   "categoriaId": 5,
+   "nombreProducto": "Aretes tono verde",
+   "descripcion": "Aretes dorados con esmeralda verde",
+   "imagen": "/aretes/1.1Arete.jpg",
+   "precio": 1400,
+   "imagenes": [
+    "/aretes/1.1Arete.jpg",
+    "/aretes/1.2Arete.jpg",
+    "/aretes/1.3Arete.jpg"
+   ]
+  },
+  {
+   "productoid": 18,
+   "categoriaId": 5,
+   "nombreProducto": "Aretes tono rosa",
+   "descripcion": "Aretes plateado piedra rosa",
+   "imagen": "/aretes/2.1Arete.jpg",
+   "precio": 1400,
+   "imagenes": [
+    "/aretes/2.1Arete.jpg",
+    "/aretes/2.2Arete.jpg",
+    "/aretes/2.3Arete.jpg"
+   ]
+  },
+  {
+   "productoid": 19,
+   "categoriaId": 5,
+   "nombreProducto": "Aretes mitad hoop",
+   "descripcion": "Aretes tipo mitad hoop dorados",
+   "imagen": "/aretes/3.1Arete.jpg",
+   "precio": 1400,
+   "imagenes": [
+    "/aretes/3.1Arete.jpg",
+    "/aretes/3.2Arete.jpg",
+    "/aretes/3.3Arete.jpg"
+   ]
+  },
+  {
+   "productoid": 20,
+   "categoriaId": 5,
+   "nombreProducto": "Aretes toque celeste",
+   "descripcion": "Aretes plateado 11k con piedra celeste",
+   "imagen": "/aretes/4.1Arete.jpg",
+   "precio": 1400,
+   "imagenes": [
+    "/aretes/4.1Arete.jpg",
+    "/aretes/4.2Arete.jpg",
+    "/aretes/4.3Arete.jpg"
+   ]
+  },
+  {
+   "productoid": 21,
+   "categoriaId": 6,
+   "nombreProducto": "Iconic Link Rose Gold",
+   "descripcion": "El Iconic Link Rose Gold se presenta con una lujosa pulsera metálica de eslabones de tres piezas, en acero inoxidable pulido con un baño en oro rosado",
+   "imagen": "/relojes/relojCirculo-rosado3.1.jpeg",
+   "precio": 4500,
+   "imagenes": [
+    "/relojes/relojCirculo-rosado3.1.jpeg",
+    "/relojes/relojCirculo-rosado3.2.jpeg",
+    "/relojes/relojCirculo-rosado3.3.jpeg"
+   ]
+  },
+  {
+   "productoid": 22,
+   "categoriaId": 1,
+   "nombreProducto": "Anillo Dorado Diamante",
+   "descripcion": "Anillo Dorado  11k...",
+   "imagen": "/anillos/anillo-dorado-diamante5.1.jpg",
+   "precio": 1900,
+   "imagenes": [
+    "/anillos/anillo-dorado-diamante5.1.jpg",
+    "/anillos/anillo-dorado-diamante5.2.jpg",
+    "/anillos/anillo-dorado-diamante5.3.jpg"
+   ]
+  },
+  {
+   "productoid": 23,
+   "categoriaId": 1,
+   "nombreProducto": "Anillo Dorado Pico",
+   "descripcion": "Anillo Dorado  11k...",
+   "imagen": "/anillos/anillo-dorado-pico6.1.jpg",
+   "precio": 1300,
+   "imagenes": [
+    "/anillos/anillo-dorado-pico6.1.jpg",
+    "/anillos/anillo-dorado-pico6.2.jpg",
+    "/anillos/anillo-dorado-pico6.3.jpg"
+   ]
+  },
+  {
+   "productoid": 24,
+   "categoriaId": 1,
+   "nombreProducto": "Anillo Azul",
+   "descripcion": "Anillo Azul 11k...",
+   "imagen": "/anillos/anillo-azul7.1.jpg",
+   "precio": 1200,
+   "imagenes": [
+    "/anillos/anillo-azul7.1.jpg",
+    "/anillos/anillo-azul7.2.jpg",
+    "/anillos/anillo-azul7.3.jpg"
+   ]
+  },
+  {
+   "productoid": 25,
+   "categoriaId": 1,
+   "nombreProducto": "Anillo Rosa",
+   "descripcion": "Anillo Rosa 11k...",
+   "imagen": "/anillos/anillo-rosa8.1.jpg",
+   "precio": 1400,
+   "imagenes": [
+    "/anillos/anillo-rosa8.1.jpg",
+    "/anillos/anillo-rosa8.2.jpg",
+    "/anillos/anillo-rosa8.3.jpg"
+   ]
+  },
+  {
+   "productoid": 26,
+   "categoriaId": 3,
+   "nombreProducto": "Pulsera Ojo",
+   "descripcion": "Pulsera elaborada en baño de oro rosa, diseño de ojo con cristales blancos y azules",
+   "imagen": "/pulseras/pulseraSwarovski-dorado3.1.jpeg",
+   "precio": 2300,
+   "imagenes": [
+    "/pulseras/pulseraSwarovski-dorado3.1.jpeg",
+    "/pulseras/pulseraSwarovski-dorado3.2.jpeg",
+    "/pulseras/pulseraSwarovski-dorado3.3.jpeg"
+   ]
+  },
+  {
+   "productoid": 27,
+   "categoriaId": 3,
+   "nombreProducto": "Pulsera Cuentas de Perlas",
+   "descripcion": "Pulsera elaborada con cuentas de perlas, dijes de plata color dorado y oso con aplicación de piedras tipo diamantes",
+   "imagen": "/pulseras/pulseraPerlasDijes6.1.jpeg",
+   "precio": 5800,
+   "imagenes": [
+    "/pulseras/pulseraPerlasDijes6.1.jpeg",
+    "/pulseras/pulseraPerlasDijes6.2.jpeg",
+    "/pulseras/pulseraPerlasDijes6.3.jpeg"
+   ]
+  },
+  {
+   "productoid": 28,
+   "categoriaId": 6,
+   "nombreProducto": "Iconic Link Silver",
+   "descripcion": "El Iconic Link se presenta con una lujosa pulsera metálica de eslabones de tres piezas, en acero inoxidable pulido en tono plateado",
+   "imagen": "/relojes/relojCirculo-plata2.1.jpeg",
+   "precio": 3900,
+   "imagenes": [
+    "/relojes/relojCirculo-plata2.1.jpeg",
+    "/relojes/relojCirculo-plata2.2.jpeg",
+    "/relojes/relojCirculo-plata2.3.jpeg"
+   ]
+  },
+  {
+   "productoid": 29,
+   "categoriaId": 6,
+   "nombreProducto": "Iconic Link Lumine",
+   "descripcion": "El reloj Lumine se presenta con una esfera en blanco translúcido, embellecida con cristales, en acero inoxidable pulido con un  acabado plateado y elementos en contraste en la pulsera chapados en refinado oro rosado. ",
+   "imagen": "/relojes/relojCirculo-lumine4.1.jpeg",
+   "precio": 5500,
+   "imagenes": [
+    "/relojes/relojCirculo-lumine4.1.jpeg",
+    "/relojes/relojCirculo-lumine4.2.jpeg",
+    "/relojes/relojCirculo-lumine4.3.jpeg"
+   ]
+  },
+  {
+   "productoid": 30,
+   "categoriaId": 6,
+   "nombreProducto": "Iconic Link Emerald",
+   "descripcion": "El Iconic Link Emerald tiene una esfera de un brillante color verde esmeralda, en acero inoxidable pulido con un baño en oro rosado",
+   "imagen": "/relojes/relojCirculo-dorado1.1.jpeg",
+   "precio": 4500,
+   "imagenes": [
+    "/relojes/relojCirculo-dorado1.1.jpeg",
+    "/relojes/relojCirculo-dorado1.2.jpeg",
+    "/relojes/relojCirculo-dorado1.3.jpeg"
+   ]
+  },
+  {
+   "productoid": 31,
+   "categoriaId": 6,
+   "nombreProducto": "Quadro Pressed Sheffield",
+   "descripcion": "El reloj de esfera cuadrada. Fabricado con acero inoxidable pulido, en un chapado en oro rosado y con una correa de piel prensada color negro",
+   "imagen": "/relojes/relojCuadrado-negro5.1.jpeg",
+   "precio": 3900,
+   "imagenes": [
+    "/relojes/relojCuadrado-negro5.1.jpeg",
+    "/relojes/relojCuadrado-negro5.2.jpeg",
+    "/relojes/relojCuadrado-negro5.3.jpeg"
+   ]
+  },
+  {
+   "productoid": 32,
+   "categoriaId": 6,
+   "nombreProducto": "Quadro Pressed Sterling",
+   "descripcion": "El reloj de esfera cuadrada. Fabricado con acero inoxidable pulido, en un acabado en plateado y con una correa metálica plateada",
+   "imagen": "/relojes/relojCuadrado-plata6.1.jpeg",
+   "precio": 3900,
+   "imagenes": [
+    "/relojes/relojCuadrado-plata6.1.jpeg",
+    "/relojes/relojCuadrado-plata6.2.jpeg",
+    "/relojes/relojCuadrado-plata6.3.jpeg"
+   ]
+  },
+  {
+   "productoid": 33,
+   "categoriaId": 5,
+   "nombreProducto": "Aretes sol",
+   "descripcion": "Aretes sol",
+   "imagen": "/aretes/5.1Arete.jpg",
+   "precio": 1700,
+   "imagenes": [
+    "/aretes/5.1Arete.jpg",
+    "/aretes/5.2Arete.jpg",
+    "/aretes/5.3Arete.jpg"
+   ]
+  },
+  {
+   "productoid": 34,
+   "categoriaId": 5,
+   "nombreProducto": "Aretes toque celeste",
+   "descripcion": "Aretes plateado 11k con piedra celeste",
+   "imagen": "/aretes/6.1Arete.jpg",
+   "precio": 1400,
+   "imagenes": [
+    "/aretes/6.1Arete.jpg",
+    "/aretes/6.2Arete.jpg",
+    "/aretes/6.3Arete.jpg"
+   ]
+  },
+  {
+   "productoid": 35,
+   "categoriaId": 5,
+   "nombreProducto": "Aretes toque celeste",
+   "descripcion": "Aretes plateado 11k con piedra celeste",
+   "imagen": "/aretes/7.1Arete.jpg",
+   "precio": 1400,
+   "imagenes": [
+    "/aretes/7.1Arete.jpg",
+    "/aretes/7.2Arete.jpg",
+    "/aretes/7.3Arete.jpg"
+   ]
+  },
+  {
+   "productoid": 36,
+   "categoriaId": 5,
+   "nombreProducto": "Aretes toque celeste",
+   "descripcion": "Aretes plateado 11k con piedra celeste",
+   "imagen": "/aretes/8.1Arete.jpg",
+   "precio": 1400,
+   "imagenes": [
+    "/aretes/8.1Arete.jpg",
+    "/aretes/8.2Arete.jpg",
+    "/aretes/8.3Arete.jpg"
+   ]
+  },
+  {
+   "productoid": 37,
+   "categoriaId": 2,
+   "nombreProducto": "Collar mano",
+   "descripcion": "Collar dorado con mano",
+   "imagen": "/collares/5.1Collar.jpg",
+   "precio": 1150,
+   "imagenes": [
+    "/collares/5.1Collar.jpg",
+    "/collares/5.2Collar.jpg",
+    "/collares/5.3Collar.jpg"
+   ]
+  },
+  {
+   "productoid": 38,
+   "categoriaId": 2,
+   "nombreProducto": "Collar ojo",
+   "descripcion": "Collar plateado ojo",
+   "imagen": "/collares/6.1Collar.jpg",
+   "precio": 1350,
+   "imagenes": [
+    "/collares/6.1Collar.jpg",
+    "/collares/6.2Collar.jpg",
+    "/collares/6.3Collar.jpg"
+   ]
+  },
+  {
+   "productoid": 39,
+   "categoriaId": 2,
+   "nombreProducto": "Collar piedras",
+   "descripcion": "Collar con diferentes piedras preciosas",
+   "imagen": "/collares/7.1Collar.jpg",
+   "precio": 1800,
+   "imagenes": [
+    "/collares/7.1Collar.jpg",
+    "/collares/7.2Collar.jpg",
+    "/collares/7.3Collar.jpg"
+   ]
+  },
+  {
+   "productoid": 40,
+   "categoriaId": 2,
+   "nombreProducto": "Collar centro rojo",
+   "descripcion": "Collar con esmeralda roja en el centro",
+   "imagen": "/collares/8.1Collar.jpg",
+   "precio": 1250,
+   "imagenes": [
+    "/collares/8.1Collar.jpg",
+    "/collares/8.2Collar.jpg",
+    "/collares/8.3Collar.jpg"
+   ]
+  },
+  {
+   "productoid": 41,
+   "categoriaId": 4,
+   "nombreProducto": "Piercing Diseño Geométrico",
+   "descripcion": "Piercing elaborado en oro amarillo de 9 Kts con diseño geométrico estilo bohemio",
+   "imagen": "/piercings/piercing4.1.jpeg",
+   "precio": 3900,
+   "imagenes": [
+    "/piercings/piercing4.1.jpeg",
+    "/piercings/piercing4.2.jpeg",
+    "/piercings/piercing4.3.jpeg"
+   ]
+  }
+ ]
