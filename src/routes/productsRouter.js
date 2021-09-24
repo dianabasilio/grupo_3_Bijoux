@@ -36,7 +36,7 @@ const storage = multer.diskStorage({
         }
 
 
-        cb(null, path.join(__dirname, '../../public/images/productos'+carpeta));
+        cb(null, path.join(__dirname, '../../public/images/productos/'+carpeta));
     },
     filename: function(req,file,cb){
         const fs = require('fs');
@@ -45,7 +45,7 @@ const storage = multer.diskStorage({
 
         let productoid = req.params.productoid;
         let product = productos.find(product => product.productoid == productoid);
-        cb(null,'categoria:'+product.categoriaId+'-' +file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+        cb(null,'categoria-'+product.categoriaId+'-' +file.fieldname + '-' + Date.now() + path.extname(file.originalname));
     }
 })
 
@@ -72,7 +72,7 @@ const storageNewFile = multer.diskStorage({
         }
 
 
-        cb(null, path.join(__dirname, '../../public/images/productos'+carpeta));
+        cb(null, path.join(__dirname, '../../public/images/productos/'+carpeta));
     },
     filename: function(req,file,cb){
         let parseCategorias = parseInt(req.body.categorias);

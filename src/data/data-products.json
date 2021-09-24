@@ -5,11 +5,11 @@
   "descripcion": "Anillo plateado 28k...",
   "precio": "1400",
   "categoriaId": "1",
-  "imagen": "anillos/categoria:1-photoMain.-1632362217961.jpg",
+  "imagen": "anillos/categoria-1-photoMain.-1632444799879.jpg",
   "imagenes": [
-   "anillos/categoria:1-photo1.-1632362217967.jpg",
-   "anillos/categoria:1-photo2.-1632362217971.jpg",
-   "anillos/categoria:1-photo3.-1632362217980.jpg"
+   "anillos/categoria-1-photo1.-1632444799888.jpg",
+   "anillos/categoria-1-photo2.-1632444799892.jpg",
+   "anillos/categoria-1-photo3.-1632444799900.jpg"
   ]
  },
  {
@@ -504,6 +504,32 @@
    "/collares/7.1Collar.jpg",
    "/collares/7.2Collar.jpg",
    "/collares/7.3Collar.jpg"
+  ]
+ },
+ {
+  "productoid": 40,
+  "categoriaId": 2,
+  "nombreProducto": "Collar centro rojo",
+  "descripcion": "Collar con esmeralda roja en el centro",
+  "imagen": "/collares/8.1Collar.jpg",
+  "precio": 1250,
+  "imagenes": [
+   "/collares/8.1Collar.jpg",
+   "/collares/8.2Collar.jpg",
+   "/collares/8.3Collar.jpg"
+  ]
+ },
+ {
+  "productoid": 41,
+  "categoriaId": 4,
+  "nombreProducto": "Piercing Diseño Geométrico",
+  "descripcion": "Piercing elaborado en oro amarillo de 9 Kts con diseño geométrico estilo bohemio",
+  "imagen": "/piercings/piercing4.1.jpeg",
+  "precio": 3900,
+  "imagenes": [
+   "/piercings/piercing4.1.jpeg",
+   "/piercings/piercing4.2.jpeg",
+   "/piercings/piercing4.3.jpeg"
   ]
  }
 ]
