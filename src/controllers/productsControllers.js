@@ -1,4 +1,4 @@
-// Acá nos falta un objeto literal con las acciones para cada ruta
+
 const dataProducts = require('../data/data-products.json');
 const dataProductsCategories = require('../data/data-categories-products.json');
 
