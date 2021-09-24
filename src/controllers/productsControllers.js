@@ -164,11 +164,10 @@ const productoController = {
         let id = req.params.id
         console.log(id);
         let rows = productoController.readFile();
-        console.log(rows.length)
+       
 
         let updatedRows = rows.filter(row => row.productoid != id); 
-        console.log(rows.length)
-
+        
         productoController.writeFile(updatedRows);
         products = productoController.readFile();
         res.redirect('/products/admin/')
