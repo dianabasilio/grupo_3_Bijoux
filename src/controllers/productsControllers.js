@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const dataProducts = path.join(__dirname, '../data/data-products.json');
-const products = JSON.parse(fs.readFileSync(dataProducts, 'utf-8'));
+let products = JSON.parse(fs.readFileSync(dataProducts, 'utf-8'));
 const dataProductsCategories = require('../data/data-categories-products.json');
 let folder = path.join(__dirname, '../data/data-products.json')
 
@@ -61,8 +61,7 @@ const productoController = {
         };
 
         productos.push(newProduct);
-        fs.writeFileSync(folder, JSON.stringify(productos, null, 2));
-        //La vista a la que llevará cuando se mande
+        fs.writeFileSync(folder, JSON.stringify(productos, null, 2));        
         res.redirect('/products');
 
 
@@ -160,10 +159,40 @@ const productoController = {
 		res.redirect('/');
         //res.send(imagenes);
         },
+    delete: (req,res)=>
+    {
+        let id = req.params.id
+        console.log(id);
+        let rows = productoController.readFile();
+        console.log(rows.length)
+
+        let updatedRows = rows.filter(row => row.productoid != id); 
+        console.log(rows.length)
+
+        productoController.writeFile(updatedRows);
+        products = productoController.readFile();
+        res.redirect('/products/admin/')
+
+    }, 
+    readFile:()=>
+    {        
+        
+            let fileContents = fs.readFileSync(dataProducts, 'utf8');
+        
+            if(fileContents) {
+                return JSON.parse(fileContents);
+            }
+        
+            return [];
+         
+    }, 
+    writeFile:(contents) =>{
+        let fileContents = JSON.stringify(contents, null, " ");
+        fs.writeFileSync(dataProducts, fileContents);
+    },
+     
 
    
 };
 
-
-// Acá exportamos el resultado
 module.exports=productoController;

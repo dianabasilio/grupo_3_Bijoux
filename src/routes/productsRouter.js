@@ -96,6 +96,6 @@ router.get('/nuevo/', productsController.productonuevo);
 router.post('/nuevo', fileUpload.any(), productsController.store)
 
 // router.post('/nuevo/', upload.single(''),productsController.productonuevo);
-
+router.delete('/delete/:id', productsController.delete); 
 
 module.exports = router;

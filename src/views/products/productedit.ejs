@@ -45,9 +45,12 @@
             </div>
 
             <button type="submit" id = "submit" value="Enviar">Enviar</button>
-            <button type="reset" id = "submit" value="Borrar">Borrar</button>
+           
 
         </form>
+        <form action="/products/delete/<%=productToEdit.productoid%>?_method=DELETE" method="POST">
+            <button type="submit" id = "delete" value="Borrar">Eliminar</button>
+       </form>
     </section>
 </main>
 
