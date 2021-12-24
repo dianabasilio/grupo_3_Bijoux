@@ -60,3 +60,48 @@ Participar cuando se requiere
 Dejar todo para lo ultimo
 
 ## Dejar de hacer
+
+# Retrospectiva 4
+## Comenzar a hacer
+-Trabajar todos los días.
+## Hacer más
+Hablar dariamente.
+
+## Continuar haciendo
+Repartirnos las tareas.
+Comunicarnos constantemente.
+Apoyarnos entre nosotros.
+
+## Hacer menos 
+
+## Dejar de hacer
+# Retrospectiva 5
+## Comenzar a hacer
+-Trabajar todos los días de aquí a final para terminar.
+## Hacer más
+Hacer más videollamadas.
+
+## Continuar haciendo
+Repartirnos las tareas.
+Comunicarnos constantemente por medio de whatsapp.
+
+## Hacer menos 
+No hacer las videollamadas.
+
+## Dejar de hacer
+No darle el tiempo suficiente.
+
+# Retrospectiva 6
+## Comenzar a hacer
+-Trabajar fuertemente e el próximo sprint.
+## Hacer más
+Hablar más por whatsapp.
+
+## Continuar haciendo
+Continuar trabajando todos los días de aquí a final para terminar.
+
+## Hacer menos 
+No hablarnos por algunos dias.
+
+## Dejar de hacer
+No hacer push y pull diariamente.
