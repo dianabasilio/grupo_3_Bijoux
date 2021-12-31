@@ -36,6 +36,37 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Product = sequelize.define(alias,cols,config);
 
+    Product.associate = function(models){
+        // este producto pertenece a una categoria de producto
+        Product.belongsTo(models.CategoryProduct, {
+            as: "productsC",
+            foreignKey: "id_category"
+        }),
+        Product.hasMany(models.ProductImage, {
+            as: "productI",
+            foreignKey: "id_product"
+        }),
+
+        //product---product_cart---productSize
+        Product.belongsToMany(models.ProductSize, {
+            as: "product_cart_productS",
+            // aqui no estaba segura si se tenia que poner el nombre literal de la tabla o el nombre del modelo, como yo declare el modelo, entonces le puse el nombre del modelo
+            throught : "ProductCart",
+            foreignKey: "id_product",
+            otherKey: "id_product_size",
+            timestamps: false,
+        });
+
+        //product----product_cart----shopping_cart
+        Product.belongsToMany(models.ShoppingCart, {
+            as: "product_shopping",
+            throught : "ProductCart",
+            foreignKey: "id_product",
+            otherKey: "id_shopping_cart",
+            timestamps: false,
+        });
+    }
+
     return Product
 
 }    

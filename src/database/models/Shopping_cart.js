@@ -37,5 +37,22 @@ module.exports = (sequelize, dataTypes) => {
     }
     const ShoppingCart = sequelize.define(alias,cols,config);
 
+    ShoppingCart.associate = function(models){
+
+        ShoppingCart.hasMany(models.User, {
+            as: "users_shopping_cart",
+            foreignKey: "email"
+        }),
+
+        //product----product_cart----shopping_cart
+        ShoppingCart.belongsToMany(models.Product, {
+            as: "product_shopping_cart",
+            throught : "ProductCart",
+            foreignKey: "id_shopping_cart",
+            otherKey: "id_product",
+            timestamps: false,
+        })
+    };
+
     return ShoppingCart
 }
