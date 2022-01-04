@@ -2,25 +2,31 @@
 const fs = require('fs');
 const path = require('path');
 
-const dataProducts = path.join(__dirname, '../data/data-products.json');
-let products = JSON.parse(fs.readFileSync(dataProducts, 'utf-8'));
-const dataProductsCategories = require('../data/data-categories-products.json');
 let folder = path.join(__dirname, '../data/data-products.json')
+
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+const moment = require('moment');
+
+//Aqui tienen otra forma de llamar a cada uno de los modelos
+const Products = db.Product;
+const Categories = db.CategoryProduct;
 
 const productoController = {
     productos:(req,res)=>{
-        productos = products;
-        res.render("products/products", {productos:productos});
+        //CUIDADO hace falta agregar el de images y de ahí basarnos, pensar en como pasar string a array para create
+        db.Product.findAll()
+            .then(productos => {
+                res.render('products/products.ejs', {productos})
+            })
     }
     ,
     store: (req, res) => {
-        console.log("hola");
         console.log(req.files);
-        let productos = products;
 
         let parsePrecio = parseInt(req.body.precio);
         let parseCategoriaId = parseInt(req.body.categorias);
-        let arregloImagenes = [];
 
 		let imagen
 
@@ -41,79 +47,114 @@ const productoController = {
                 carpeta="relojes/";
             }
             imagen = carpeta + req.files[0].filename;
+            first_image = carpeta + req.files[1].filename;
+            second_image = carpeta + req.files[2].filename;
+            third_image = carpeta + req.files[3].filename;	
+		}     
 
-            arregloImagenes.push(carpeta + req.files[1].filename);
-            arregloImagenes.push(carpeta + req.files[2].filename);
-            arregloImagenes.push(carpeta + req.files[3].filename);
-			
-		} 
-
-        let newProduct = {
-
-            productoid : productos[productos.length - 1].productoid + 1,
-            categoriaId : parseCategoriaId,
-            nombreProducto: req.body.name,
-            descripcion : req.body.descripcion,
-            imagen : imagen,
-            precio : parsePrecio,
-            imagenes : arregloImagenes
-            
-        };
-
-        productos.push(newProduct);
-        fs.writeFileSync(folder, JSON.stringify(productos, null, 2));        
-        res.redirect('/products');
-
+        //aquí te quedaste
+        Products
+        .create(
+            {
+                id_category: parseCategoriaId,
+                name_product: req.body.name,
+                description: req.body.descripcion,
+                main_image: imagen,
+                price: parsePrecio,
+                first_image: first_image,
+                second_image: second_image,
+                third_image: third_image
+            }
+        )
+        .then(()=> {
+            return res.redirect('/products')})            
+        .catch(error => res.send(error))
 
 	},
     categoria: (req, res)=>{
-
-        let productos ;
         let categoria =  "PRODUCTOS" 
         categoriaid =req.params.categoriaid; 
         
+        //Cuando no son relojes es categoriaid = 0
         if (categoriaid ==0){   
             categoria = "JOYERIA";
-            productos = products.filter(p => p.categoriaId != 6 );
+            Products
+            .findAll(
+                {
+                    where: {
+                        id_category: {
+                          [Op.not]: 6
+                        }
+                    }
+                })
+                .then(productos => {
+                    res.render('products/productscategoria.ejs', {productos:productos, categoria:categoria});
+                })         
+            .catch(error => res.send(error))
         }
         else{
-            let c = dataProductsCategories.find( c =>  c.categoriaId == categoriaid );
             //título de categoría
-            categoria = c.categoria  
-            productos = products.filter(p => p.categoriaId == req.params.categoriaid );
+            //Cuando no son relojes categoriaid = 6
+            categoria = "RELOJES"
+            Products
+            .findAll(
+                {
+                    where: {
+                        id_category: 6
+                    }
+                })
+                .then(productos => {
+                    res.render('products/productscategoria.ejs', {productos:productos, categoria:categoria});
+                })         
+            .catch(error => res.send(error))
         }
-         
-        res.render("products/productscategoria", {productos:productos, categoria:categoria});
 
     }, 
     productodetail : (req,res)=>{
-     let    producto = products.find(p => p.productoid == req.params.productoid );            
-         
-         
-        res.render("products/productdetail", {producto:producto});
-
+        db.Product.findByPk(req.params.productoid)
+            .then(producto => {
+                res.render('products/productdetail.ejs', {producto});
+            });
     },
 
     productoadmin : (req,res)=>{
-        let    productos = products;            
-            
-            
-           res.render("products/productsadmin", {productos:productos});
-   
+        Products
+            .findAll()
+                .then(productos => {
+                    res.render('products/productsadmin.ejs', {productos});
+                })         
+            .catch(error => res.send(error))       
        },
+
     edit: (req,res)=>{
-    let    productToEdit= products.find(p => p.productoid == req.params.productoid );
-    res.render("products/productedit", {title:"Editar", categorias:dataProductsCategories, productToEdit:productToEdit});
+
+    let productoid = req.params.id;
+    let promProducts = Products.findByPk(productoid);
+    let promCategories = Categories.findAll();
+
+    Promise
+    .all([promProducts, promCategories])
+    .then(([product, allCategories]) => {
+        return res.render(path.resolve(__dirname, '..', 'views',  'products', 'productedit'), {productToEdit:product, categorias:allCategories, title:"Editar"})})
+    .catch(error => res.send(error))
+
+
     }, 
     productonuevo : (req,res)=>{
-    res.render("products/productcreate", {title:"Nuevo", categorias:dataProductsCategories, producto:{productoid:0}});
+    Categories
+            .findAll()
+                .then(categorias => {
+                    res.render('products/productcreate.ejs', {categorias, title:"Nuevo"});
+                })         
+            .catch(error => res.send(error))   
 
     },
     update: (req,res)=>{
         let productoid = req.params.productoid;
-		let productToEdit = products.find(product => product.productoid == productoid)
+        let parsePrecio = parseInt(req.body.precio);
+        let parseCategoriaId = parseInt(req.body.categoriaId);
+		let productToEdit = products.find(product => product.productoid == productoid);
 		let imagen
-        let imagenes=[0,0,0]
 
 		if(req.files){
             if(productToEdit.categoriaId == 1){
@@ -130,68 +171,43 @@ const productoController = {
             }else if (productToEdit.categoriaId == 6){
                 carpeta="relojes/";
             }
-            imagen =carpeta+ req.files[0].filename;
-            imagenes[0]= carpeta+ req.files[1].filename;
-            imagenes[1]= carpeta+ req.files[2].filename;
-            imagenes[2]= carpeta+ req.files[3].filename;
-			
-		} else {
-			imagen = productToEdit.imagen;
-            imagenes= imagenes;
+            imagen = carpeta + req.files[0].filename;
+            first_image = carpeta + req.files[1].filename;
+            second_image = carpeta + req.files[2].filename;
+            third_image = carpeta + req.files[3].filename;	
 		}
-        //console.log(imagenes);
 
-		productToEdit = {
-			productoid: productToEdit.productoid,
-			...req.body,
-			imagen: imagen,
-            imagenes: imagenes,
-		};
-		
-		let newProducts = products.map(product => {
-			if (product.productoid == productToEdit.productoid) {
-				return product = {...productToEdit};
-			}
-			return product;
-		})
+        Products
+        .update(
+            {
+                id_category: parseCategoriaId,
+                name_product: req.body.name,
+                description: req.body.descripcion,
+                main_image: imagen,
+                price: parsePrecio,
+                first_image: first_image,
+                second_image: second_image,
+                third_image: third_image
+            },
+            {
+                where: {id: productoid}
+            })
+        .then(()=> {
+            return res.redirect('/')})            
+        .catch(error => res.send(error))
 
-		fs.writeFileSync(dataProducts, JSON.stringify(newProducts, null, 2));
-		res.redirect('/');
-        //res.send(imagenes);
+
         },
     delete: (req,res)=>
     {
-        let id = req.params.id
-        console.log(id);
-        let rows = productoController.readFile();
-       
-
-        let updatedRows = rows.filter(row => row.productoid != id); 
-        
-        productoController.writeFile(updatedRows);
-        products = productoController.readFile();
-        res.redirect('/products/admin/')
+        let productId = req.params.id
+        Products
+        .destroy({where: {id: productId}, force: true}) // force: true es para asegurar que se ejecute la acción
+        .then(()=>{
+            return res.redirect('/products/admin/')})
+        .catch(error => res.send(error)) 
 
     }, 
-    readFile:()=>
-    {        
-        
-            let fileContents = fs.readFileSync(dataProducts, 'utf8');
-        
-            if(fileContents) {
-                return JSON.parse(fileContents);
-            }
-        
-            return [];
-         
-    }, 
-    writeFile:(contents) =>{
-        let fileContents = JSON.stringify(contents, null, " ");
-        fs.writeFileSync(dataProducts, fileContents);
-    },
-     
-
-   
 };
 
 
