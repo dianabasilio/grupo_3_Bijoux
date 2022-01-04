@@ -4,8 +4,12 @@ SET FOREIGN_KEY_CHECKS=0;
 CREATE TABLE `bijoux_db`.`products` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name_product` VARCHAR(100) NOT NULL,
-  `description` VARCHAR(100) NULL,
+  `description` VARCHAR(100) NOT NULL,
   `price` DECIMAL(3,1) NOT NULL,
+  `main_image` VARCHAR(100) NOT NULL,
+  `first_image` VARCHAR(100) NOT NULL,
+  `second_image` VARCHAR(100) NOT NULL,
+  `third_image` VARCHAR(100) NOT NULL,
   `id_category`  INT(10) UNSIGNED NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `product_id_UNIQUE` (`id` ASC));
@@ -23,19 +27,11 @@ CREATE TABLE `bijoux_db`.`product_cart` (
   
   
 CREATE TABLE `bijoux_db`.`category_product` (
-  `id`  INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id`  INT(10) UNSIGNED NOT NULL,
   `category` VARCHAR(255) NULL,
   `path` VARCHAR(255) NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `email_UNIQUE` (`id` ASC) );
-  
-  CREATE TABLE `bijoux_db`.`product_image` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_product` INT(10) UNSIGNED NOT NULL,
-  `path` VARCHAR(255) NOT NULL,
-  `main` TINYINT(1) NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC) );
   
 CREATE TABLE `bijoux_db`.`product_size` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -64,16 +60,6 @@ ADD CONSTRAINT `id_product`
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
   
-  
-ALTER TABLE `bijoux_db`.`product_image` 
-ADD INDEX `product_image_id_idx` (`id_product` ASC) ;
-;
-ALTER TABLE `bijoux_db`.`product_image` 
-ADD CONSTRAINT `product_image_id`
-  FOREIGN KEY (`id_product`)
-  REFERENCES `bijoux_db`.`products` (`id`)
-  ON DELETE NO ACTION
-  ON UPDATE NO ACTION;
 
 ALTER TABLE `bijoux_db`.`product_cart` 
 ADD CONSTRAINT `id_product_cart`
