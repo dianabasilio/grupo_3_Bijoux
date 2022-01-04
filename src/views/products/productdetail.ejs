@@ -21,22 +21,22 @@
             <div class="photos">
                 <div class = "extra-photos">
                     <article>
-                        <img src="/images/productos/<%= producto.imagenes[0]%>"  alt="imagen 1" class="product_img">
+                        <img src="/images/productos/<%= producto.main_image%>"  alt="imagen 1" class="product_img">
                     </article>
     
                     <article>
-                        <img src="/images/productos/<%= producto.imagenes[1]%>"   alt="imagen 2" class="product_img">
+                        <img src="/images/productos/<%= producto.first_image%>"   alt="imagen 2" class="product_img">
                     </article>
     
                     <article>
-                        <img src="/images/productos/<%= producto.imagenes[2]%>"   alt="imagen 3" class="product_img">
+                        <img src="/images/productos/<%= producto.second_image%>"   alt="imagen 3" class="product_img">
                     </article>
                          
                 </div>
                 <div class="main-photo">
     
                     <article>
-                        <img src="/images/productos/<%= producto.imagen%>"  alt="piercing" class="product_img">
+                        <img src="/images/productos/<%= producto.third_image%>"  alt="piercing" class="product_img">
                     </article>
                 
                 </div>
@@ -44,13 +44,13 @@
             </div>
             <di class="text">
                 <div class= "info">
-                    <h4><%= producto.nombreProducto%></h4>
-                    <p class="price">MX$<%= producto.precio%></p>
+                    <h4><%= producto.name_product%></h4>
+                    <p class="price">MX$<%= producto.price%></p>
         
                 </div>
         
                 <div class= "extra-info">
-                    <p class="description"><%= producto.descripcion%></p>         
+                    <p class="description"><%= producto.description%></p>         
                     <li><a>Garantía un año</a></li>
                     <H5>Talla:</h5>
                     <select name="color">

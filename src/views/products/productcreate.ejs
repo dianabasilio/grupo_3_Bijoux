@@ -18,14 +18,14 @@
     <section>
         <form action="/products/nuevo" method="POST" class="form-create-update" enctype="multipart/form-data">
             <div class="info-new-product">
-                <input type="text" name="name" placeholder="Nombre del producto" value="<%=producto.productoid==0?'': producto.nombreProducto%>">
-                <input type="text" name="descripcion" placeholder="Descripcion del producto" value ="<%=producto.productoid==0?'': producto.descripcion  %>">
-                <input type="text" name="precio" placeholder="Precio del producto" value="<%=producto.productoid==0?'': producto.precio  %>">
+                <input type="text" name="name" placeholder="Nombre del producto">
+                <input type="text" name="descripcion" placeholder="Descripcion del producto">
+                <input type="text" name="precio" placeholder="Precio del producto">
             </div>
             <label for="categorias"><b>Categoria:   </b></label>
             <select name="categorias"  id="categorias">
                 <% categorias.forEach(categoria =>{ %>
-                    <option id= "value"value="<%=categoria.categoriaId %>"> <%=categoria.categoria %> </option>
+                    <option id= "value"value="<%=categoria.id %>"> <%=categoria.category %> </option>
                 <% }) %>  
             </select>
             <div class="fotos">

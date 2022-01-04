@@ -19,11 +19,11 @@
             <div class= "products-box">
                 <% productos.forEach(producto =>{ %>
                     <article>
-                        <img src="/images/productos/<%=producto.imagen%>"  width="100" alt="producto" class="product_img">
+                        <img src="/images/productos/<%=producto.main_image%>"  width="100" alt="producto" class="product_img">
                         <div class="category">
-                            <a href="/products/productdetail/<%= producto.productoid%>">
-                            <p>  <%= producto.nombreProducto%></p>
-                            <p>  $ <%= producto.precio%></p>
+                            <a href="/products/productdetail/<%= producto.id%>">
+                            <p>  <%= producto.name_product%></p>
+                            <p>  $ <%= producto.price%></p>
                             </a>
                         </div>
                     </article>

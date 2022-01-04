@@ -32,11 +32,11 @@
             <div class="table-body">
                 <% productos.forEach(producto =>{ %>
                     <div class="table-row" >
-                        <div class="table-column  productoid"> <p><%= producto.productoid  %></p>  </div>
-                        <div class="table-column  producto"><p><%= producto.nombreProducto  %></p> </div>
-                        <div class="table-column  descripcion"><p><%= producto.descripcion  %></p></div>
-                        <div class="table-column  precio"><p><%= producto.precio  %></p></div>
-                        <div class="table-column editar"> <a href="/products/editar/<%= producto.productoid %>"><i class="fas fa-eye"></i></a> </div>
+                        <div class="table-column  productoid"> <p><%= producto.id  %></p>  </div>
+                        <div class="table-column  producto"><p><%= producto.name_product  %></p> </div>
+                        <div class="table-column  descripcion"><p><%= producto.description  %></p></div>
+                        <div class="table-column  precio"><p><%= producto.price  %></p></div>
+                        <div class="table-column editar"> <a href="/products/editar/<%= producto.id %>"><i class="fas fa-eye"></i></a> </div>
                     </div>
                 <% }) %>
 
