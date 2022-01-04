@@ -93,7 +93,7 @@ router.patch('/editar/:productoid', upload.any(),productsController.update);
 
 router.get('/nuevo/', productsController.productonuevo);
 // router.post('/nuevo/', productsController.store);
-router.post('/nuevo', fileUpload.any(), productsController.store)
+router.post('/nuevo', fileUpload.any(), productsController.store);
 
 // router.post('/nuevo/', upload.single(''),productsController.productonuevo);
 router.delete('/delete/:id', productsController.delete); 
