@@ -8,6 +8,7 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
 
+        
         name_product: {
             type: dataTypes.STRING(100),
             allowNull: false
@@ -18,6 +19,22 @@ module.exports = (sequelize, dataTypes) => {
         },
         price: {
             type: dataTypes.DECIMAL(3, 1),
+            allowNull: false
+        },
+        main_image: {
+            type: dataTypes.STRING(100),
+            allowNull: false
+        },
+        first_image: {
+            type: dataTypes.STRING(100),
+            allowNull: false
+        },
+        second_image: {
+            type: dataTypes.STRING(100),
+            allowNull: false
+        },
+        third_image: {
+            type: dataTypes.STRING(100),
             allowNull: false
         },
 
@@ -42,8 +59,9 @@ module.exports = (sequelize, dataTypes) => {
             as: "productsC",
             foreignKey: "id_category"
         }),
+        //Un producto tiene varias imagenes
         Product.hasMany(models.ProductImage, {
-            as: "productI",
+            as: "productImage",
             foreignKey: "id_product"
         }),
 
