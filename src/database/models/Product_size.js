@@ -20,9 +20,7 @@ module.exports = (sequelize, dataTypes) => {
     };
     let config = {
         tableName: 'product_size',
-        timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
+        timestamps: false,
         deletedAt: false
     }
     const ProductSize = sequelize.define(alias,cols,config);
@@ -32,7 +30,7 @@ module.exports = (sequelize, dataTypes) => {
         //product---product_cart---productSize
         ProductSize.belongsToMany(models.Product, {
             as: "product_cart_size",
-            throught : "ProductCart",
+            through : "ProductCart",
             foreignKey: "id_product_size",
             otherKey: "id_product",
             timestamps: false,
