@@ -35,10 +35,10 @@
     
                 <% categorias.forEach(categoria =>{ %>
                     <article>
-                        <img src="/images/<%= categoria.path%>"  width="100" alt="anillo" class="product_img">
+                        <img src="/images/index-images/<%= categoria.path%>"  width="100" alt="anillo" class="product_img">
                         <div class="category">
                             <a href="/products/categoria/<%= categoria.id%>">
-                            <p>  <%= categoria.categoria%></p>
+                            <p>  <%= categoria.category%></p>
                             </a>
                         </div>
                     </article>
