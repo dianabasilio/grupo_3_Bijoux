@@ -16,11 +16,11 @@
 <main>
      <h1> <%= title %>  Producto </h1>
     <section>
-        <form action="/products/editar/<%= productToEdit.productoid %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+        <form action="/products/editar/<%= product.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
             <div class="info-new-product">
-                <input type="text" name="nombreProducto" placeholder="Nombre del producto" value="<%= productToEdit.name_product%>">
-                <input type="text" name="descripcion" placeholder="Descripcion del producto" value ="<%= productToEdit.description  %>">
-                <input type="text" name="precio" placeholder="Precio del producto" value="<%= productToEdit.price  %>">
+                <input type="text" name="nombreProducto" placeholder="Nombre del producto" value="<%= product.name_product%>">
+                <input type="text" name="descripcion" placeholder="Descripcion del producto" value ="<%= product.description  %>">
+                <input type="text" name="precio" placeholder="Precio del producto" value="<%= product.price  %>">
             </div>
             <label for="categoriaId"><b>Categoria:   </b></label>
             <select name="categoriaId"  id="categoriaId">
@@ -30,16 +30,16 @@
             </select>
             <div class="fotos">
                 <h4>Foto principal</h4>
-                <input type="file" class = "upload-file" name="photoMain.<%=categorias.category %>" accept=".jpg" multiple>
+                <input type="file" class = "upload-file" name="photoMain" accept=".jpg" value="<%= locals.old && old.photoMain ? old.photoMain : '' %>" multiple>
                 <span class="btn btn-primary">Escoger archivo</span>
                 <h4>Foto detalle 1</h4>
-                <input type="file" class = "upload-file" name="photo1.<%=categorias.category %>" accept=".jpg" multiple>
+                <input type="file" class = "upload-file" name="photo1" accept=".jpg" value="<%= locals.old && old.photo1 ? old.photo1 : '' %>" multiple>
                 <span class="btn btn-primary">Escoger archivo</span>
                 <h4>Foto detalle 2</h4>
-                <input type="file" class = "upload-file" name="photo2.<%=categorias.category %>" accept=".jpg" multiple>
+                <input type="file" class = "upload-file" name="photo2" accept=".jpg" value="<%= locals.old && old.photo2 ? old.photo2 : '' %>" multiple>
                 <span class="btn btn-primary">Escoger archivo</span>
                 <h4>Foto detalle 3</h4>
-                <input type="file" class = "upload-file" name="photo3.<%=categorias.categoria %>" accept=".jpg" multiple>
+                <input type="file" class = "upload-file" name="photo3" accept=".jpg" value="<%= locals.old && old.photo3 ? old.photo3 : '' %>" multiple>
                 <span class="btn btn-primary">Escoger archivo</span>
 
             </div>
@@ -48,7 +48,7 @@
            
 
         </form>
-        <form action="/products/delete/<%=productToEdit.id%>?_method=DELETE" method="POST">
+        <form action="/products/delete/<%=product.id%>?_method=DELETE" method="POST">
             <button type="submit" id = "delete" value="Borrar">Eliminar</button>
        </form>
     </section>
