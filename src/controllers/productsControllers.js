@@ -23,15 +23,15 @@ const productoController = {
     }
     ,
     store: (req, res) => {
-        console.log(req.files);
+        console.log('hoaishfaoi');
 
         let parsePrecio = parseInt(req.body.precio);
         let parseCategoriaId = parseInt(req.body.categorias);
 
 		let imagen
 
-
-		if(req.files){
+        //Si no estan los 4 archivos.. no avanza
+		if(req.files[0] && req.files[1] && req.files[2] && req.files[3]){
             if(parseCategoriaId == 1){
                 carpeta="anillos/";
             } else if (parseCategoriaId == 2){
@@ -50,9 +50,8 @@ const productoController = {
             first_image = carpeta + req.files[1].filename;
             second_image = carpeta + req.files[2].filename;
             third_image = carpeta + req.files[3].filename;	
-		}     
 
-        //aquí te quedaste
+        //Si no existe los archivos no queremos que avance
         Products
         .create(
             {
@@ -69,6 +68,17 @@ const productoController = {
         .then(()=> {
             return res.redirect('/products')})            
         .catch(error => res.send(error))
+		}
+        else {
+            Categories
+            .findAll()
+                .then(categorias => {
+                    res.render('products/productcreate.ejs', {categorias, title:"Nuevo"});
+                })         
+            .catch(error => res.send(error))
+        }
+
+        
 
 	},
     categoria: (req, res)=>{
