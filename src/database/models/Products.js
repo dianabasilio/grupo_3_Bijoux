@@ -46,9 +46,7 @@ module.exports = (sequelize, dataTypes) => {
     };
     let config = {
         tableName: 'products',
-        timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
+        timestamps: false,
         deletedAt: false
     }
     const Product = sequelize.define(alias,cols,config);
@@ -59,17 +57,12 @@ module.exports = (sequelize, dataTypes) => {
             as: "productsC",
             foreignKey: "id_category"
         }),
-        //Un producto tiene varias imagenes
-        Product.hasMany(models.ProductImage, {
-            as: "productImage",
-            foreignKey: "id_product"
-        }),
 
         //product---product_cart---productSize
         Product.belongsToMany(models.ProductSize, {
             as: "product_cart_productS",
             // aqui no estaba segura si se tenia que poner el nombre literal de la tabla o el nombre del modelo, como yo declare el modelo, entonces le puse el nombre del modelo
-            throught : "ProductCart",
+            through : "ProductCart",
             foreignKey: "id_product",
             otherKey: "id_product_size",
             timestamps: false,
@@ -78,7 +71,7 @@ module.exports = (sequelize, dataTypes) => {
         //product----product_cart----shopping_cart
         Product.belongsToMany(models.ShoppingCart, {
             as: "product_shopping",
-            throught : "ProductCart",
+            through : "ProductCart",
             foreignKey: "id_product",
             otherKey: "id_shopping_cart",
             timestamps: false,
