@@ -76,7 +76,21 @@ const productoController = {
         categoriaid =req.params.categoriaid; 
         
         //Cuando no son relojes es categoriaid = 0
-        if (categoriaid ==0){   
+        if (categoriaid == 6){   
+            categoria = "RELOJES"
+            Products
+            .findAll(
+                {
+                    where: {
+                        id_category: 6
+                    }
+                })
+                .then(productos => {
+                    res.render('products/productscategoria.ejs', {productos:productos, categoria:categoria});
+                })         
+            .catch(error => res.send(error))
+        }
+        else if (categoriaid == 0){
             categoria = "JOYERIA";
             Products
             .findAll(
@@ -91,22 +105,23 @@ const productoController = {
                     res.render('products/productscategoria.ejs', {productos:productos, categoria:categoria});
                 })         
             .catch(error => res.send(error))
-        }
-        else{
             //título de categoría
             //Cuando no son relojes categoriaid = 6
-            categoria = "RELOJES"
+        }
+        else {
+            categoria = "JOYERIA";
             Products
             .findAll(
                 {
                     where: {
-                        id_category: 6
+                        id_category: categoriaid
                     }
                 })
                 .then(productos => {
                     res.render('products/productscategoria.ejs', {productos:productos, categoria:categoria});
                 })         
             .catch(error => res.send(error))
+
         }
 
     }, 
@@ -128,14 +143,14 @@ const productoController = {
 
     edit: (req,res)=>{
 
-    let productoid = req.params.id;
+    let productoid = req.params.productoid;
     let promProducts = Products.findByPk(productoid);
     let promCategories = Categories.findAll();
 
     Promise
     .all([promProducts, promCategories])
     .then(([product, allCategories]) => {
-        return res.render(path.resolve(__dirname, '..', 'views',  'products', 'productedit'), {productToEdit:product, categorias:allCategories, title:"Editar"})})
+        return res.render(('products/productedit.ejs'), {product:product, categorias:allCategories, title:"Editar"})})
     .catch(error => res.send(error))
 
 
@@ -153,22 +168,22 @@ const productoController = {
         let productoid = req.params.productoid;
         let parsePrecio = parseInt(req.body.precio);
         let parseCategoriaId = parseInt(req.body.categoriaId);
-		let productToEdit = products.find(product => product.productoid == productoid);
+
 		let imagen
 
 		if(req.files){
-            if(productToEdit.categoriaId == 1){
+            if(parseCategoriaId == 1){
                 carpeta="anillos/";
-            } else if (productToEdit.categoriaId == 2){
+            } else if (parseCategoriaId == 2){
                 carpeta="collares/";
-            }else if (productToEdit.categoriaId == 3){
+            }else if (parseCategoriaId == 3){
                 carpeta="pulseras/";
             }
-            else if (productToEdit.categoriaId == 4){
+            else if (parseCategoriaId == 4){
                 carpeta="piercings/";
-            }else if (productToEdit.categoriaId == 5){
+            }else if (parseCategoriaId == 5){
                 carpeta="aretes/";
-            }else if (productToEdit.categoriaId == 6){
+            }else if (parseCategoriaId == 6){
                 carpeta="relojes/";
             }
             imagen = carpeta + req.files[0].filename;
