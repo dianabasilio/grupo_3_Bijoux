@@ -223,6 +223,7 @@ const productoController = {
 		}
         else {
 //Si no lo cumple hará lo mismo que edit
+//El último commit era para update en vez de create
             let productoid = req.params.productoid;
             let promProducts = Products.findByPk(productoid);
             let promCategories = Categories.findAll();
