@@ -3,13 +3,21 @@
 let fs = require('fs');
 const path = require('path');
 
-const dataProducts = require('../data/data-products.json');
-const dataProductsCategories = require('../data/data-categories-products.json');
+
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+const moment = require('moment');
+
+const Categories = db.CategoryProduct;
+const Products = db.Product;
 
 const mainController = {
     index: (req, res)=>{
-        res.render("index", {categorias:dataProductsCategories});
-
+        Categories.findAll()
+            .then(categorias => {
+                res.render('index.ejs', {categorias})
+            })
     }
     ,
     carrito: (req, res)=>{
