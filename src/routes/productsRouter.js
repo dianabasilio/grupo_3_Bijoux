@@ -15,23 +15,20 @@ const storage = multer.diskStorage({
     destination:function(req,file,cb){
         const fs = require('fs');
         const dataP = path.join(__dirname, '../data/data-products.json');
-        const productos = JSON.parse(fs.readFileSync(dataP, 'utf-8'));
+        let parseCategorias = parseInt(req.body.categoriaId);
 
-        let productoid = req.params.productoid;
-        let product = productos.find(product => product.productoid == productoid);
-        console.log(product);
-        if(product.categoriaId == 1){
+        if(parseCategorias == 1){
             carpeta="/anillos";
-        } else if (product.categoriaId == 2){
+        } else if (parseCategorias == 2){
             carpeta="/collares";
-        }else if (product.categoriaId == 3){
+        }else if (parseCategorias == 3){
             carpeta="/pulseras";
         }
-        else if (product.categoriaId == 4){
+        else if (parseCategorias == 4){
             carpeta="/piercings";
-        }else if (product.categoriaId == 5){
+        }else if (parseCategorias == 5){
             carpeta="/aretes";
-        }else if (product.categoriaId == 6){
+        }else if (parseCategorias == 6){
             carpeta="/relojes";
         }
 
@@ -39,13 +36,8 @@ const storage = multer.diskStorage({
         cb(null, path.join(__dirname, '../../public/images/productos/'+carpeta));
     },
     filename: function(req,file,cb){
-        const fs = require('fs');
-        const dataP = path.join(__dirname, '../data/data-products.json');
-        const productos = JSON.parse(fs.readFileSync(dataP, 'utf-8'));
-
-        let productoid = req.params.productoid;
-        let product = productos.find(product => product.productoid == productoid);
-        cb(null,'categoria-'+product.categoriaId+'-' +file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+        let parseCategorias = parseInt(req.body.categoriaId);
+        cb(null,'categoria-'+parseCategorias+'-' +file.fieldname + '-' + Date.now() + path.extname(file.originalname));
     }
 })
 
