@@ -18,8 +18,8 @@
     <section>
         <form action="/products/editar/<%= product.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
             <div class="info-new-product">
-                <input type="text" name="nombreProducto" placeholder="Nombre del producto" value="<%= product.name_product%>">
-                <input type="text" name="descripcion" placeholder="Descripcion del producto" value ="<%= product.description  %>">
+                <input type="text" name="name_product" placeholder="Nombre del producto" value="<%= product.name_product%>">
+                <input type="text" name="description" placeholder="Descripcion del producto" value ="<%= product.description  %>">
                 <input type="text" name="precio" placeholder="Precio del producto" value="<%= product.price  %>">
             </div>
             <label for="categoriaId"><b>Categoria:   </b></label>
