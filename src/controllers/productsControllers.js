@@ -181,7 +181,8 @@ const productoController = {
 
 		let imagen
 
-		if(req.files){
+        //Verifica que esten los 4 archivos
+		if(req.files[0] && req.files[1] && req.files[2] && req.files[3]){
             if(parseCategoriaId == 1){
                 carpeta="anillos/";
             } else if (parseCategoriaId == 2){
@@ -199,10 +200,9 @@ const productoController = {
             imagen = carpeta + req.files[0].filename;
             first_image = carpeta + req.files[1].filename;
             second_image = carpeta + req.files[2].filename;
-            third_image = carpeta + req.files[3].filename;	
-		}
+            third_image = carpeta + req.files[3].filename;
 
-        Products
+            Products
         .update(
             {
                 id_category: parseCategoriaId,
@@ -220,6 +220,22 @@ const productoController = {
         .then(()=> {
             return res.redirect('/')})            
         .catch(error => res.send(error))
+		}
+        else {
+//Si no lo cumple hará lo mismo que edit
+            let productoid = req.params.productoid;
+            let promProducts = Products.findByPk(productoid);
+            let promCategories = Categories.findAll();
+
+            Promise
+            .all([promProducts, promCategories])
+            .then(([product, allCategories]) => {
+                return res.render(('products/productedit.ejs'), {product:product, categorias:allCategories, title:"Editar"})})
+            .catch(error => res.send(error))
+
+        }
+
+        
 
 
         },
