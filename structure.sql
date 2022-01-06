@@ -5,7 +5,7 @@ CREATE TABLE `bijoux_db`.`products` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name_product` VARCHAR(100) NOT NULL,
   `description` VARCHAR(100) NOT NULL,
-  `price` DECIMAL(3,1) NOT NULL,
+  `price` DECIMAL(8,1) NOT NULL,
   `main_image` VARCHAR(100) NOT NULL,
   `first_image` VARCHAR(100) NOT NULL,
   `second_image` VARCHAR(100) NOT NULL,
