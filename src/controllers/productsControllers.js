@@ -196,8 +196,8 @@ const productoController = {
         .update(
             {
                 id_category: parseCategoriaId,
-                name_product: req.body.name,
-                description: req.body.descripcion,
+                name_product: req.body.name_product,
+                description: req.body.description,
                 main_image: imagen,
                 price: parsePrecio,
                 first_image: first_image,
