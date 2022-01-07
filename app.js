@@ -1,9 +1,25 @@
 const express = require('express');
+const session = require('express-session');
+const cookies = require('cookie-parser');
+
 const app= express();
-//Requerir path 
+
+const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
+
+//Requerir path rutas
 const path = require('path');
 const mainRouter = require('./src/routes/mainRouter');
+const userRoutes = require('./src/routes/userRoutes');
 const productsRouter = require('./src/routes/productsRouter');
+
+app.use(session({
+	secret: "Shhh, It's a secret",
+	resave: false,
+	saveUninitialized: false,
+}));
+
+app.use(cookies());
+app.use(userLoggedMiddleware);
 
 
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
@@ -20,10 +36,9 @@ app.set('view engine','ejs');
 
 app.use('/', mainRouter);
 app.use('/products/', productsRouter);
+app.use('/user', userRoutes);
 
-
-
-let port = process.env.PORT||3030;
+let port = process.env.PORT||3020;
 
 app.listen(port, () =>{
     console.log('Servidor funcionando ' +port);

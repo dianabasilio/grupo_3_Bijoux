@@ -25,26 +25,31 @@
                     <p>Si tiene una cuenta inicie sesión con su dirección de correo electrónico.</p>
                 </div>
                 
-                <form action="/" method="GET">
+                <form action="/user/login" method="GET">
                     <p>
                         <label for="email"></label>
                         <input type="email" name="email" id="email" placeholder="Correo electrónico">
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="text-danger">
+                                <%= errors.email.msg %>
+                            </div>
+                        <% } %>
                     </p>   
         
                     <p>      
                         <label for="contraseña"></label>
                         <input type="password" name="password" id="contraseña" placeholder="Contraseña"> 
                     </p>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario
+                        </label>
+                    </div>
         
                     <p >
                         <!--<button type="submit" action="/" method="GET">Enviar</button> -->
                         <button type="submit" id = "submit">Iniciar sesión</button>
                         
-                    </p>
-        
-                    <p>
-                        <!--<button type="submit" action="/" method="GET">Enviar</button> -->               
-                        <button type="forgot-password" id = "forgot-password" >¿Olvidó su contraseña?</button>
                     </p>
         
     
@@ -60,7 +65,7 @@
     
                 </p>
     
-                <form action="/users/add" method="GET">
+                <form action="/user/register" method="GET">
     
                     <p >
                         <!--<button type="submit" action="/" method="GET">Enviar</button> -->

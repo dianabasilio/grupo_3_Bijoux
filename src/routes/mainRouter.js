@@ -10,14 +10,8 @@ const mainController = require('../controllers/mainController');
 router.get('/', mainController.index);
 //GET carrito page
 router.get('/carrito', mainController.carrito);
-//GET login page
-router.get('/login', mainController.login);
 //GET productdetail page
 router.get('/productdetail', mainController.productdetail);
-//GET register page
-router.get('/register', mainController.register);
-//POST register page
-router.post('/register', mainController.create);
 
 
 
