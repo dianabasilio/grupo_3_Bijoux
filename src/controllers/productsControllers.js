@@ -13,6 +13,8 @@ const moment = require('moment');
 const Products = db.Product;
 const Categories = db.CategoryProduct;
 
+const {validationResult} = require('express-validator')
+
 const productoController = {
     productos:(req,res)=>{
         //CUIDADO hace falta agregar el de images y de ahí basarnos, pensar en como pasar string a array para create
@@ -23,15 +25,16 @@ const productoController = {
     }
     ,
     store: (req, res) => {
-        console.log('hoaishfaoi');
+        let errors = validationResult(req);
 
         let parsePrecio = parseInt(req.body.precio);
         let parseCategoriaId = parseInt(req.body.categorias);
+        let noImages;
 
 		let imagen
 
         //Si no estan los 4 archivos.. no avanza
-		if(req.files[0] && req.files[1] && req.files[2] && req.files[3]){
+		if(req.files[0] && req.files[1] && req.files[2] && req.files[3]&&errors.isEmpty()){
             if(parseCategoriaId == 1){
                 carpeta="anillos/";
             } else if (parseCategoriaId == 2){
@@ -70,10 +73,13 @@ const productoController = {
         .catch(error => res.send(error))
 		}
         else {
+            if (!(req.files[0] && req.files[1] && req.files[2] && req.files[3])){
+                noImages = 'No subiste todas las imagenes (JPG, JPEG, PNG, GIF)'
+            }
             Categories
             .findAll()
                 .then(categorias => {
-                    res.render('products/productcreate.ejs', {categorias, title:"Nuevo"});
+                    res.render('products/productcreate.ejs', {categorias, title:"Nuevo", errors :errors.array(), old: req.body, noImages:noImages});
                 })         
             .catch(error => res.send(error))
         }
@@ -156,11 +162,12 @@ const productoController = {
     let productoid = req.params.productoid;
     let promProducts = Products.findByPk(productoid);
     let promCategories = Categories.findAll();
+    let noImages;
 
     Promise
     .all([promProducts, promCategories])
     .then(([product, allCategories]) => {
-        return res.render(('products/productedit.ejs'), {product:product, categorias:allCategories, title:"Editar"})})
+        return res.render(('products/productedit.ejs'), {product:product, categorias:allCategories, title:"Editar",noImages:noImages })})
     .catch(error => res.send(error))
 
 
@@ -175,14 +182,16 @@ const productoController = {
 
     },
     update: (req,res)=>{
+        let errors = validationResult(req);
         let productoid = req.params.productoid;
         let parsePrecio = parseInt(req.body.precio);
         let parseCategoriaId = parseInt(req.body.categoriaId);
 
-		let imagen
+		let imagen;
+        let noImages;
 
         //Verifica que esten los 4 archivos
-		if(req.files[0] && req.files[1] && req.files[2] && req.files[3]){
+		if(req.files[0] && req.files[1] && req.files[2] && req.files[3]&&errors.isEmpty()){
             if(parseCategoriaId == 1){
                 carpeta="anillos/";
             } else if (parseCategoriaId == 2){
@@ -206,8 +215,8 @@ const productoController = {
         .update(
             {
                 id_category: parseCategoriaId,
-                name_product: req.body.name_product,
-                description: req.body.description,
+                name_product: req.body.name,
+                description: req.body.descricion,
                 main_image: imagen,
                 price: parsePrecio,
                 first_image: first_image,
@@ -222,8 +231,11 @@ const productoController = {
         .catch(error => res.send(error))
 		}
         else {
-//Si no lo cumple hará lo mismo que edit
-//El último commit era para update en vez de create
+            //Si no se cumple que se enviaron las 4 imágenes se mandará este mensaje
+            if (!(req.files[0] && req.files[1] && req.files[2] && req.files[3])){
+                noImages = 'No subiste todas las imagenes (JPG, JPEG, PNG, GIF).'
+            }
+            //Si no lo cumple hará lo mismo que edit
             let productoid = req.params.productoid;
             let promProducts = Products.findByPk(productoid);
             let promCategories = Categories.findAll();
@@ -231,7 +243,7 @@ const productoController = {
             Promise
             .all([promProducts, promCategories])
             .then(([product, allCategories]) => {
-                return res.render(('products/productedit.ejs'), {product:product, categorias:allCategories, title:"Editar"})})
+                return res.render(('products/productedit.ejs'), {product:product, categorias:allCategories, title:"Editar", errors :errors.array(), old: req.body, noImages:noImages})})
             .catch(error => res.send(error))
 
         }

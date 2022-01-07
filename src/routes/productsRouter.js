@@ -8,6 +8,7 @@ const multer = require('multer');
 // Aća nos falta traer el controller
 const productsController = require('../controllers/productsControllers');
 
+const { body } = require('express-validator');
 
 
 // ************ Multer ************ 
@@ -73,6 +74,12 @@ const storageNewFile = multer.diskStorage({
 });
 const fileUpload = multer({storage: storageNewFile});
 
+const ValidateCreateForm = [
+    body('name').notEmpty().withMessage('Completa el nombre del producto').bail()
+    .isLength({ min: 5}).withMessage('Deben de ser mínimo 5 carácteres'),
+    body('descripcion').isLength({ min: 20 }).withMessage('Descripción mínima con 20 carácteres')
+];
+
 router.get('/', productsController.productos);
 router.get('/categoria/:categoriaid?/', productsController.categoria);
 router.get('/productdetail/:productoid/', productsController.productodetail);
@@ -81,11 +88,12 @@ router.get('/editar/:productoid', productsController.edit);
 
 /*** EDIT ONE PRODUCT ***/ 
 //router.get('/edit/:id', productsController.edit);
-router.patch('/editar/:productoid', upload.any(),productsController.update); 
+router.patch('/editar/:productoid', upload.any()
+  ,ValidateCreateForm,productsController.update); 
 
 router.get('/nuevo/', productsController.productonuevo);
 // router.post('/nuevo/', productsController.store);
-router.post('/nuevo', fileUpload.any(), productsController.store);
+router.post('/nuevo', fileUpload.any(),ValidateCreateForm ,productsController.store);
 
 // router.post('/nuevo/', upload.single(''),productsController.productonuevo);
 router.delete('/delete/:id', productsController.delete); 

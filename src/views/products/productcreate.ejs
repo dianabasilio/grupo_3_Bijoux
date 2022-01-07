@@ -15,12 +15,20 @@
 
 <main>
      <h1> <%= title %>  Producto </h1>
+     <% if (locals.errors) {%> 
+     <% errors.forEach(error => { %> 
+        <p> <%= error.msg %> </p>
+     <% }) %> 
+     <% } %>
+     <% if (noImages) {%> 
+           <p> <%= noImages %> </p>
+        <% } %> 
     <section>
         <form action="/products/nuevo" method="POST" class="form-create-update" enctype="multipart/form-data">
             <div class="info-new-product">
-                <input type="text" name="name" placeholder="Nombre del producto">
-                <input type="text" name="descripcion" placeholder="Descripcion del producto">
-                <input type="text" name="precio" placeholder="Precio del producto">
+                <input type="text" name="name" placeholder="Nombre del producto" value="<%= locals.old && old.name ? old.name : null %>">
+                <input type="text" name="descripcion" placeholder="Descripcion del producto" value="<%= locals.old && old.descripcion ? old.descripcion: null %>">
+                <input type="text" name="precio" placeholder="Precio del producto" value="<%= locals.old && old.precio ? old.precio: null %>" >
             </div>
             <label for="categorias"><b>Categoria:   </b></label>
             <select name="categorias"  id="categorias">
@@ -30,16 +38,16 @@
             </select>
             <div class="fotos">
                 <h4>Foto principal</h4>
-                <input type="file" class = "upload-file" name="foto-main" accept=".jpg" multiple>
+                <input type="file" class = "upload-file" name="fotoMain" value="<%= locals.old && old.fotoMain ? old.foto-main: null %>" accept=".jpg, .jpeg, .png, .gif" multiple>
                 <span class="btn btn-primary">Escoger archivo</span>
                 <h4>Foto detalle 1</h4>
-                <input type="file" class = "upload-file" name="foto-detalle-1" accept=".jpg" multiple>
+                <input type="file" class = "upload-file" name="fotoDetalle1"  value="<%= locals.old && old.fotoDetalle1 ? old.fotoDetalle1: null %>" accept=".jpg, .jpeg, .png, .gif" multiple>
                 <span class="btn btn-primary">Escoger archivo</span>
                 <h4>Foto detalle 2</h4>
-                <input type="file" class = "upload-file" name="foto-detalle-2" accept=".jpg" multiple>
+                <input type="file" class = "upload-file" name="fotoDetalle2" value="<%= locals.old && old.fotoDetalle2 ? old.fotoDetalle2: null %>" accept=".jpg, .jpeg, .png, .gif" multiple>
                 <span class="btn btn-primary">Escoger archivo</span>
                 <h4>Foto detalle 3</h4>
-                <input type="file" class = "upload-file" name="foto-detalle-3" accept=".jpg" multiple>
+                <input type="file" class = "upload-file" name="fotoDetalle3"  value="<%= locals.old && old.fotoDetalle3 ? old.fotoDetalle3: null %>" accept=".jpg, .jpeg, .png, .gif" multiple>
                 <span class="btn btn-primary">Escoger archivo</span>
 
             </div>
