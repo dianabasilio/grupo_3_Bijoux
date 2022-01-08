@@ -1,9 +1,9 @@
 module.exports = {
   "development": {
-    "username": "admin",
-    "password": 12345678,
-    "database": "database_development",
-    "host": "bijoux.cjsgnbio4rra.us-east-1.rds.amazonaws.com",
+    "username": "root",
+    "password": "Ltcl1899jiji@",
+    "database": "bijoux_db",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {

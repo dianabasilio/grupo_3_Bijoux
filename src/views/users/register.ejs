@@ -19,22 +19,49 @@
                 Crear una cuenta tiene muchos beneficios: Pago más rápido, guardar más de una dirección, seguimiento de pedidos y mucho más.
             </p>
             
-            <form class="register" action="/register" method="POST">
+            <form class="register" action="/user/register" method="POST" enctype="multipart/form-data">
                 <div >
-                <input type="text" name="first_name" id="nombre" placeholder="Nombre">
-                <input type="text" name="last_name" id="apellido" placeholder="Apellido">
-                <input type="email" name="email" id="email" placeholder="Email">
-                <input type="password" name="password" id="contrasena" placeholder="Contraseña">
-                <input type="file" class = "upload-file" name="avatar" accept=".jpg" multiple>
+                <input type="text" name="first_name" id="nombre" placeholder="Nombre" value="<%= locals.oldData ? oldData.first_name : null %>">
+                <% if (locals.errors && errors.first_name) { %>
+                    <div class="text-danger">
+                        <%= errors.first_name.msg %> 
+                    </div>
+                <% } %>
+                <input type="text" name="last_name" id="apellido" placeholder="Apellido" value="<%= locals.oldData ? oldData.last_name : null %>" >
+                <% if (locals.errors && errors.last_name) { %>
+                    <div class="text-danger">
+                        <%= errors.last_name.msg %> 
+                    </div>
+                <% } %>
+                <input type="email" name="email" id="email" placeholder="Email" value="<%= locals.oldData ? oldData.email : null %>" >
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                        <%= errors.email.msg %>
+                    </div>
+                <% } %>
+                <input type="password" name="password" id="contrasena" placeholder="Contraseña" value="<%= locals.oldData ? oldData.password : null %>">
+                <% if (locals.errors && errors.password) { %>
+                    <div class="text-danger">
+                        <%= errors.password.msg %>
+                    </div>
+                <% } %>
+                <input type="file" class = "upload-file" name="avatar" multiple>
+                <% if (locals.errors && errors.avatar) { %>
+                    <div class="text-danger">
+                        <%= errors.avatar.msg %>
+                    </div>
+                <% } %>
                 <span class="btn btn-primary">Escoger foto de perfil</span>
                 <br>
-                <input type="submit" id = "submit" value="Crear cuenta">
+                <br>
                 <div class="privacidad">
                     <div>
                         <input type="checkbox" name="interests" value="a" id="a">
                         <label for="a"> Al marcar esta casilla, doy mi consentimiento y acepto lo siguiente.</label>
                     </div> 
-                <div> 
+                <div>
+                    <br>
+                    <input type="submit" id = "submit" value="Crear cuenta">
                     <p>
                         Al entregar la información de arriba, acepto que Bijoux, identificados en www.bijoux.com/politica/politicaprivacidad/  pueden procesar mi nombre, mi dirección de correo electrónico y demás información personal que haya sido entregada por mí para ponerse en contacto conmigo y realizar actividades de publicidad directa, ventas y estudios. 
                     </p>  

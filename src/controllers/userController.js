@@ -6,6 +6,11 @@ const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const moment = require('moment');
 
+const bcryptjs = require('bcryptjs');
+const {
+	validationResult
+} = require('express-validator');
+
 const Users = db.User;
 
 const userController = {
@@ -14,6 +19,7 @@ const userController = {
 		return res.render('users/register.ejs');
 	},
 	processRegister: (req, res) => {
+		console.log(req.file);
 		const resultValidation = validationResult(req);
 
 		if (resultValidation.errors.length > 0) {
@@ -24,8 +30,9 @@ const userController = {
 		}
 
 		let userInDB = Users.findByPk(req.body.email);
+		console.log('userIndb:  '+userInDB)
 
-		if (userInDB) {
+		if (!userInDB) {
 			return res.render('users/register.ejs', {
 				errors: {
 					email: {
@@ -40,34 +47,46 @@ const userController = {
         .create(
             {
                 ...req.body,
-				password: bcryptjs.hashSync(req.body.password, 10),
-				avatar: req.file.filename
+				image_path: req.file.filename,
+				password: bcryptjs.hashSync(req.body.password, 10)
             }
         )
         .then(()=> {
-            return res.redirect('users/login.ejs')})            
+            return res.redirect('/user/login')})            
         .catch(error => res.send(error))
 
 	},
 	login: (req, res) => {
 		return res.render('users/login.ejs');
 	},
-	loginProcess: (req, res) => {
-		let userToLogin = Users.findByPk(req.body.email);
+	loginProcess: async(req, res) => {
+		console.log('proceso login');
+		console.log('email: '+req.body.email);
+		let userToLogin = await Users.findByPk(req.body.email);
+		console.log('userToLogin: '+userToLogin);
+		
 		
 		if(userToLogin) {
+			console.log('Ya se dio cuenta que existe el user');
+			console.log('user listo: '+userToLogin);
+			console.log('password del body: '+req.body.password);
+			console.log('password encrypted: '+userToLogin.password);
 			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
 			if (isOkThePassword) {
+				console.log('Debiste entrar correctamente'+req.session);
+				console.log('user listo: '+userToLogin);
 				//eliminando la contraseña por seguridad
 				delete userToLogin.password;
 				req.session.userLogged = userToLogin;
+				console.log('user listo con req.session: '+req.session.userLogged);
 
 				if(req.body.remember_user) {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
 
-				return res.redirect('users/userProfile.ejs');
-			} 
+				return res.redirect('/user/profile/');
+			}
+			console.log('Pusiste mal contraseña'+userToLogin);
 			return res.render('users/login.ejs', {
 				errors: {
 					email: {
@@ -76,7 +95,7 @@ const userController = {
 				}
 			});
 		}
-
+		console.log('No estabas en base de datos'+userToLogin);
 		return res.render('users/login.ejs', {
 			errors: {
 				email: {
@@ -85,7 +104,9 @@ const userController = {
 			}
 		});
 	},
-	profile: (req, res) => {
+	profile: async (req, res) => {
+		console.log('Estas en profile');
+		console.log('user listo con req.session: '+req.session.userLogged);
 		console.log(req.session);
 		return res.render('users/userProfile.ejs', {
 			user: req.session.userLogged

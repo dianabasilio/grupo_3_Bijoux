@@ -10,6 +10,7 @@ function userLoggedMiddleware(req, res, next) {
 
 	let emailInCookie = req.cookies.userEmail;
 	let userFromCookie = Users.findByPk(emailInCookie);
+	console.log('userLoggedMiddleware:'+req.session.userLogged)
 
 	if (userFromCookie) {
 		req.session.userLogged = userFromCookie;
