@@ -75,6 +75,7 @@ Apoyarnos entre nosotros.
 ## Hacer menos 
 
 ## Dejar de hacer
+
 # Retrospectiva 5
 ## Comenzar a hacer
 -Trabajar todos los días de aquí a final para terminar.
@@ -93,7 +94,7 @@ No darle el tiempo suficiente.
 
 # Retrospectiva 6
 ## Comenzar a hacer
--Trabajar fuertemente e el próximo sprint.
+-Trabajar fuertemente en el próximo sprint.
 ## Hacer más
 Hablar más por whatsapp.
 
@@ -105,3 +106,39 @@ No hablarnos por algunos dias.
 
 ## Dejar de hacer
 No hacer push y pull diariamente.
+
+# Retrospectiva 7
+## Comenzar a hacer
+-Distribución de tareas mas rápida
+-Mas reuniones por zoom 
+
+## Hacer más
+Mantener una comunicación más amplia con todos los paticipantes del equipo.
+Establecer los tiempos en los que vamos a entregar el avance de las tareas asignadas.
+
+## Continuar haciendo
+organizarnos para terminar todas las tareas de los sprints que nos aun faltan por concluir. 
+
+## Hacer menos 
+No hablarnos por algunos dias.
+
+## Dejar de hacer
+No hacer push y pull diariamente.
+
+
+# Retrospectiva 8
+## Comenzar a hacer
+-Trabajar fuertemente en el último próximo sprint.
+-Hacer una revisión de avances a la mitad del sprint.
+## Hacer más
+Mejorar organización del tiempo para la solución de tareas.
+
+## Continuar haciendo
+Seguir trabajando para cerrar el proyecto y los sprints 
+Apoyarnos resolviendo las dudas que se tienen durante el sprint 
+
+## Hacer menos 
+No hablarnos por algunos dias.
+
+## Dejar de hacer
+Confiarnos con las fechas de entrega del proyecto final.
