@@ -24,10 +24,10 @@ INSERT INTO products
 VALUES (default,"Aretes Verdes", "Aretes Verdes de oro 18k...", 759, "aretes/1.1Arete.jpg", "aretes/1.1Arete.jpg",  "aretes/1.2Arete.jpg",  "aretes/1.3Arete.jpg",5);
 
 INSERT INTO products
-VALUES (default,"Collar perla", "Collar con perla de plata", 1400, "collares/1.1Collar.jpg","collares/1.1Collar.jpg",  "aretes/1.2Collar.jpg",  "aretes/1.3Collar.jpg",2);
+VALUES (default,"Collar perla", "Collar con perla de plata", 1400, "collares/1.1Collar.jpg","collares/1.1Collar.jpg",  "collares/1.2Collar.jpg",  "collares/1.3Collar.jpg",2);
 
 INSERT INTO products
-VALUES (default,"Collar piedras", "Collar con  piedras de plata", 1200, "collares/4.1Collar.jpg","collares/4.1Collar.jpg",  "aretes/4.2Collar.jpg",  "aretes/4.3Collar.jpg",2);
+VALUES (default,"Collar piedras", "Collar con  piedras de plata", 1200, "collares/4.1Collar.jpg","collares/4.1Collar.jpg",  "collares/4.2Collar.jpg",  "collares/4.3Collar.jpg",2);
 
 INSERT INTO products
 VALUES (default,"Pulsera con rosas", "Pulsera con rosas plateada", 1700,"pulseras/pulseraPlata1.1.jpeg", "pulseras/pulseraPlata1.1.jpeg",  "pulseras/pulseraPlata1.2.jpeg",  "pulseras/pulseraPlata1.3.jpeg",3);
