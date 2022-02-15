@@ -1,9 +1,9 @@
 module.exports = {
   "development": {
-    "username": "root",
-    "password": "Ltcl1899jiji@",
+    "username": "admin",
+    "password": "Ltcl1899jiji",
     "database": "bijoux_db",
-    "host": "127.0.0.1",
+    "host": "database-1.cw8et7efn2ur.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
@@ -14,10 +14,10 @@ module.exports = {
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "admin",
+    "password": "Ltcl1899jiji",
+    "database": "bijoux_db_prod",
+    "host": "database-1.cw8et7efn2ur.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
