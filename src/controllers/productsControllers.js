@@ -31,7 +31,7 @@ const productoController = {
         let parseCategoriaId = parseInt(req.body.categorias);
         let noImages;
 
-		let imagen
+		let imagen;
 
         //Si no estan los 4 archivos.. no avanza
 		if(req.files[0] && req.files[1] && req.files[2] && req.files[3]&&errors.isEmpty()){
@@ -173,10 +173,11 @@ const productoController = {
 
     }, 
     productonuevo : (req,res)=>{
+        let noImages;
     Categories
             .findAll()
                 .then(categorias => {
-                    res.render('products/productcreate.ejs', {categorias, title:"Nuevo"});
+                    res.render('products/productcreate.ejs', {categorias, title:"Nuevo", noImages:noImages});
                 })         
             .catch(error => res.send(error))   
 

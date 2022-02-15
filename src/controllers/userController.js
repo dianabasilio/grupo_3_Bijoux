@@ -59,32 +59,37 @@ const userController = {
 	login: (req, res) => {
 		return res.render('users/login.ejs');
 	},
-	loginProcess: async(req, res) => {
+	loginProcess: (req, res) => {
 		console.log('proceso login');
 		console.log('email: '+req.body.email);
-		let userToLogin = await Users.findByPk(req.body.email);
+		let userToLogin = Users.findByPk(req.body.email);
 		console.log('userToLogin: '+userToLogin);
 
+		Promise
+		.all([userToLogin])
+		.then(([userToLogin]) => {
 
-		if(userToLogin) {
-			console.log('Ya se dio cuenta que existe el user');
-			console.log('user listo: '+userToLogin);
-			console.log('password del body: '+req.body.password);
-			console.log('password encrypted: '+userToLogin.password);
-			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-			if (isOkThePassword) {
-				console.log('Debiste entrar correctamente'+req.session);
+			if(userToLogin !== null ) {
+				console.log('Ya se dio cuenta que existe el user');
 				console.log('user listo: '+userToLogin);
-				//eliminando la contraseña por seguridad
-				delete userToLogin.password;
-				req.session.userLogged = userToLogin;
-				console.log('user listo con req.session: '+req.session.userLogged);
-
-				if(req.body.remember_user) {
+				console.log('password del body: '+req.body.password);
+				console.log('password encrypted: '+userToLogin.password);
+				let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+				if (isOkThePassword) {
+					console.log('Debiste entrar correctamente'+req.session);
+					console.log('user listo: '+userToLogin);
+					//eliminando la contraseña por seguridad
+					delete userToLogin.password;
+					req.session.userLogged = userToLogin;
+					console.log('user listo con req.session: '+req.session.userLogged);
+	
+					if(req.body.remember_user) {
 						res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 					}
-
-					return res.redirect('/user/profile/');
+	
+					return res.render('users/userProfile.ejs', {
+						user: req.session.userLogged
+					});
 				}
 				console.log('Pusiste mal contraseña'+userToLogin);
 				return res.render('users/login.ejs', {
@@ -92,27 +97,30 @@ const userController = {
 						email: {
 							msg: 'Las credenciales son inválidas'
 						}
-				}
-			});
-		}
-		console.log('No estabas en base de datos'+userToLogin);
-		return res.render('users/login.ejs', {
-			errors: {
-				email: {
-					msg: 'No se encuentra este email en nuestra base de datos, registrarse'
-				}
+					}
+				});
 			}
-		});
+			else {
+				console.log('No estabas en base de datos'+userToLogin);
+				return res.render('users/login.ejs', {
+					errors: {
+						email: {
+							msg: 'No se encuentra este email en nuestra base de datos, registrarse'
+						}
+					}
+				});
+			}
+
+
+		})
+		.catch(error => res.send(error))
+		
+		
 	},
-	profile: async (req, res) => {
-		console.log('Estas en profile');
-		console.log('user listo con req.session: '+req.session.userLogged);
-		console.log(req.session);
+	profile: (req, res) => {
 		return res.render('users/userProfile.ejs', {
 			user: req.session.userLogged
 		});
-		
-		
 	},
 
 	logout: (req, res) => {
