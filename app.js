@@ -38,7 +38,7 @@ app.use('/', mainRouter);
 app.use('/products/', productsRouter);
 app.use('/user', userRoutes);
 
-let port = process.env.PORT||3020;
+let port = process.env.PORT||3000;
 
 app.listen(port, () =>{
     console.log('Servidor funcionando ' +port);
